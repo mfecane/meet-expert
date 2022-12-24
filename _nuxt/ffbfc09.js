@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{343:function(n,t,e){"use strict";e.r(t);var o={__name:"component-to-copy",setup:function(n){return{__sfc:!0}}},c=e(43),component=Object(c.a)(o,(function(){var n=this._self._c;this._self._setupProxy;return n("Fragment")}),[],!1,null,null,null);t.default=component.exports}}]);
