@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Agile"
+    },
+    {
+        "name": "Jira"
+    },
+    {
+        "name": "Kanban"
+    },
+    {
+        "name": "Scrum"
+    },
+    {
+        "name": "Analytics"
+    },
+    {
+        "name": "JavaScript"
+    },
+    {
+        "name": "Python"
+    },
+    {
+        "name": "ProductManagement"
+    },
+    {
+        "name": "C++"
+    },
+    {
+        "name": "UX/UI"
+    },
+    {
+        "name": "DataScience"
+    },
+    {
+        "name": "dart"
+    },
+    {
+        "name": "restapi"
+    },
+    {
+        "name": "googleservices"
+    },
+    {
+        "name": "flutter"
+    },
+    {
+        "name": "firebase"
+    },
+    {
+        "name": "mvvm"
+    },
+    {
+        "name": "confluence"
+    }
+]

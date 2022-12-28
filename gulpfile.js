@@ -130,18 +130,16 @@ const server = () => {
 };
 
 const js = () => {
-  return (
-    gulp
-      .src("src/js/script.js")
-      // .pipe(sourcemaps.init())
-      // .pipe(concat("script.min.js"))
-      // .on("error", function (err) {
-      //   console.log(err.toString());
-      //   this.emit("end");
-      // })
-      // .pipe(sourcemaps.write("."))
-      .pipe(dest("dist/js"))
-  );
+  return gulp
+    .src("src/js/script.js")
+    .pipe(sourcemaps.init())
+    .pipe(concat("script.min.js"))
+    .on("error", function (err) {
+      console.log(err.toString());
+      this.emit("end");
+    })
+    .pipe(sourcemaps.write("."))
+    .pipe(dest("dist/js"));
 };
 
 const assets = () => {

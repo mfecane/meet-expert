@@ -1,0 +1,44 @@
+[
+    {
+        "text": "I had no programming experience at all, I only knew SQL. My task was to implement the functionality in Python in a short time, while I had a desire to make a program with my own hands, so I turned to a mentor for help. Andrey listened to my task, understood the situation, offered several solutions, we chose the most suitable one, and as a result, under his guidance, I wrote my first program. The program works and solves a business problem. Andrey is a professional and knows his job. Thanks to him.",
+        "letter": "А",
+        "author": "Александер",
+        "date": "14 Ноября 2022"
+    },
+    {
+        "text": "I liked everything: Andrey quickly solves the issue, explains it clearly. I helped to deal with a non–trivial task.",
+        "letter": "А",
+        "author": "Альбина",
+        "date": "10 Ноября 2022"
+    },
+    {
+        "text": "Prompt assignment of the lesson and quick resolution of the issues raised. A thorough approach to learning. Gives not only technical knowledge, but also advice on further development in the profession.",
+        "letter": "Р",
+        "author": "Рифат",
+        "date": "13 Октября 2022"
+    },
+    {
+        "text": "Andrey suggested some debugging and development tricks. I helped to sort out the errors of the backend of the training project: documentation inconsistency, file upload errors, etc. Meetings were scheduled promptly. Andrey proved himself to be an experienced specialist who quickly finds the cause of errors and a solution.",
+        "letter": "К",
+        "author": "Константин",
+        "date": "13 Октября 2022"
+    },
+    {
+        "text": "We conducted several classes with Dmitry to solve a practical problem on the project. It turned out to quickly arrange meetings, to get a successful result in the required time.",
+        "letter": "Е",
+        "author": "Екатерина",
+        "date": "20 Сентября 2022"
+    },
+    {
+        "text": "Andrey helped me launch a project that will be useful for me to perform work tasks. I couldn't do it on my own. The mentor's experience in solving complex real-world problems is felt. If something doesn't work out for you, contact Andrey :)",
+        "letter": "М",
+        "author": "Михаил",
+        "date": "20 Сентября 2022"
+    },
+    {
+        "text": "I really liked it! Andrey explains very clearly and easily, answered all questions. He suggested it himself and we sorted out 2 options for solving the problem. Impressions are only positive, I am glad that Andrey helped with the solution of the issue.",
+        "letter": "Р",
+        "author": "Роман",
+        "date": "20 Сентября 2022"
+    }
+]

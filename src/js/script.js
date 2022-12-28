@@ -72,5 +72,4 @@ window.addEventListener("load", function () {
   setUpPanel();
   setUpCalendar();
   setUpBackScroll();
-  debugger;
 });

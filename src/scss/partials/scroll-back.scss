@@ -1,0 +1,38 @@
+.scroll-back {
+    background: var(--light);
+    position: fixed;
+    top: 120px;
+    width: 100vw;
+    z-index: 1;
+    transition: transform 200ms ease-out;
+}
+
+.scroll-back.hidden {
+    transform: translateY(-120px);
+}
+
+.scroll-back__inner {
+    display: flex;
+    padding: 22px 0;
+    gap: 12px;
+}
+
+.scroll-back__icon {
+    flex: 0 0 16px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(static/images/arrow.svg);
+    transform: scaleX(-1);
+}
+
+.scroll-back__caption {
+    flex: 1 0 auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--gray);
+}
