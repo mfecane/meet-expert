@@ -1,0 +1,18 @@
+<section class="people-list">
+  <div class="container">
+    <div class="people-list--no-result">
+      <h2 class="heading">Найди эксперта</h2>
+      <h3 class="people-list__sub-heading sub-heading">
+        среди 370+ специалистов
+      </h3>
+    </div>
+  </div>
+  <div class="people-list__layout">
+    @@loop("./expert-list-item.html", "../../data/expert-list.json")
+  </div>
+  <div class="container">
+    <button class="btn btn-primary people-list__more-button">
+      Смотреть больше экспертов
+    </button>
+  </div>
+</section>

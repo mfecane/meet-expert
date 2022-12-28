@@ -1,0 +1,136 @@
+.overlay {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: #03225c6e;
+    z-index: 3;
+    transition: opacity 200ms ease-out;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 900px;
+    width: 50%;
+    height: 100vh;
+    background: white;
+    transition: all 200ms ease-out;
+    overflow: hidden;
+    display: flex;
+    z-index: 4;
+    transform: translateX(100%);
+}
+
+.overlay-panel.active {
+    transform: translateX(0);
+}
+
+.panel-gutter {
+    flex: 0 0 42px;
+    background: var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel-gutter__label {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+
+.panel-content {
+    padding: 32px 42px;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendarEl {
+    height: 100%;
+    max-height: 500px;
+    margin: 22px 0;
+}
+
+.person-details {
+    display: flex;
+    gap: 30px;
+}
+
+.person-details__profile-container {
+    flex: 0 0 152px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.person-details__profile-image-container {
+    position: relative;
+    height: 174px;
+    background-image: url(@/assets/images/expertface.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+.person-details__profile-link {
+    padding: 13px 20px;
+    background: #ff683e;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.person-details__info {
+}
+
+.person-details__name {
+    font-family: "Bodoni";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 25px;
+    color: #2e2e2e;
+    margin-bottom: 5px;
+}
+
+.person-details__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #cdcdcd;
+    margin-bottom: 8px;
+}
+
+.person-details__cost {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #2e2e2e;
+    margin-bottom: 19px;
+}
+
+.person-details__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: #2e2e2e;
+}

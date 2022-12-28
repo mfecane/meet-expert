@@ -1,0 +1,16 @@
+.tags__tag {
+    padding: 12px 18px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--grey);
+    background: var(--light);
+    cursor: pointer;
+}
+
+.tags__tag:hover {
+    color: #b6b6b6;
+}

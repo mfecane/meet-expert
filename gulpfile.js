@@ -2,7 +2,7 @@ import gulp from "gulp";
 import gulpSass from "gulp-sass";
 import sass from "sass";
 import prefix from "gulp-autoprefixer";
-import browserSync from "browser-sync";
+import browserSyncImport from "browser-sync";
 import data from "gulp-data";
 import path from "path";
 import twig from "gulp-twig";
@@ -12,8 +12,9 @@ import sourcemaps from "gulp-sourcemaps";
 import fs from "fs";
 import clean from "gulp-clean";
 import fileinclude from "gulp-file-include";
+import { deleteAsync } from "del";
 
-const { src, parallel, series, watch } = gulp;
+const { src, parallel, series, watch, dest } = gulp;
 
 const sassInstance = gulpSass(sass);
 
@@ -25,11 +26,11 @@ var paths = {
   js: "./src/js/",
 };
 
-const browserSyncInstance = browserSync.create();
+const browserSync = browserSyncImport.create();
 
 function css() {
   return gulp
-    .src(paths.scss + "styles.scss")
+    .src(paths.scss + "index.scss")
     .pipe(sourcemaps.init())
     .pipe(
       plumber({
@@ -70,6 +71,10 @@ function css() {
     .pipe(gulp.dest(paths.dist + "css/"));
 }
 
+const clear = () => {
+  return deleteAsync("./dist");
+};
+
 export const html = () => {
   return src([paths.html])
     .pipe(fileinclude())
@@ -81,7 +86,8 @@ export const html = () => {
         },
       })
     )
-    .pipe(gulp.dest(paths.dist));
+    .pipe(gulp.dest(paths.dist))
+    .pipe(browserSync.stream());
 };
 
 // function html() {
@@ -115,13 +121,13 @@ export const html = () => {
 //   );
 // }
 
-function serve() {
-  browserSyncInstance.init({
+const server = () => {
+  browserSync.init({
     server: {
       baseDir: "./dist",
     },
   });
-}
+};
 
 function js() {
   return gulp
@@ -133,21 +139,40 @@ function js() {
       this.emit("end");
     })
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("dist/js"));
+    .pipe(dest("dist/js"));
 }
 
+const assets = () => {
+  return src("./assets/**/*")
+    .pipe(
+      plumber({
+        handleError: function (err) {
+          console.log(err);
+          this.emit("end");
+        },
+      })
+    )
+    .pipe(dest("dist/assets"));
+};
+
 const updateBrowser = () => {
-  browserSyncInstance.reload();
+  browserSync.reload();
 };
 
 export const watcher = () => {
-  watch("./src/data/**/*.json", html);
+  watch("./src/html/**/*.html", html).on("change", updateBrowser);
+  watch("./src/scss/**/*.scss", css).on("change", updateBrowser);
+  watch("./data/*.json", html).on("change", updateBrowser);
 };
 
-export const dev = series(html, watcher);
+export const dev = series(
+  clear,
+  parallel(assets, html, css, js),
+  parallel(watcher, server)
+);
 
-gulp.watch("./src/data/**/*.json", html).on("change", updateBrowser);
-gulp.watch("./src/js/**/*.js", js).on("change", updateBrowser);
-gulp.watch("./src/styles/**/*.scss", css).on("change", updateBrowser);
+// gulp.watch("./src/data/**/*.json", html).on("change", updateBrowser);
+// gulp.watch("./src/js/**/*.js", js).on("change", updateBrowser);
+// gulp.watch("./src/styles/**/*.scss", css).on("change", updateBrowser);
 
-export default series(parallel(html, js, css), serve);
+// export default series(parallel(html, js, css), server);

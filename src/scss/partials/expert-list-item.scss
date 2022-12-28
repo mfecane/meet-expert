@@ -1,0 +1,84 @@
+.people-list__line {
+    padding: 19px 0;
+}
+
+.people-list__line:hover {
+    background-color: var(--light);
+}
+
+.people-list__line-inner {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: 5fr 200px minmax(100px, 1fr) minmax(100px, 1fr) minmax(183px, 1fr);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+.people-list__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.people-list__details-name {
+    font-family: "Bodoni";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 25px;
+    color: var(--dark);
+}
+
+.people-list__details-job {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.people-list__photo-container {
+    position: relative;
+}
+
+.people-list__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.1s ease-out;
+    width: 166px;
+    height: 190px;
+    background-image: url(@/assets/images/expertface.png);
+}
+
+.people-list__line:hover .people-list__photo {
+    opacity: 1;
+}
+
+.people-list__experience {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dark);
+}
+
+.people-list__price {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dark);
+}
+
+.people-list__action {
+}
+
+.people-list__line:not(:hover) .people-list__action .btn {
+    background: var(--light);
+    color: var(--brand);
+}

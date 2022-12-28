@@ -1,0 +1,114 @@
+/* vars */
+
+:root {
+    --accent: #ff683e;
+    --dark-bg: #03225c;
+    --dark: #2e2e2e;
+    --brand: #1c51b9;
+    --light: #f9f7f2;
+    --grey: #cdcdcd;
+}
+
+@font-face {
+    font-family: "Gotham Pro";
+    font-weight: 700;
+    src: url("/assets/fonts/Gotham_Pro_Bold.ttf");
+}
+
+@font-face {
+    font-family: "Gotham Pro";
+    font-weight: 400;
+    src: url("/assets/fonts/Gotham_Pro_Regular.ttf");
+}
+
+/* common */
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 181px;
+}
+
+.btn-primary {
+    background-color: var(--brand);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-bg);
+}
+
+.btn-primary:active {
+    background-color: #0d378d;
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #8398c4;
+}
+
+.btn-primary:disabled {
+    background-color: var(--grey);
+}
+
+a {
+    color: var(--brand);
+}
+
+a:hover {
+    color: var(--dark);
+}
+
+.heading {
+    font-family: "Bodoni";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 67px;
+    text-align: center;
+    color: var(--dark);
+}
+
+.sub-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 67px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--brand);
+}
+
+body {
+    font-family: "Gotham Pro";
+    font-weight: 700;
+    background: white;
+    color: var(--dark);
+    padding-top: 123px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+
+    @media (max-width: 1200px) {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+}
+
+.container.container--narrow {
+    max-width: 1050px;
+    margin: auto;
+    @media (max-width: 1050px) {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+}

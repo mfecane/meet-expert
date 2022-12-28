@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!--  -->
     @@include("partials/header.html")
 
-    @@loop("partials/data.html", "../../data/cards.json")
-</body>
+    <!--  -->
+    @@include("partials/hero.html")
+
+    <!--  -->
+    @@include("partials/tech-list.html")
+
+    <!--  -->
+    @@include("partials/searchbar.html")
+
+    <!--  -->
+    @@include("partials/expert-list.html")
+
+    <!--  -->
+    @@include("partials/become-expert.html")
+
+    <!--  -->
+    @@include("partials/mission-section.html")
+
+    <!--  -->
+    @@include("partials/site-footer.html")
+
+    <!--  -->
+    @@include("partials/overlay-panel.html")
+
+    <script src="js/script.min.js" defer />
+    <script src="js/index.global.min.js" defer />
+  </body>
 </html>

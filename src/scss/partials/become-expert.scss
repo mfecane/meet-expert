@@ -1,0 +1,54 @@
+.become-expert {
+    min-height: 500px;
+    background: #03225c;
+}
+
+.become-expert__layout {
+    display: flex;
+    gap: 42px;
+    transform: translateY(97px);
+}
+
+.become-expert__image {
+    flex: 0 0 549px;
+    background-image: url("../assets/images/workers.png");
+    background-position: center center cover;
+    height: 630px;
+    width: 549px;
+}
+
+.become-expert__text {
+    padding: 79px 0;
+}
+
+.become-expert__heading {
+    font-family: "Bodoni";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 62px;
+    color: #ffffff;
+}
+
+.become-expert__subheading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ff683e;
+}
+
+.become-expert__paragraph-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--light);
+    margin: 37px 0 27px 0;
+}
+
+.become-expert__button.btn:hover {
+    background-color: #456fcb;
+}

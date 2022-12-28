@@ -1,4 +1,11 @@
 [
-    {"name": "card1"},
-    {"name": "card2"}
+    {
+        "name": "card1"
+    },
+    {
+        "name": "card2"
+    },
+    {
+        "name": "card3"
+    }
 ]
