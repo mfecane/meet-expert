@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "gulp": "gulp"
+    "dev": "gulp dev",
+    "deploy": "gulp build && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "browser-sync": "^2.27.11",
     "del": "^7.0.0",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean": "^0.4.0",

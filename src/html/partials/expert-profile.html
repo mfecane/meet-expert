@@ -1,13 +1,11 @@
-<div class="container">
+<div class="container container--narrow">
   <div class="expert-profile">
     <div class="expert-profile__profile-container">
       <div class="expert-profile__profile-image-container"></div>
       <div class="expert-profile__profile-link">Запланировать встречу</div>
       <div class="expert-profile__actions">
-        <expert-profile-action text="Чем я могу помочь" />
-        <expert-profile-action text="Доступные даты" />
-        <expert-profile-action text="Отзывы" />
-        <expert-profile-action text="в начало" rotate="true" />
+        @@loop('./experts/expert-profile-action.html',
+        "../../data/expert-actions.json")
       </div>
     </div>
     <div class="expert-profile__info">
