@@ -129,18 +129,20 @@ const server = () => {
   });
 };
 
-function js() {
-  return gulp
-    .src("src/js/script.js")
-    .pipe(sourcemaps.init())
-    .pipe(concat("script.min.js"))
-    .on("error", function (err) {
-      console.log(err.toString());
-      this.emit("end");
-    })
-    .pipe(sourcemaps.write("."))
-    .pipe(dest("dist/js"));
-}
+const js = () => {
+  return (
+    gulp
+      .src("src/js/script.js")
+      // .pipe(sourcemaps.init())
+      // .pipe(concat("script.min.js"))
+      // .on("error", function (err) {
+      //   console.log(err.toString());
+      //   this.emit("end");
+      // })
+      // .pipe(sourcemaps.write("."))
+      .pipe(dest("dist/js"))
+  );
+};
 
 const assets = () => {
   return src("./assets/**/*")
@@ -155,6 +157,10 @@ const assets = () => {
     .pipe(dest("dist/assets"));
 };
 
+const favicon = () => {
+  return src("./assets/images/favicon.ico").pipe(dest("dist/"));
+};
+
 const updateBrowser = () => {
   browserSync.reload();
 };
@@ -163,11 +169,12 @@ export const watcher = () => {
   watch("./src/html/**/*.html", html).on("change", updateBrowser);
   watch("./src/scss/**/*.scss", css).on("change", updateBrowser);
   watch("./data/*.json", html).on("change", updateBrowser);
+  watch("./src/js/**/*.js", html).on("change", updateBrowser);
 };
 
 export const dev = series(
   clear,
-  parallel(assets, html, css, js),
+  parallel(favicon, assets, html, css, js),
   parallel(watcher, server)
 );
 
