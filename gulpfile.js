@@ -176,8 +176,4 @@ export const dev = series(
   parallel(watcher, server)
 );
 
-// gulp.watch("./src/data/**/*.json", html).on("change", updateBrowser);
-// gulp.watch("./src/js/**/*.js", js).on("change", updateBrowser);
-// gulp.watch("./src/styles/**/*.scss", css).on("change", updateBrowser);
-
-// export default series(parallel(html, js, css), server);
+export const build = series(clear, parallel(favicon, assets, html, css, js));
