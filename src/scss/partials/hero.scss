@@ -39,6 +39,11 @@
     line-height: 4.1875rem;
     padding-bottom: 2.9375rem;
 
+    span {
+        display: inline;
+        white-space: nowrap;
+    }
+
     @media (max-width: $breakPointPhone) {
         font-size: 3rem;
         line-height: 3rem;

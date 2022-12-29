@@ -26,6 +26,14 @@
 
     position: relative;
     display: block;
+
+    @media (max-width: $breakPointTablet) {
+        min-width: 700px;
+    }
+
+    @media (max-width: $breakPointPhone) {
+        min-width: 100%;
+    }
 }
 
 .searchbar__icon {
@@ -57,6 +65,20 @@
     color: var(--grey);
     opacity: 1;
     transition: opacity 0.1s ease-out;
+
+    @media (max-width: $breakPointPhone) {
+        display: none;
+    }
+}
+
+.searchbar__helptext-mobile {
+    display: none;
+    color: var(--grey);
+    text-transform: uppercase;
+
+    @media (max-width: $breakPointPhone) {
+        display: block;
+    }
 }
 
 .searchbar.active .searchbar__helptext {
