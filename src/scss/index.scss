@@ -1,6 +1,7 @@
 @import "common/_reset.scss";
-@import "common/_reset.scss";
+@import "common/_vars.scss";
 
+@import "global.scss";
 @import "global.scss";
 
 @import "partials/header.scss";
@@ -20,3 +21,5 @@
 @import "partials/expert-profile.scss";
 @import "partials/comment-item.scss";
 @import "partials/expert-profile-action.scss";
+
+@import "components/burger.scss";

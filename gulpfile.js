@@ -167,7 +167,7 @@ export const watcher = () => {
   watch("./src/html/**/*.html", html).on("change", updateBrowser);
   watch("./src/scss/**/*.scss", css).on("change", updateBrowser);
   watch("./data/*.json", html).on("change", updateBrowser);
-  watch("./src/js/**/*.js", html).on("change", updateBrowser);
+  watch("./src/js/**/*.js", js).on("change", updateBrowser);
 };
 
 export const dev = series(

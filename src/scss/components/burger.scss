@@ -1,0 +1,39 @@
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 32px;
+    @media (max-width: $burgerBreakpoint) {
+        display: flex;
+    }
+}
+
+.bar {
+    width: 32px;
+    flex: 0 0 6px;
+    background-color: $burgerColor;
+    border-radius: 3px;
+    transition: all 200ms ease;
+}
+
+.burger.active {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 32px;
+    @media (max-width: $burgerBreakpoint) {
+        display: flex;
+    }
+
+    .bar:nth-child(1) {
+        transform: rotate(45deg) translate(9px, 9px);
+    }
+
+    .bar:nth-child(2) {
+        transform: scaleX(0);
+    }
+
+    .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(9px, -9px);
+    }
+}

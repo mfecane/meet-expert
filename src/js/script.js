@@ -67,9 +67,29 @@ function setUpBackScroll() {
   });
 }
 
+function setUpBurger() {
+  const burgerButton = document.querySelector(".burger");
+  const nav = document.querySelector(".nav");
+  const navLinks = [...document.querySelectorAll(".nav__link")];
+  if (!nav || !burgerButton || !navLinks.length) {
+    return;
+  }
+  burgerButton.addEventListener("click", () => {
+    burgerButton.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+  navLinks.forEach((el) =>
+    el.addEventListener("click", () => {
+      burgerButton.classList.toggle("active", false);
+      nav.classList.toggle("active", false);
+    })
+  );
+}
+
 window.addEventListener("load", function () {
   setUpSearch();
   setUpPanel();
   setUpCalendar();
   setUpBackScroll();
+  setUpBurger();
 });

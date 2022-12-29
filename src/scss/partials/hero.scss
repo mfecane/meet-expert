@@ -17,16 +17,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 3.75rem;
 }
 
 .hero__bottom {
     height: max-content;
 }
 
-.hero__title {
+.hero__heading.heading {
+    font-size: 4.375rem;
+    line-height: 4.1875rem;
+
+    @media (max-width: $breakPointPhone) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
 }
 
-.hero__subtitle {
+.hero__sub-heading.sub-heading {
+    font-size: 3.125rem;
+    line-height: 4.1875rem;
+    padding-bottom: 2.9375rem;
+
+    @media (max-width: $breakPointPhone) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
 }
 
 .hero__copy {
@@ -37,6 +53,7 @@
     text-align: center;
     color: var(--dark);
     max-width: 720px;
+    padding-bottom: 1.8125rem;
 }
 
 .hero__info {
