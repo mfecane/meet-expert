@@ -62,6 +62,7 @@
     left: 36px;
     width: calc(100% - 42px);
     height: 16px;
+    line-height: 20px;
     color: var(--grey);
     opacity: 1;
     transition: opacity 0.1s ease-out;
@@ -75,6 +76,7 @@
     display: none;
     color: var(--grey);
     text-transform: uppercase;
+    line-height: 20px;
 
     @media (max-width: $breakPointPhone) {
         display: block;

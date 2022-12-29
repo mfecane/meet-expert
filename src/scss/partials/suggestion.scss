@@ -7,6 +7,12 @@
     display: flex;
     gap: 42px;
     transform: translateY(97px);
+    align-items: flex-end;
+
+    @media (max-width: $breakPointPhone) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .suggestion__image {
@@ -15,6 +21,15 @@
     background-size: cover;
     height: 630px;
     width: 549px;
+
+    @media (max-width: $breakPointSmallMonitor) {
+        flex: 1 0 50%;
+    }
+
+    @media (max-width: $breakPointPhone) {
+        flex: 0 0 350px;
+        width: 100%;
+    }
 }
 
 .suggestion__image--workers {
@@ -26,25 +41,23 @@
 }
 
 .suggestion__text {
-    padding: 79px 0;
+    padding: 0 0 159px 0;
+
+    @media (max-width: $breakPointSmallMonitor) {
+        flex: 1 0 50%;
+        padding: 0 0 149px 0;
+    }
 }
 
 .suggestion__heading {
-    font-family: "Bodoni";
-    font-style: italic;
-    font-weight: 400;
-    font-size: 58px;
-    line-height: 62px;
+    font-size: 3.625rem;
+    line-height: 3.875rem;
     color: #ffffff;
 }
 
-.suggestion__subheading {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 56px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+.suggestion__sub-heading {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
     color: #ff683e;
 }
 

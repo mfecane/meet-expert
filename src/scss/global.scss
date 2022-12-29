@@ -7,6 +7,7 @@
     --brand: #1c51b9;
     --light: #f9f7f2;
     --grey: #cdcdcd;
+    font-size: 16px;
 
     @media (max-width: $breakPointTablet) {
         font-size: 13px;
@@ -80,18 +81,16 @@ a:hover {
     font-family: "Bodoni";
     font-style: italic;
     font-weight: 400;
-    font-size: 70px;
-    line-height: 67px;
-    text-align: center;
+    font-size: 4.375rem;
+    line-height: 4.1875rem;
     color: var(--dark);
 }
 
 .sub-heading {
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
-    line-height: 67px;
-    text-align: center;
+    font-size: 3.125rem;
+    line-height: 4.1875rem;
     text-transform: uppercase;
     color: var(--brand);
 }
@@ -115,7 +114,7 @@ body {
 
     @media (max-width: $breakPointPhone) {
         max-width: 100%;
-        margin: 0 25px;
+        margin: 0 20px;
     }
 }
 

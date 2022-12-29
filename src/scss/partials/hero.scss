@@ -25,6 +25,7 @@
 }
 
 .hero__heading.heading {
+    text-align: center;
     font-size: 4.375rem;
     line-height: 4.1875rem;
 
@@ -35,6 +36,7 @@
 }
 
 .hero__sub-heading.sub-heading {
+    text-align: center;
     font-size: 3.125rem;
     line-height: 4.1875rem;
     padding-bottom: 2.9375rem;
@@ -45,8 +47,8 @@
     }
 
     @media (max-width: $breakPointPhone) {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2.25rem;
+        line-height: 2.25rem;
     }
 }
 

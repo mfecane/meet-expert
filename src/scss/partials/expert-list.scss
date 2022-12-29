@@ -1,3 +1,21 @@
+.people-list__heading {
+    text-align: center;
+
+    @media (max-width: $breakPointPhone) {
+        font-size: 3rem;
+        line-height: 2.75rem;
+    }
+}
+
+.people-list__sub-heading {
+    text-align: center;
+
+    @media (max-width: $breakPointPhone) {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
+}
+
 .people-list {
     margin: 24px 0 101px 0;
 }

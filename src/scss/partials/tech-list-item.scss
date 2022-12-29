@@ -29,17 +29,21 @@
     font-family: "Bodoni";
     font-style: italic;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 25px;
+    font-size: 1.75rem;
+    line-height: 1.5625rem;
     text-align: center;
     color: var(--dark);
+
+    @media (max-width: $breakPointPhone) {
+        font-size: 1.5rem;
+    }
 }
 
 .card__subtitle {
     font-style: normal;
     font-weight: 700;
-    font-size: 17px;
-    line-height: 25px;
+    font-size: 1.0625rem;
+    line-height: 1.5625rem;
     text-align: center;
     text-transform: uppercase;
 
