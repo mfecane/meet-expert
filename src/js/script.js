@@ -51,6 +51,18 @@ function setUpCalendar() {
       right: "timeGridWeek,timeGridDay",
     },
     events: "https://fullcalendar.io/api/demo-feeds/events.json",
+    eventColor: "#1C51B9",
+    locale: "ru",
+    buttonText: {
+      today: "сегодня",
+      month: "месяц",
+      week: "неделя",
+      day: "день",
+      list: "список",
+    },
+    allDayContent: function () {
+      return "весь день";
+    },
   });
   calendar.render();
 }

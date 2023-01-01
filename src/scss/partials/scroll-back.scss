@@ -15,6 +15,7 @@
     display: flex;
     padding: 22px 0;
     gap: 12px;
+    align-items: center;
 }
 
 .scroll-back__icon {
@@ -53,4 +54,17 @@
 
 .scroll-back__heart:not(:hover) path {
     stroke: var(--grey);
+}
+
+.fc ::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--light);
+}
+
+.fc ::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: white;
+    border-radius: 3px;
+    border: 4px solid transparent;
+    background-clip: content-box;
 }
