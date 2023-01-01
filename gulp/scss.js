@@ -14,7 +14,7 @@ const sassInstance = gulpSass(sass);
 var plugins = [
   autoprefixer(),
   cssnano({
-    preset: ["cssnano-preset-advanced", { normalizeWhitespace: false }],
+    preset: ["default", { normalizeWhitespace: false }],
   }),
   cmq(),
   prettify(),

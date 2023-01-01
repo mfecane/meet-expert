@@ -46,37 +46,6 @@ export const html = () => {
     .pipe(browserSync.stream());
 };
 
-// function html() {
-//   return (
-//     gulp
-//       .src(["./src/templates/*.twig"])
-//       // .pipe(clean({ force: true }))
-//       .pipe(
-//         plumber({
-//           handleError: function (err) {
-//             console.log(err);
-//             this.emit("end");
-//           },
-//         })
-//       )
-//       .pipe(
-//         data(function (file) {
-//           console.log("reread file");
-//           return JSON.parse(
-//             fs.readFileSync(paths.data + path.basename(file.path) + ".json")
-//           );
-//         })
-//       )
-//       .pipe(
-//         twig().on("error", function (err) {
-//           console.log(err);
-//           this.emit("end");
-//         })
-//       )
-//       .pipe(gulp.dest(paths.dist))
-//   );
-// }
-
 const server = () => {
   browserSync.init({
     server: {
@@ -133,9 +102,5 @@ export const dev = series(
 );
 
 export const build = series(clear, parallel(favicon, assets, html, css, js));
-
-// export const config = series(
-//   watch(["./gulpfile.js", "./gulp/**/*.js"], build).on("change", updateBrowser)
-// );
 
 export default build;
