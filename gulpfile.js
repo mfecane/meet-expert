@@ -1,7 +1,6 @@
 import gulp from "gulp";
 import gulpSass from "gulp-sass";
 import sass from "sass";
-import prefix from "gulp-autoprefixer";
 import browserSyncImport from "browser-sync";
 import data from "gulp-data";
 import path from "path";
@@ -12,11 +11,11 @@ import sourcemaps from "gulp-sourcemaps";
 import fs from "fs";
 import clean from "gulp-clean";
 import fileinclude from "gulp-file-include";
+import { css } from "./gulp/scss.js";
+
 import { deleteAsync } from "del";
 
 const { src, parallel, series, watch, dest } = gulp;
-
-const sassInstance = gulpSass(sass);
 
 var paths = {
   html: "./src/html/*.html",
@@ -27,49 +26,6 @@ var paths = {
 };
 
 const browserSync = browserSyncImport.create();
-
-function css() {
-  return gulp
-    .src(paths.scss + "index.scss")
-    .pipe(sourcemaps.init())
-    .pipe(
-      plumber({
-        handleError: function (err) {
-          console.log(err);
-          this.emit("end");
-        },
-      })
-    )
-    .pipe(
-      sassInstance({
-        includePaths: [paths.scss],
-        outputStyle: "compressed",
-      }).on("error", function (err) {
-        console.log(err.message);
-        // sass.logError
-        this.emit("end");
-      })
-    )
-    .pipe(
-      prefix(
-        [
-          "last 15 versions",
-          "> 1%",
-          "ie 8",
-          "ie 7",
-          "iOS >= 9",
-          "Safari >= 9",
-          "Android >= 4.4",
-          "Opera >= 30",
-        ],
-        {
-          cascade: true,
-        }
-      )
-    )
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(paths.dist + "css/"));
-}
 
 const clear = () => {
   return deleteAsync("./dist");
@@ -177,3 +133,9 @@ export const dev = series(
 );
 
 export const build = series(clear, parallel(favicon, assets, html, css, js));
+
+// export const config = series(
+//   watch(["./gulpfile.js", "./gulp/**/*.js"], build).on("change", updateBrowser)
+// );
+
+export default build;
