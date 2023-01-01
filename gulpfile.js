@@ -1,17 +1,13 @@
 import gulp from "gulp";
-import gulpSass from "gulp-sass";
-import sass from "sass";
 import browserSyncImport from "browser-sync";
-import data from "gulp-data";
-import path from "path";
-import twig from "gulp-twig";
 import plumber from "gulp-plumber";
 import concat from "gulp-concat";
 import sourcemaps from "gulp-sourcemaps";
-import fs from "fs";
-import clean from "gulp-clean";
+import prettify from "gulp-prettify";
 import fileinclude from "gulp-file-include";
 import { css } from "./gulp/scss.js";
+import { assets } from "./gulp/assets.js";
+import htmlmin from "gulp-htmlmin";
 
 import { deleteAsync } from "del";
 
@@ -33,7 +29,6 @@ const clear = () => {
 
 export const html = () => {
   return src([paths.html])
-    .pipe(fileinclude())
     .pipe(
       plumber({
         handleError: function (err) {
@@ -42,6 +37,9 @@ export const html = () => {
         },
       })
     )
+    .pipe(fileinclude())
+    .pipe(htmlmin({ collapseWhitespace: false, removeComments: true }))
+    .pipe(prettify({ indent_size: 2 }))
     .pipe(gulp.dest(paths.dist))
     .pipe(browserSync.stream());
 };
@@ -67,23 +65,6 @@ const js = () => {
     .pipe(dest("dist/js"));
 };
 
-const assets = () => {
-  return src("./assets/**/*")
-    .pipe(
-      plumber({
-        handleError: function (err) {
-          console.log(err);
-          this.emit("end");
-        },
-      })
-    )
-    .pipe(dest("dist/assets"));
-};
-
-const favicon = () => {
-  return src("./assets/images/favicon.ico").pipe(dest("dist/"));
-};
-
 const updateBrowser = () => {
   browserSync.reload();
 };
@@ -97,10 +78,10 @@ export const watcher = () => {
 
 export const dev = series(
   clear,
-  parallel(favicon, assets, html, css, js),
+  parallel(assets, html, css, js),
   parallel(watcher, server)
 );
 
-export const build = series(clear, parallel(favicon, assets, html, css, js));
+export const build = series(clear, parallel(assets, html, css, js));
 
 export default build;

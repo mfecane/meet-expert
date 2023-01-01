@@ -36,3 +36,21 @@
     text-transform: uppercase;
     color: var(--gray);
 }
+
+.scroll-back__heart {
+    width: 21px;
+    height: 21px;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    path {
+        transition: stroke 200ms ease;
+    }
+}
+
+.scroll-back__heart:not(:hover) path {
+    stroke: var(--grey);
+}

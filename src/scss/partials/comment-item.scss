@@ -15,6 +15,10 @@
     display: flex;
     gap: 20px;
     align-items: center;
+
+    @media (max-width: $breakPointSmallPhone) {
+        flex-wrap: wrap;
+    }
 }
 .comment__image {
     flex: 0 0 32px;
@@ -41,4 +45,9 @@
     line-height: 26px;
     text-align: right;
     color: var(--grey);
+
+    @media (max-width: $breakPointSmallPhone) {
+        flex: 0 0 100%;
+        text-align: unset;
+    }
 }

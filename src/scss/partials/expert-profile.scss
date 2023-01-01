@@ -3,6 +3,10 @@
     gap: 30px;
     overflow: hidden;
     margin-top: 89px;
+
+    @media (max-width: $breakPointPhone) {
+        flex-direction: column;
+    }
 }
 
 .expert-profile__profile-container {
@@ -10,6 +14,17 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+
+    @media (max-width: $breakPointPhone) {
+        display: grid;
+        grid-template-columns: 260px auto;
+        grid-template-rows: 400px auto;
+        column-gap: 20px;
+    }
+
+    @media (max-width: $breakPointSmallPhone) {
+        grid-template-columns: 100%;
+    }
 }
 
 .expert-profile__profile-image-container {
@@ -18,6 +33,10 @@
     background-image: url(../assets/images/expertface.png);
     background-position: center center;
     background-size: cover;
+
+    @media (max-width: $breakPointPhone) {
+        height: 100%;
+    }
 }
 
 .expert-profile__profile-link {
@@ -29,6 +48,16 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #ffffff;
+
+    @media (max-width: $breakPointPhone) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    @media (max-width: $breakPointSmallPhone) {
+        grid-column: unset;
+        grid-row: unset;
+    }
 }
 
 .expert-profile__info {
@@ -80,6 +109,14 @@
     display: flex;
     flex-direction: column;
     gap: 17px;
+
+    @media (max-width: $breakPointPhone) {
+        margin-top: 0;
+    }
+
+    @media (max-width: $breakPointSmallPhone) {
+        margin-top: 16px;
+    }
 }
 
 .expert-profile__heading {
@@ -110,6 +147,16 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(6, min-content);
     grid-auto-flow: column;
+
+    @media (max-width: $breakPointSmallMonitor) {
+        grid-template-rows: repeat(9, min-content);
+    }
+
+    @media (max-width: $breakPointSmallPhone) {
+        grid-template-columns: 1fr;
+        grid-auto-flow: unset;
+        grid-template-rows: unset;
+    }
 }
 
 .help-list-item:before {
