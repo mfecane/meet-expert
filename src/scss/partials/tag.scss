@@ -9,6 +9,10 @@
     color: var(--grey);
     background: var(--light);
     cursor: pointer;
+
+    .search__section--alternative & {
+        background: white;
+    }
 }
 
 .tags__tag:hover {

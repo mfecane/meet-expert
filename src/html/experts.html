@@ -11,8 +11,15 @@
     <!--  -->
     @@include("partials/header.html")
 
-    <!--  -->
-    @@include("partials/searchbar.html")
+    <!-- prettier-ignore -->
+    <div class="switch">
+      @@include("partials/searchbar.html", {
+        "class": "search__section--alternative"
+      })
+      @@include("partials/searchbar-alt.html", {
+        "class": "search__section--alternative"
+      })
+    </div>
 
     <!--  -->
     @@include("partials/expert-list.html")
