@@ -906,7 +906,7 @@ body.lock{
 }
 
 .person-details__info{
-  margin-right:30px;
+  margin-left:30px;
 }
 
 .person-details__name{
@@ -1071,6 +1071,7 @@ body.lock{
   display:flex;
   flex:0 0 260px;
   flex-direction:column;
+  margin-bottom:20px;
   position:sticky;
   top:var(--header-height);
   transition:top .2s ease-out;
@@ -1351,14 +1352,14 @@ body.lock{
 .fc .fc-icon-chevron-left:before{
   content:"🡐";
   display:block;
-  font-family:monospace;
+  font-family:sans-serif;
   font-weight:700;
 }
 
 .fc .fc-icon-chevron-right:before{
   content:"🡒";
   display:block;
-  font-family:monospace;
+  font-family:sans-serif;
   font-weight:700;
 }
 
@@ -1449,6 +1450,7 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
   border-radius:6px;
   bottom:6px;
   box-shadow:4px 4px 12px 0 rgba(0,0,0,.2);
+  cursor:pointer;
   display:flex;
   height:0;
   justify-content:center;
@@ -1476,22 +1478,32 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
 }
 
 .switcher__button{
-  background-color:#bbb;
+  background-color:#ddd;
   border-radius:6px;
-  cursor:pointer;
   height:12px;
-  transition:background-color .2s ease;
   width:12px;
 }
 
-.switcher__button.active,.switcher__button:hover{
-  background-color:#ff7474;
+.switcher__button,.switcher__label{
+  transition:background-color .3s ease;
 }
 
 .switcher__label{
-  color:#bbb;
+  color:#ddd;
   font-family:Roboto,sans-serif;
   font-size:14px;
+}
+
+.switcher__button-container:hover .switcher__button{
+  background-color:#999;
+}
+
+.switcher__button-container:hover .switcher__button.active,.switcher__button-container:hover .switcher__button:hover{
+  background-color:#ff7474;
+}
+
+.switcher__button-container:hover .switcher__label{
+  color:#999;
 }
 
 @media (max-width:991.98px){
