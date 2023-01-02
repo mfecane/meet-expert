@@ -26,11 +26,12 @@
 
 .people-list__more-button {
     background: #ff683e;
-    min-width: 255px;
     text-transform: uppercase;
     color: #ffffff;
     margin: 59px auto 0 auto;
     display: block;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .people-list__more-button:hover {

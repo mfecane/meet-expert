@@ -20,7 +20,7 @@
 .people-list__line-inner {
     display: grid;
     gap: 22px;
-    grid-template-columns: 5fr 200px minmax(100px, 1fr) minmax(100px, 1fr) minmax(183px, 1fr);
+    grid-template-columns: 5fr 200px minmax(100px, 1fr) minmax(100px, 1fr) auto;
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -28,7 +28,7 @@
 
     @media (max-width: $breakPointTablet) {
         gap: 10px;
-        grid-template-columns: 5fr 180px minmax(80px, 1fr) minmax(90px, 1fr) minmax(160px, 1fr);
+        grid-template-columns: 5fr 180px minmax(80px, 1fr) minmax(90px, 1fr) auto;
     }
 
     @media (max-width: $breakPointPhone) {
@@ -38,7 +38,8 @@
     }
 
     @media (max-width: $breakPointSmallPhone) {
-        display: block;
+        display: flex;
+        flex-direction: column;
         transform: unset;
         position: static;
     }
@@ -67,7 +68,7 @@
     color: var(--grey);
 
     @media (max-width: $breakPointPhone) {
-        font-size: 13px;
+        font-size: 0.8125rem;
     }
 }
 
@@ -97,7 +98,6 @@
         opacity: 1;
         transform: unset;
         position: static;
-        height: 100%;
     }
 }
 
@@ -125,6 +125,10 @@
     @media (max-width: $breakPointPhone) {
         padding-top: 20px;
     }
+}
+
+.people-list__action-button {
+    width: max-content;
 }
 
 .people-list__line:not(:hover) .people-list__action .btn {

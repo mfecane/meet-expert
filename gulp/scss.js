@@ -20,7 +20,7 @@ var plugins = [
   prettify(),
 ];
 
-export const css = () => {
+export default () => {
   return gulp
     .src("./src/scss/index.scss")
     .pipe(sourcemaps.init())

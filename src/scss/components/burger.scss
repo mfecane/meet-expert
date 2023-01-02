@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 32px;
+    transition: transform 300ms ease;
     @media (max-width: $burgerBreakpoint) {
         display: flex;
     }
@@ -36,4 +37,6 @@
     .bar:nth-child(3) {
         transform: rotate(-45deg) translate(9px, -9px);
     }
+
+    transform: rotate(180deg);
 }

@@ -4,8 +4,27 @@
       <div class="expert-profile__profile-image-container"></div>
       <div class="expert-profile__profile-link">Запланировать встречу</div>
       <div class="expert-profile__actions">
-        @@loop('./experts/expert-profile-action.html',
-        "../../data/expert-actions.json")
+        <!-- prettier-ignore -->
+        @@include('./experts/expert-profile-action.html', { 
+          "text": "Чем я могу помочь",
+          "link": "#help"
+        })
+        <!-- prettier-ignore -->
+        @@include('./experts/expert-profile-action.html', { 
+          "text": "Доступные даты",
+          "link": "#calendar"
+        })
+        <!-- prettier-ignore -->
+        @@include('./experts/expert-profile-action.html', { 
+          "text": "Отзывы" ,
+          "link": "#comments"
+        })
+        <!-- prettier-ignore -->
+        @@include('./experts/expert-profile-action.html', { 
+          "text": "в начало",
+          "class": "expert-profile__action-arrow--rotate",
+          "link": "#top"
+        })
       </div>
     </div>
     <div class="expert-profile__info">
@@ -49,7 +68,7 @@
         @@loop("./tag.html", "../../data/exprt-tags.json")
       </div>
 
-      <h2 class="expert-profile__heading">Чем</h2>
+      <h2 class="expert-profile__heading" id="help">Чем</h2>
       <h3 class="expert-profile__sub-heading">я могу помочь</h3>
 
       <ul class="help-list">
@@ -71,7 +90,7 @@
         <li class="help-list-item">UI/UX</li>
         <li class="help-list-item">Сторителлинг</li>
       </ul>
-      <h2 class="expert-profile__heading">Выберите подходящие</h2>
+      <h2 class="expert-profile__heading" id="calendar">Выберите подходящие</h2>
       <h3 class="expert-profile__sub-heading">даты для встречи</h3>
 
       <div class="calendarEl calendar--profile"></div>
@@ -83,7 +102,7 @@
         <div class="comments-header__right">7🤝</div>
       </div>
 
-      <div class="comments-list">
+      <div class="comments-list" id="comments">
         @@loop("./comment-item.html", "../../data/comments.json")
       </div>
     </div>

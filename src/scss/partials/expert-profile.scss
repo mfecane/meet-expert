@@ -1,7 +1,6 @@
 .expert-profile {
     display: flex;
     gap: 30px;
-    overflow: hidden;
     margin-top: 89px;
 
     @media (max-width: $breakPointPhone) {
@@ -14,6 +13,14 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    position: sticky;
+    top: var(--header-height);
+    align-self: flex-start;
+    transition: top 200ms ease-out;
+
+    &.shift {
+        top: calc(var(--header-height) + 75px);
+    }
 
     @media (max-width: $breakPointPhone) {
         display: grid;
@@ -137,6 +144,7 @@
 }
 
 .calendarEl {
+    min-height: 400px;
 }
 
 .calendar--profile {

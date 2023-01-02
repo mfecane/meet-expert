@@ -1,19 +1,27 @@
 .scroll-back {
     background: var(--light);
     position: fixed;
-    top: 120px;
+    top: var(--header-height);
     width: 100vw;
     z-index: 1;
     transition: transform 200ms ease-out;
+    transform: translateY(-120px);
 }
 
-.scroll-back.hidden {
-    transform: translateY(-120px);
+.scroll-back.visible {
+    transform: translateY(0);
 }
 
 .scroll-back__inner {
     display: flex;
     padding: 22px 0;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scroll-back__back-link {
+    display: flex;
     gap: 12px;
     align-items: center;
 }

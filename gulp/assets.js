@@ -82,4 +82,4 @@ const favicon = () => {
   return src(paths.ico).pipe(dest("dist/"));
 };
 
-export const assets = parallel(files, images, fonts, favicon);
+export default parallel(files, images, fonts, favicon);

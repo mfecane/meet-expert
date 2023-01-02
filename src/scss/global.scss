@@ -20,6 +20,12 @@
     @media (max-width: $breakPointSmallPhone) {
         font-size: 12px;
     }
+
+    --header-height: 123px;
+
+    @media (max-width: $breakPointPhone) {
+        --header-height: 93px;
+    }
 }
 
 @font-face {
@@ -53,6 +59,7 @@
     border: none;
     font-size: 1rem;
     cursor: pointer;
+    max-width: max-content;
 }
 
 .btn-primary:hover {
@@ -81,6 +88,10 @@ a:hover {
     color: var(--dark);
 }
 
+a.block-link {
+    display: block;
+}
+
 .heading {
     font-family: "Bodoni";
     font-style: italic;
@@ -104,7 +115,11 @@ body {
     font-weight: 700;
     background: white;
     color: var(--dark);
-    padding-top: 123px;
+    padding-top: var(--header-height);
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .container {

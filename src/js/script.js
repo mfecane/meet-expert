@@ -27,6 +27,7 @@ function setUpPanel() {
     element.addEventListener("click", () => {
       overlay.classList.toggle("active", true);
       overlayPanel.classList.toggle("active", true);
+      document.body.classList.toggle("lock", true);
     });
   });
 
@@ -34,6 +35,7 @@ function setUpPanel() {
   gutterLabel.addEventListener("click", () => {
     overlay.classList.toggle("active", false);
     overlayPanel.classList.toggle("active", false);
+    document.body.classList.toggle("lock", false);
   });
 }
 
@@ -69,12 +71,19 @@ function setUpCalendar() {
 
 function setUpBackScroll() {
   const scrollBackPanel = document.querySelector(".scroll-back");
+  const personPhoto = document.querySelector(
+    ".expert-profile__profile-container"
+  );
   if (!scrollBackPanel) {
     return;
   }
   let previousScroll = 0;
   window.addEventListener("scroll", function () {
-    scrollBackPanel.classList.toggle("hidden", window.scrollY > previousScroll);
+    const show = window.scrollY < previousScroll;
+    scrollBackPanel.classList.toggle("visible", show);
+    if (personPhoto) {
+      personPhoto && personPhoto.classList.toggle("shift", show);
+    }
     previousScroll = window.scrollY;
   });
 }
@@ -89,6 +98,7 @@ function setUpBurger() {
   burgerButton.addEventListener("click", () => {
     burgerButton.classList.toggle("active");
     nav.classList.toggle("active");
+    document.body.classList.toggle("lock");
   });
   navLinks.forEach((el) =>
     el.addEventListener("click", () => {

@@ -17,7 +17,9 @@
     }
 
     @media (max-width: $breakPointPhone) {
-        display: block;
+        display: flex;
+        transform: translate(0, 0);
+        padding: 50px 0;
     }
 }
 
@@ -26,10 +28,17 @@
     background-position: center center;
     background-size: cover;
     height: 630px;
+    max-height: 50vw;
     width: 549px;
 
     @media (max-width: $breakPointSmallMonitor) {
         flex: 1 0 50%;
+        width: unset;
+    }
+
+    @media (max-width: $breakPointSmallMonitor) {
+        flex: 0 0 50vw;
+        width: 100%;
     }
 }
 
@@ -55,7 +64,7 @@
     }
 
     @media (max-width: $breakPointPhone) {
-        padding-bottom: 0;
+        padding: 0 !important;
     }
 }
 
@@ -63,12 +72,22 @@
     font-size: 3.625rem;
     line-height: 3.875rem;
     color: #ffffff;
+
+    @media (max-width: $breakPointPhone) {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
 }
 
 .suggestion__sub-heading {
     font-size: 2.5rem;
     line-height: 3.5rem;
     color: #ff683e;
+
+    @media (max-width: $breakPointPhone) {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }
 }
 
 .suggestion__paragraph-text {

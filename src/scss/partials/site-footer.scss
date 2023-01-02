@@ -104,8 +104,12 @@
     text-transform: uppercase;
     color: var(--grey);
     max-width: 250px;
-    white-space: pre-line;
     margin-right: 32px;
+
+    pre {
+        font-family: inherit;
+        white-space: pre-line;
+    }
 
     @media (max-width: $breakPointPhone) {
         text-align: right;

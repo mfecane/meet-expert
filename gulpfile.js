@@ -5,8 +5,9 @@ import concat from "gulp-concat";
 import sourcemaps from "gulp-sourcemaps";
 import prettify from "gulp-prettify";
 import fileinclude from "gulp-file-include";
-import { css } from "./gulp/scss.js";
-import { assets } from "./gulp/assets.js";
+import css from "./gulp/scss.js";
+import html from "./gulp/html.js";
+import assets from "./gulp/assets.js";
 import htmlmin from "gulp-htmlmin";
 
 import { deleteAsync } from "del";
@@ -25,23 +26,6 @@ const browserSync = browserSyncImport.create();
 
 const clear = () => {
   return deleteAsync("./dist");
-};
-
-export const html = () => {
-  return src([paths.html])
-    .pipe(
-      plumber({
-        handleError: function (err) {
-          console.log(err);
-          this.emit("end");
-        },
-      })
-    )
-    .pipe(fileinclude())
-    .pipe(htmlmin({ collapseWhitespace: false, removeComments: true }))
-    .pipe(prettify({ indent_size: 2 }))
-    .pipe(gulp.dest(paths.dist))
-    .pipe(browserSync.stream());
 };
 
 const server = () => {
