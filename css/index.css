@@ -295,15 +295,8 @@ body.lock{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
+  margin:0 -10px;
   transform:translateY(-42px);
-}
-
-.tech-list__layout>*{
-  margin-top:20px;
-}
-
-.tech-list__layout>:not(:first-child){
-  margin-left:20px;
 }
 
 .card{
@@ -313,7 +306,8 @@ body.lock{
   display:flex;
   flex-direction:column;
   height:227px;
-  width:calc(20% - 16px);
+  margin:10px;
+  width:calc(20% - 20px);
 }
 
 .card__top{
@@ -1518,7 +1512,7 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
     padding:10px;
   }
   .card{
-    width:calc(33.33333% - 13.33333px);
+    width:calc(33.33% - 20px);
   }
   .searchbar{
     min-width:700px;
@@ -1608,7 +1602,7 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
   }
   .card{
     height:180px;
-    width:calc(50% - 10px);
+    width:calc(50% - 20px);
   }
   .card__title{
     font-size:1.5rem;
