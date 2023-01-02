@@ -288,7 +288,7 @@ body.lock{
   margin-bottom:62px;
 }
 
-.list_layout{
+.tech-list__layout{
   display:flex;
   flex-wrap:wrap;
   gap:20px;
@@ -1257,15 +1257,25 @@ body.lock{
 
 .expert-profile__action-arrow{
   background-color:var(--light);
-  background-image:url(../assets/images/arrow.svg);
-  background-position:50%;
-  background-repeat:no-repeat;
-  background-size:16px 16px;
   height:36px;
   width:36px;
 }
 
-.expert-profile__action-arrow--rotate{
+.expert-profile__action-arrow-icon{
+  background-image:url(../assets/images/arrow.svg);
+  background-position:50%;
+  background-repeat:no-repeat;
+  background-size:16px 16px;
+  height:100%;
+  transition:transform .1s ease;
+  width:100%;
+}
+
+.expert-profile__action:hover .expert-profile__action-arrow-icon{
+  transform:rotate(90deg);
+}
+
+.expert-profile__action-arrow-icon--rotate{
   transform:rotate(-90deg);
 }
 
@@ -1276,6 +1286,10 @@ body.lock{
   font-weight:700;
   line-height:.9375rem;
   text-transform:uppercase;
+}
+
+.expert-profile__action:hover .expert-profile__action-text{
+  color:var(--brand);
 }
 
 :root .fc{
