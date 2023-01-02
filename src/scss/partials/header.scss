@@ -51,8 +51,12 @@
     display: inline-block;
     padding: 0.75rem 0;
 
+    @media (max-width: $breakPointSmallMonitor) {
+        font-size: calc(0.7rem + 0.2vmin);
+    }
+
     @media (max-width: $breakPointTablet) {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 }
 
