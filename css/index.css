@@ -82,7 +82,7 @@ h1,h2,h3,h4,h5,h6{
 @font-face{
   font-family:Gotham Pro;
   font-weight:400;
-  src:url(../assets/fonts/Gotham_Pro_Regular.woff)
+  src:url(../assets/fonts/Gotham_Pro_Medium.woff)
 }
 
 .btn{
@@ -159,7 +159,7 @@ a.block-link{
 body{
   background:#fff;
   color:var(--dark);
-  font-family:Gotham Pro;
+  font-family:Gotham Pro,sans-serif;
   font-weight:700;
   padding-top:var(--header-height);
 }
@@ -388,6 +388,10 @@ body.lock{
   padding:70px 0 72px;
 }
 
+.search__section--alternative{
+  background-color:var(--light);
+}
+
 .search__container{
   align-items:center;
   display:flex;
@@ -406,8 +410,9 @@ body.lock{
   letter-spacing:.08em;
   line-height:.75rem;
   margin:auto;
+  min-height:52px;
   min-width:830px;
-  padding:12px 12px 12px 36px;
+  padding:8px 112px 8px 36px;
   position:relative;
   text-transform:uppercase;
 }
@@ -416,19 +421,13 @@ body.lock{
   background-image:url(../assets/images/glass.svg);
   height:14px;
   left:12px;
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
   width:14px;
 }
 
-.searchbar__input{
-  background:transparent;
-  color:var(--brand);
-  font-size:.8125rem;
-  position:relative;
-  width:100%;
-  z-index:1;
+.searchbar__helptext,.searchbar__icon{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
 }
 
 .searchbar__helptext{
@@ -437,9 +436,6 @@ body.lock{
   left:36px;
   line-height:1.25rem;
   opacity:1;
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
   transition:opacity .1s ease-out;
   width:calc(100% - 42px);
 }
@@ -457,6 +453,61 @@ body.lock{
 
 .searchbar__highlight{
   color:var(--brand);
+}
+
+.searchbar__content{
+  align-items:center;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.searchbar__tag{
+  background:var(--light);
+  color:#1c51b9;
+  display:inline-flex;
+  font-size:.8125rem;
+  font-weight:700;
+  gap:10px;
+  letter-spacing:.08em;
+  line-height:.75rem;
+  min-width:-moz-max-content;
+  min-width:max-content;
+  padding:12px 18px;
+  text-transform:uppercase;
+}
+
+.searchbar__tag-close:before{
+  color:var(--dark);
+  content:"✖";
+  font-family:sans-serif;
+  font-weight:700;
+}
+
+.searchbar__input{
+  background:transparent;
+  color:var(--brand);
+  display:inline-block;
+  flex:1 1 auto;
+  font-size:.8125rem;
+  font-weight:700;
+  position:relative;
+  z-index:1;
+}
+
+.searchbar__go-button{
+  background:var(--brand);
+  color:#fff;
+  flex:0 0 max-content;
+  font-size:.8125rem;
+  font-weight:700;
+  line-height:.75rem;
+  padding:12px 18px;
+  position:absolute;
+  right:12px;
+  text-transform:uppercase;
+  top:50%;
+  transform:translateY(-50%);
 }
 
 .people-list__heading,.people-list__sub-heading{
@@ -901,6 +952,10 @@ body.lock{
   text-transform:uppercase;
 }
 
+.search__section--alternative .tags__tag{
+  background:#fff;
+}
+
 .tags__tag:hover{
   color:#b6b6b6;
 }
@@ -1327,6 +1382,70 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
 
 .burger.active .bar:nth-child(3){
   transform:rotate(-45deg) translate(9px, -9px);
+}
+
+.switcher{
+  position:relative;
+}
+
+.switcher__child{
+  visibility:hidden;
+}
+
+.switcher__child:not(.visible){
+  display:none;
+}
+
+.switcher__child.visible{
+  visibility:visible;
+}
+
+.switcher__button-container{
+  align-items:center;
+  background:#fff;
+  border-radius:6px;
+  bottom:6px;
+  box-shadow:4px 4px 12px 0 rgba(0,0,0,.2);
+  display:flex;
+  gap:12px;
+  height:0;
+  justify-content:center;
+  left:50%;
+  opacity:0;
+  overflow:hidden;
+  padding:0 12px;
+  position:absolute;
+  transform:translateX(-50%);
+  transition:all .2s ease;
+  width:-moz-max-content;
+  width:max-content;
+}
+
+.switcher:hover .switcher__button-container{
+  display:flex;
+  height:-moz-max-content;
+  height:max-content;
+  opacity:1;
+  padding:8px 12px;
+}
+
+.switcher__button{
+  background-color:#bbb;
+  border-radius:6px;
+  cursor:pointer;
+  height:12px;
+  transition:background-color .2s ease;
+  width:12px;
+}
+
+.switcher__button.active,.switcher__button:hover{
+  background-color:#ff7474;
+}
+
+.switcher__label{
+  color:#bbb;
+  font-family:Roboto,sans-serif;
+  font-size:14px;
 }
 
 @media (max-width:999.998px){
