@@ -19,8 +19,8 @@
 
     font-style: normal;
     font-weight: 700;
-    font-size: 13px;
-    line-height: 12px;
+    font-size: 0.8125rem;
+    line-height: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
@@ -52,17 +52,17 @@
     z-index: 1;
     width: 100%;
     background: transparent;
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .searchbar__helptext {
     position: absolute;
     top: 50%;
-    transform: translateY(calc(-50% + 2px));
+    transform: translateY(calc(-50%));
     left: 36px;
     width: calc(100% - 42px);
     height: 16px;
-    line-height: 20px;
+    line-height: 1.25rem;
     color: var(--grey);
     opacity: 1;
     transition: opacity 0.1s ease-out;
@@ -76,7 +76,7 @@
     display: none;
     color: var(--grey);
     text-transform: uppercase;
-    line-height: 20px;
+    line-height: 1.25rem;
 
     @media (max-width: $breakPointPhone) {
         display: block;

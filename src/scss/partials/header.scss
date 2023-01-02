@@ -46,6 +46,10 @@
     position: relative;
     display: inline-block;
     padding: 0.75rem 0;
+
+    @media (max-width: $breakPointTablet) {
+        font-size: 0.85rem;
+    }
 }
 
 .nav__link:not(.btn):before {
@@ -67,7 +71,7 @@
 .nav__link.btn {
     @media (max-width: $breakPointTablet) {
         padding: 10px 10px;
-        min-width: 151px;
+        min-width: 141px;
     }
 }
 

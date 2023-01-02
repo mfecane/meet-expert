@@ -8,10 +8,16 @@
     gap: 42px;
     transform: translateY(97px);
     align-items: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
 
     @media (max-width: $breakPointPhone) {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    @media (max-width: $breakPointPhone) {
+        display: block;
     }
 }
 
@@ -24,11 +30,6 @@
 
     @media (max-width: $breakPointSmallMonitor) {
         flex: 1 0 50%;
-    }
-
-    @media (max-width: $breakPointPhone) {
-        flex: 0 0 350px;
-        width: 100%;
     }
 }
 
@@ -44,8 +45,17 @@
     padding: 0 0 159px 0;
 
     @media (max-width: $breakPointSmallMonitor) {
-        flex: 1 0 50%;
-        padding: 0 0 149px 0;
+        flex: 1 1 auto;
+        padding: 0 0 139px 0;
+    }
+
+    @media (max-width: $breakPointTablet) {
+        flex: 1 1 auto;
+        padding: 0 0 129px 0;
+    }
+
+    @media (max-width: $breakPointPhone) {
+        padding-bottom: 0;
     }
 }
 
@@ -64,8 +74,8 @@
 .suggestion__paragraph-text {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
     color: var(--light);
     margin: 37px 0 27px 0;
 }

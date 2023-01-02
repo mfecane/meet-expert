@@ -1,5 +1,9 @@
 .mission {
     margin: 276px 0 166px 0;
+
+    @media (max-width: $breakPointPhone) {
+        margin: 60px 0;
+    }
 }
 
 .mission-inner {
@@ -9,22 +13,22 @@
 }
 
 .mission-inner__heading.heading {
-    font-size: 54px;
-    line-height: 52px;
+    font-size: 3.375rem;
+    line-height: 3.25rem;
 }
 
 .mission-inner__sub-heading.sub-heading {
     margin-bottom: 27px;
-    font-size: 37px;
+    font-size: 2.3125rem;
+    line-height: 3.25rem;
     font-weight: 700;
-    line-height: 52px;
 }
 
 .mission__copy {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
     text-align: center;
     max-width: 905px;
     color: var(--dark);

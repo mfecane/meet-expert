@@ -43,8 +43,8 @@
     padding: 13px 20px;
     background: #ff683e;
     font-weight: 700;
-    font-size: 13px;
-    line-height: 12px;
+    font-size: 0.8125rem;
+    line-height: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #ffffff;
@@ -67,8 +67,8 @@
     font-family: "Bodoni";
     font-style: italic;
     font-weight: 400;
-    font-size: 23px;
-    line-height: 25px;
+    font-size: 1.4375rem;
+    line-height: 1.5625rem;
     color: var(--dark);
     margin-bottom: 5px;
 }
@@ -76,8 +76,8 @@
 .expert-profile__title {
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
     text-transform: uppercase;
     color: var(--grey);
     margin-bottom: 8px;
@@ -86,16 +86,16 @@
 .expert-profile__cost {
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     color: #2e2e2e;
 }
 
 .expert-profile__text {
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 23px;
+    font-size: 0.9375rem;
+    line-height: 1.4375rem;
     color: var(--dark);
     margin: 20px 0;
 }
@@ -123,15 +123,15 @@
     font-family: "Bodoni";
     font-style: italic;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 25px;
+    font-size: 1.75rem;
+    line-height: 1.5625rem;
     color: var(--dark);
 }
 
 .expert-profile__sub-heading {
-    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 1.5625rem;
     font-weight: 700;
-    line-height: 25px;
     color: var(--brand);
     text-transform: uppercase;
 }
@@ -168,9 +168,9 @@
 }
 
 .help-list-item {
-    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.4375rem;
     font-weight: 400;
-    line-height: 23px;
 }
 
 .comments-header {
@@ -185,15 +185,15 @@
 .comments-header__right {
     flex: 0 0 80px;
     color: var(--accent);
-    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 1.0625rem;
     font-weight: 700;
-    line-height: 17px;
     text-align: right;
 }
 
 .comments-list {
     display: flex;
     flex-direction: column;
-    gap: 23px;
+    gap: 1.4375rem;
     margin: 0 0 138px 0;
 }

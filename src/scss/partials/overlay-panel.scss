@@ -34,8 +34,7 @@
     @media (max-width: $breakPointTablet) {
         max-width: 100vw;
         min-width: 100vw;
-        min-height: 70vh;
-        max-height: 600px;
+        height: 75vh;
         transform: translateY(100%);
         flex-direction: column;
     }
@@ -118,8 +117,8 @@
     padding: 13px 20px;
     background: #ff683e;
     font-weight: 700;
-    font-size: 13px;
-    line-height: 12px;
+    font-size: 0.8125rem;
+    line-height: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #ffffff;
@@ -132,8 +131,8 @@
     font-family: "Bodoni";
     font-style: italic;
     font-weight: 400;
-    font-size: 23px;
-    line-height: 25px;
+    font-size: 1.4375rem;
+    line-height: 1.5625rem;
     color: #2e2e2e;
     margin-bottom: 5px;
 }
@@ -141,8 +140,8 @@
 .person-details__title {
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
     text-transform: uppercase;
     color: #cdcdcd;
     margin-bottom: 8px;
@@ -151,8 +150,8 @@
 .person-details__cost {
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     color: #2e2e2e;
     margin-bottom: 19px;
 }
@@ -160,7 +159,7 @@
 .person-details__text {
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 23px;
+    font-size: 0.9375rem;
+    line-height: 1.4375rem;
     color: #2e2e2e;
 }

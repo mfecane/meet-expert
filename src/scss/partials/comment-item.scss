@@ -6,8 +6,8 @@
 .comment_text {
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
     color: var(--dark);
     margin-bottom: 19px;
 }
@@ -33,16 +33,16 @@
     flex: 2 0 auto;
     font-family: "Bodoni";
     font-style: italic;
-    font-size: 23px;
-    line-height: 25px;
+    font-size: 1.4375rem;
+    line-height: 1.5625rem;
     color: var(--dark);
 }
 .comment__date {
     flex: 0 0 max-content;
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 26px;
+    font-size: 0.8125rem;
+    line-height: 1.625rem;
     text-align: right;
     color: var(--grey);
 
