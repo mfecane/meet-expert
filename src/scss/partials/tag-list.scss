@@ -1,7 +1,15 @@
 .tags__container {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
     max-width: fit-content;
     margin: 15px 0 52px 0;
+    margin-top: -12px;
+
+    & > * {
+        margin-top: 12px;
+    }
+
+    & > :not(:last-child) {
+        margin-right: 12px;
+    }
 }

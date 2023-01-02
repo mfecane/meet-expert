@@ -15,14 +15,12 @@
 .scroll-back__inner {
     display: flex;
     padding: 22px 0;
-    gap: 12px;
     align-items: center;
     justify-content: space-between;
 }
 
 .scroll-back__back-link {
     display: flex;
-    gap: 12px;
     align-items: center;
 }
 
@@ -34,6 +32,7 @@
     background-size: cover;
     background-image: url(../assets/images/arrow.svg);
     transform: scaleX(-1);
+    margin-right: 12px;
 }
 
 .scroll-back__caption {
@@ -44,6 +43,7 @@
     line-height: 0.9375rem;
     text-transform: uppercase;
     color: var(--gray);
+    transform: translateY(2px);
 }
 
 .scroll-back__heart {

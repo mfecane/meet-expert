@@ -78,7 +78,7 @@
     overflow: auto;
     height: 100%;
 }
-//    margin: 33px 0 52px;
+
 .calendarEl {
 }
 
@@ -95,7 +95,6 @@
 .person-details {
     display: flex;
     flex: 0 0 min-content;
-    gap: 30px;
 }
 
 .person-details__profile-container {
@@ -125,6 +124,7 @@
 }
 
 .person-details__info {
+    margin-right: 30px;
 }
 
 .person-details__name {

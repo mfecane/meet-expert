@@ -11,11 +11,9 @@
     display: flex;
     margin-bottom: 176px;
     justify-content: space-between;
-    gap: 20px;
 
     @media (max-width: $breakPointTablet) {
         flex-direction: column;
-        gap: 50px;
     }
 
     @media (max-width: $breakPointSmallPhone) {
@@ -41,6 +39,12 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 16px;
     column-gap: 58px;
+    margin-left: 20px;
+
+    @media (max-width: $breakPointTablet) {
+        margin-top: 50px;
+        margin-left: 0px;
+    }
 
     @media (max-width: $breakPointSmallPhone) {
         display: flex;

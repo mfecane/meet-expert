@@ -15,14 +15,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
     height: 100%;
 }
 
 .logo {
     height: 23px;
     flex: 0 0 216px;
-
+    margin-right: 20px;
     @media (max-width: $breakPointTablet) {
         flex: 0 0 14rem;
     }
@@ -30,12 +29,41 @@
 
 .nav {
     display: flex;
-    gap: 40px;
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: $breakPointTablet) {
-        gap: 16px;
+    & > :not(:first-child) {
+        margin-left: 40px;
+        @media (max-width: $breakPointTablet) {
+            margin-left: 16px;
+        }
+    }
+
+    @media (max-width: $burgerBreakpoint) {
+        position: absolute;
+        background-color: white;
+        top: var(--header-height);
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - var(--header-height));
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 200ms ease;
+        padding: 3.75rem;
+        justify-content: flex-start;
+        background-color: var(--light);
+
+        & > :not(:first-child) {
+            margin-top: 1.875rem;
+            margin-left: 0;
+        }
+
+        &.active {
+            display: flex;
+            transform: translateX(0);
+
+            overflow: auto;
+        }
     }
 }
 
@@ -80,30 +108,5 @@
     @media (max-width: $breakPointTablet) {
         padding: 10px 10px;
         min-width: 141px;
-    }
-}
-
-.nav {
-    @media (max-width: $burgerBreakpoint) {
-        position: absolute;
-        background-color: white;
-        top: var(--header-height);
-        left: 0;
-        width: 100vw;
-        height: calc(100vh - var(--header-height));
-        flex-direction: column;
-        transform: translateX(100%);
-        transition: transform 200ms ease;
-        padding: 3.75rem;
-        gap: 1.875rem;
-        justify-content: flex-start;
-        background-color: var(--light);
-
-        &.active {
-            display: flex;
-            transform: translateX(0);
-
-            overflow: auto;
-        }
     }
 }

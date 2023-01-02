@@ -5,7 +5,6 @@
 
 .suggestion__layout {
     display: flex;
-    gap: 42px;
     transform: translateY(97px);
     align-items: flex-end;
     justify-content: space-between;
@@ -51,6 +50,7 @@
 }
 
 .suggestion__text {
+    margin-left: 43px;
     padding: 0 0 159px 0;
 
     @media (max-width: $breakPointSmallMonitor) {

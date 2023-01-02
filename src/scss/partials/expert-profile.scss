@@ -1,6 +1,5 @@
 .expert-profile {
     display: flex;
-    gap: 30px;
     margin-top: 89px;
 
     @media (max-width: $breakPointPhone) {
@@ -24,6 +23,7 @@
 
     @media (max-width: $breakPointPhone) {
         display: grid;
+        position: static;
         grid-template-columns: 260px auto;
         grid-template-rows: 400px auto;
         column-gap: 20px;
@@ -68,6 +68,12 @@
 }
 
 .expert-profile__info {
+    margin-left: 30px;
+
+    @media (max-width: $breakPointPhone) {
+        margin-top: 30px;
+        margin-left: 0px;
+    }
 }
 
 .expert-profile__name {
@@ -115,7 +121,6 @@
     margin-top: 26px;
     display: flex;
     flex-direction: column;
-    gap: 17px;
 
     @media (max-width: $breakPointPhone) {
         margin-top: 0;
@@ -123,6 +128,10 @@
 
     @media (max-width: $breakPointSmallPhone) {
         margin-top: 16px;
+    }
+
+    & > :not(:first-child) {
+        margin-top: 17px;
     }
 }
 
@@ -202,6 +211,9 @@
 .comments-list {
     display: flex;
     flex-direction: column;
-    gap: 1.4375rem;
     margin: 0 0 138px 0;
+
+    & > :not(:first-child) {
+        margin-top: 1.4375rem;
+    }
 }

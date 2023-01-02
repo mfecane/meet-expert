@@ -1,7 +1,10 @@
 .expert-profile__action.block-link {
     display: flex;
-    gap: 12px;
     align-items: center;
+
+    & > :not(:first-child) {
+        margin-left: 12px;
+    }
 }
 
 .expert-profile__action-arrow {

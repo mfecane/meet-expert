@@ -11,7 +11,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 22px;
 }
 
 .searchbar {
@@ -21,6 +20,7 @@
     border: 2px solid var(--brand);
     padding: 4px 12px 4px 36px;
     min-height: 52px;
+    margin-bottom: 20px;
 
     font-style: normal;
     font-weight: 700;
@@ -95,7 +95,6 @@
 .searchbar__content {
     display: flex;
     align-items: center;
-    gap: 12px;
     flex-wrap: wrap;
     flex: 1 0 auto;
 }
@@ -111,10 +110,14 @@
     text-transform: uppercase;
     color: #1c51b9;
     display: inline-flex;
-    gap: 10px;
+
+    &:not(:last-child) {
+        margin-right: 12px;
+    }
 }
 
 .searchbar__tag-close {
+    margin-left: 10px;
     &:before {
         font-family: sans-serif;
         font-weight: 700;

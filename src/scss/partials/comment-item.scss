@@ -3,6 +3,7 @@
     box-shadow: 0px 8px 31px rgba(28, 81, 185, 0.05);
     padding: 20px 32px 20px 23px;
 }
+
 .comment_text {
     font-style: normal;
     font-weight: 400;
@@ -11,15 +12,20 @@
     color: var(--dark);
     margin-bottom: 19px;
 }
+
 .comment__info {
     display: flex;
-    gap: 20px;
     align-items: center;
 
     @media (max-width: $breakPointSmallPhone) {
         flex-wrap: wrap;
     }
+
+    & :not(:first-child) {
+        margin-left: 20px;
+    }
 }
+
 .comment__image {
     flex: 0 0 32px;
     height: 32px;
@@ -29,6 +35,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .comment__author {
     flex: 2 0 auto;
     font-family: "Bodoni";
@@ -37,6 +44,7 @@
     line-height: 1.5625rem;
     color: var(--dark);
 }
+
 .comment__date {
     flex: 0 0 max-content;
     font-style: normal;
