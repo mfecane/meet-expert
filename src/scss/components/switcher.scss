@@ -1,6 +1,7 @@
 .switcher {
     position: relative;
 }
+
 .switcher__child {
     visibility: hidden;
 
@@ -31,6 +32,7 @@
     height: 0;
     padding: 0px 12px;
     opacity: 0;
+    cursor: pointer;
 
     & > :not(:first-child) {
         margin-left: 12px;
@@ -48,17 +50,26 @@
     width: 12px;
     height: 12px;
     border-radius: 6px;
-    background-color: #bbb;
-    transition: background-color 200ms ease;
-    cursor: pointer;
-    &.active,
-    &:hover {
-        background-color: rgb(255, 116, 116);
-    }
+    background-color: #ddd;
+    transition: background-color 300ms ease;
 }
 
 .switcher__label {
     font-family: Roboto, sans-serif;
     font-size: 14px;
-    color: #bbb;
+    color: #ddd;
+    transition: background-color 300ms ease;
+}
+
+.switcher__button-container:hover {
+    .switcher__button {
+        background-color: #999;
+        &.active,
+        &:hover {
+            background-color: rgb(255, 116, 116);
+        }
+    }
+    .switcher__label {
+        color: #999;
+    }
 }

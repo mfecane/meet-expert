@@ -61,6 +61,8 @@
     @media (max-width: $breakPointTablet) {
         flex: 1 1 auto;
         padding: 0 0 129px 0;
+        margin-left: 0px;
+        margin-top: 20px;
     }
 
     @media (max-width: $breakPointPhone) {

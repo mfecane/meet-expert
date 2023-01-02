@@ -1,3 +1,10 @@
+.tags__container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    margin: 15px -6px 52px -6px;
+}
+
 .tags__tag {
     padding: 12px 18px;
     font-style: normal;
@@ -9,6 +16,7 @@
     color: var(--grey);
     background: var(--light);
     cursor: pointer;
+    margin: 6px;
 
     .search__section--alternative & {
         background: white;

@@ -16,6 +16,7 @@
     top: var(--header-height);
     align-self: flex-start;
     transition: top 200ms ease-out;
+    margin-bottom: 20px;
 
     &.shift {
         top: calc(var(--header-height) + 75px);

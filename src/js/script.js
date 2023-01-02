@@ -120,7 +120,7 @@ function setUpSwitchers() {
         switcherElement.appendChild(buttonContainer);
 
         const label = document.createElement("span");
-        label.innerText = "View layout variant";
+        label.innerText = "Switch layout variant";
         label.classList.add("switcher__label");
         buttonContainer.appendChild(label);
 
