@@ -7,14 +7,24 @@
 .expert-profile__action-arrow {
     width: 36px;
     height: 36px;
+    background-color: var(--light);
+}
+
+.expert-profile__action-arrow-icon {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 16px 16px;
     background-image: url(../assets/images/arrow.svg);
-    background-color: var(--light);
+    width: 100%;
+    height: 100%;
+    transition: transform 100ms ease;
+
+    .expert-profile__action:hover & {
+        transform: rotate(90deg);
+    }
 }
 
-.expert-profile__action-arrow--rotate {
+.expert-profile__action-arrow-icon--rotate {
     transform: rotate(-90deg);
 }
 
@@ -25,4 +35,8 @@
     line-height: 0.9375rem;
     text-transform: uppercase;
     color: var(--grey);
+
+    .expert-profile__action:hover & {
+        color: var(--brand);
+    }
 }

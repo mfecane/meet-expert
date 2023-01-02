@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,11 +12,11 @@
     @@include("partials/header.html")
 
     <!-- prettier-ignore -->
-    <div class="switch">
+    <div class="switcher">
       @@include("partials/searchbar.html", {
         "class": "search__section--alternative"
       })
-      @@include("partials/searchbar-alt.html", {
+      @@include("partials/experts/searchbar-alt.html", {
         "class": "search__section--alternative"
       })
     </div>
@@ -31,7 +31,7 @@
     @@include("partials/mission-section.html")
 
     <!--  -->
-    @@include("partials/site-footer.html")
+    @@include("partials/footer.html")
 
     <!--  -->
     @@include("partials/overlay-panel.html")

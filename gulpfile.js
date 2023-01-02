@@ -1,14 +1,10 @@
 import gulp from "gulp";
 import browserSyncImport from "browser-sync";
-import plumber from "gulp-plumber";
 import concat from "gulp-concat";
 import sourcemaps from "gulp-sourcemaps";
-import prettify from "gulp-prettify";
-import fileinclude from "gulp-file-include";
 import css from "./gulp/scss.js";
 import html from "./gulp/html.js";
 import assets from "./gulp/assets.js";
-import htmlmin from "gulp-htmlmin";
 
 import { deleteAsync } from "del";
 
@@ -54,9 +50,11 @@ const updateBrowser = () => {
 };
 
 export const watcher = () => {
-  watch("./src/html/**/*.html", html).on("change", updateBrowser);
+  watch(["./src/html/**/*.html", "./data/*.json"], html).on(
+    "change",
+    updateBrowser
+  );
   watch("./src/scss/**/*.scss", css).on("change", updateBrowser);
-  watch("./data/*.json", html).on("change", updateBrowser);
   watch("./src/js/**/*.js", js).on("change", updateBrowser);
 };
 

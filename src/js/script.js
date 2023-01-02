@@ -108,27 +108,20 @@ function setUpBurger() {
   );
 }
 
-function setUpSwitch() {
-  const switches = [...document.querySelectorAll(".switch")];
-  if (switches.length) {
-    switches.forEach((switchElement) => {
+function setUpSwitchers() {
+  const switchers = [...document.querySelectorAll(".switcher")];
+  if (switchers.length) {
+    switchers.forEach((switcherElement) => {
       let activeIndex = 0;
-      const children = [...switchElement.children];
+      const children = [...switcherElement.children];
       if (children.length) {
         const buttonContainer = document.createElement("div");
-        buttonContainer.classList.add("switch__button-container");
-        switchElement.appendChild(buttonContainer);
-
-        const closeButton = document.createElement("button");
-        closeButton.classList.add("switch__close");
-        buttonContainer.appendChild(closeButton);
-        closeButton.addEventListener("click", () => {
-          buttonContainer.style.display = "none";
-        });
+        buttonContainer.classList.add("switcher__button-container");
+        switcherElement.appendChild(buttonContainer);
 
         const label = document.createElement("span");
         label.innerText = "View layout variant";
-        label.classList.add("switch__label");
+        label.classList.add("switcher__label");
         buttonContainer.appendChild(label);
 
         const updateElements = (index) => {
@@ -136,13 +129,19 @@ function setUpSwitch() {
           children.forEach((child, idx) => {
             child.classList.toggle("visible", activeIndex === idx);
           });
+
+          [...buttonContainer.querySelectorAll(".switcher__button")].forEach(
+            (child, idx) => {
+              child.classList.toggle("active", activeIndex === idx);
+            }
+          );
         };
 
         children.forEach((child, index) => {
-          child.classList.add("switch__child");
+          child.classList.add("switcher__child");
 
           const div = document.createElement("div");
-          div.classList.add("switch__button");
+          div.classList.add("switcher__button");
           buttonContainer.appendChild(div);
 
           div.addEventListener("click", () => {
@@ -162,5 +161,5 @@ window.addEventListener("load", function () {
   setUpCalendar();
   setUpBackScroll();
   setUpBurger();
-  setUpSwitch();
+  setUpSwitchers();
 });

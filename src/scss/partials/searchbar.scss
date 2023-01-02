@@ -19,7 +19,8 @@
     min-width: 830px;
     background: #ffffff;
     border: 2px solid var(--brand);
-    padding: 12px 12px 12px 36px;
+    padding: 4px 12px 4px 36px;
+    min-height: 52px;
 
     font-style: normal;
     font-weight: 700;
@@ -29,7 +30,12 @@
     text-transform: uppercase;
 
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+
+    &--with-button {
+        padding-right: 112px;
+    }
 
     @media (max-width: $breakPointTablet) {
         min-width: 700px;
@@ -48,15 +54,6 @@
     width: 14px;
     height: 14px;
     background-image: url(../assets/images/glass.svg);
-}
-
-.searchbar__input {
-    color: var(--brand);
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    background: transparent;
-    font-size: 0.8125rem;
 }
 
 .searchbar__helptext {
@@ -93,4 +90,61 @@
 
 .searchbar__highlight {
     color: var(--brand);
+}
+
+.searchbar__content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+}
+
+.searchbar__tag {
+    min-width: max-content;
+    padding: 12px 18px;
+    background: var(--light);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    line-height: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1c51b9;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.searchbar__tag-close {
+    &:before {
+        font-family: sans-serif;
+        font-weight: 700;
+        content: "\2716";
+        color: var(--dark);
+    }
+}
+
+.searchbar__input {
+    color: var(--brand);
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.searchbar__go-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    flex: 0 0 max-content;
+    font-size: 0.8125rem;
+    line-height: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    background: var(--brand);
+    padding: 12px 18px;
 }
