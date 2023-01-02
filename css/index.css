@@ -392,7 +392,6 @@ body.lock{
 
 .search__container{
   flex-direction:column;
-  gap:22px;
   justify-content:center;
 }
 
@@ -409,7 +408,7 @@ body.lock{
   font-weight:700;
   letter-spacing:.08em;
   line-height:.75rem;
-  margin:auto;
+  margin:auto auto 20px;
   min-height:52px;
   min-width:830px;
   padding:4px 12px 4px 36px;
@@ -464,7 +463,6 @@ body.lock{
   display:flex;
   flex:1 0 auto;
   flex-wrap:wrap;
-  gap:12px;
 }
 
 .searchbar__tag{
@@ -473,13 +471,20 @@ body.lock{
   display:inline-flex;
   font-size:.8125rem;
   font-weight:700;
-  gap:10px;
   letter-spacing:.08em;
   line-height:.75rem;
   min-width:-moz-max-content;
   min-width:max-content;
   padding:12px 18px;
   text-transform:uppercase;
+}
+
+.searchbar__tag:not(:last-child){
+  margin-right:12px;
+}
+
+.searchbar__tag-close{
+  margin-left:10px;
 }
 
 .searchbar__tag-close:before{
