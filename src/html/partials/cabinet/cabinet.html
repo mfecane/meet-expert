@@ -1,0 +1,43 @@
+<div class="container container--very-narrow">
+  <div class="cabinet">
+    <div class="cabinet__profile-container">
+      <!-- prettier-ignore -->
+      @@include("../profile-photo.html", { 
+        "linkText": "Update the photo",
+        "linkClass": "profile-photo__link--cabinet", 
+        "icon": true 
+      })
+
+      <div class="cabinet__actions">
+        <!-- prettier-ignore -->
+        @@include('../profile-action.html', { 
+          "text": "Your profile",
+          "class": "profile-action--dark",
+          "link": "#help"
+        })
+        <!-- prettier-ignore -->
+        @@include('./message.html', { 
+          "text": "Messages",
+          "class": "profile-action--dark",
+          "link": "#calendar"
+        })
+        <!-- prettier-ignore -->
+        @@include('../profile-action.html', { 
+          "text": "payments",
+          "class": "profile-action--dark",
+          "link": "#comments"
+        })
+        <!-- prettier-ignore -->
+        @@include('../profile-action.html', { 
+          "text": "Settings",
+          "class": "profile-action--dark",
+          "link": "#top"
+        })
+      </div>
+    </div>
+    <div class="cabinet__content">
+      <!-- prettier-ignore -->
+      @@include('./cabinet-content.html')
+    </div>
+  </div>
+</div>

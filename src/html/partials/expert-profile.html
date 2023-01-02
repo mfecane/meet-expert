@@ -1,28 +1,33 @@
 <div class="container container--narrow">
   <div class="expert-profile">
+    <!-- prettier-ignore -->
     <div class="expert-profile__profile-container">
-      <div class="expert-profile__profile-image-container"></div>
-      <div class="expert-profile__profile-link">Запланировать встречу</div>
+      @@include('./profile-photo.html', { 
+        "linkText": "Запланировать встречу",
+        "linkClass": "", 
+        "icon": false 
+      })
+
       <div class="expert-profile__actions">
         <!-- prettier-ignore -->
-        @@include('./experts/expert-profile-action.html', { 
+        @@include('./profile-action.html', { 
           "text": "Чем я могу помочь",
           "link": "#help"
         })
         <!-- prettier-ignore -->
-        @@include('./experts/expert-profile-action.html', { 
+        @@include('./profile-action.html', { 
           "text": "Доступные даты",
           "link": "#calendar"
         })
         <!-- prettier-ignore -->
-        @@include('./experts/expert-profile-action.html', { 
+        @@include('./profile-action.html', { 
           "text": "Отзывы" ,
           "link": "#comments"
         })
         <!-- prettier-ignore -->
-        @@include('./experts/expert-profile-action.html', { 
+        @@include('./profile-action.html', { 
           "text": "в начало",
-          "class": "expert-profile__action-arrow-icon--rotate",
+          "iconclass": "expert-profile__action-arrow-icon--rotate",
           "link": "#top"
         })
       </div>

@@ -10,14 +10,6 @@ import { deleteAsync } from "del";
 
 const { src, parallel, series, watch, dest } = gulp;
 
-var paths = {
-  html: "./src/html/*.html",
-  dist: "./dist/",
-  scss: "./src/scss/",
-  data: "./src/data/",
-  js: "./src/js/",
-};
-
 const browserSync = browserSyncImport.create();
 
 const clear = () => {
@@ -33,8 +25,7 @@ const server = () => {
 };
 
 const js = () => {
-  return gulp
-    .src("src/js/script.js")
+  return src("src/js/script.js")
     .pipe(sourcemaps.init())
     .pipe(concat("script.min.js"))
     .on("error", function (err) {

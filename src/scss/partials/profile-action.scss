@@ -1,4 +1,4 @@
-.expert-profile__action.block-link {
+.profile-action.block-link {
     display: flex;
     align-items: center;
 
@@ -7,13 +7,35 @@
     }
 }
 
-.expert-profile__action-arrow {
+.profile-action__icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--messages {
+        background: var(--accent);
+        color: white;
+
+        .profile-action:hover & {
+            background: var(--accent-hover);
+        }
+    }
+
+    .profile-action--dark:hover & {
+        background-color: var(--dark-bg);
+    }
+}
+
+.profile-action__icon-action {
     width: 36px;
     height: 36px;
     background-color: var(--light);
 }
 
-.expert-profile__action-arrow-icon {
+.profile-action__icon--arrow {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 16px 16px;
@@ -25,13 +47,17 @@
     .expert-profile__action:hover & {
         transform: rotate(90deg);
     }
+
+    .profile-action--dark:hover & {
+        color: white;
+    }
 }
 
-.expert-profile__action-arrow-icon--rotate {
+.profile-action__icon--arrow--rotate {
     transform: rotate(-90deg);
 }
 
-.expert-profile__action-text {
+.profile-action__text {
     font-style: normal;
     font-weight: 700;
     font-size: 0.9375rem;
@@ -39,7 +65,7 @@
     text-transform: uppercase;
     color: var(--grey);
 
-    .expert-profile__action:hover & {
+    .profile-action:hover & {
         color: var(--brand);
     }
 }

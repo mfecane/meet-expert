@@ -1,0 +1,32 @@
+.cabinet {
+    display: flex;
+    margin-top: 89px;
+    overflow: hidden;
+}
+
+.cabinet__profile-container {
+    flex: 0 0 260px;
+}
+
+.cabinet__actions {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $breakPointPhone) {
+        margin-top: 0;
+    }
+
+    @media (max-width: $breakPointSmallPhone) {
+        margin-top: 16px;
+    }
+
+    & > :not(:first-child) {
+        margin-top: 17px;
+    }
+}
+
+.cabinet__content {
+    margin-left: 45px;
+    overflow: hidden;
+}

@@ -23,7 +23,7 @@
     flex: 0 0 216px;
     margin-right: 20px;
     @media (max-width: $breakPointTablet) {
-        flex: 0 0 14rem;
+        flex: 0 0 184px;
     }
 }
 
@@ -97,11 +97,18 @@
     width: 100%;
     opacity: 0;
     background-color: var(--brand);
-    transition: opacity 0.1s ease-out;
+    transition: opacity 0.2s ease-out;
 }
 
-.nav__link:not(.btn):hover:before {
+.nav__link:not(.btn):hover:before,
+.nav__link.active:not(.btn):hover:before {
     opacity: 1;
+    background-color: var(--brand);
+}
+
+.nav__link.active:not(.btn):before {
+    opacity: 1;
+    background: var(--accent);
 }
 
 .nav__link.btn {

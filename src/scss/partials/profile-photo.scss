@@ -1,0 +1,54 @@
+.profile-photo__container {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.profile-photo__image-container {
+    height: 297px;
+    flex: 1 0 auto;
+    background-image: url(../assets/images/expertface.png);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.profile-photo__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    background-color: var(--grey);
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo__link {
+    flex: 0 0 max-content;
+    padding: 13px 20px;
+    background: #ff683e;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    line-height: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+
+    &:hover {
+        background: var(--accent-hover);
+        color: white;
+    }
+
+    &--cabinet {
+        // profile-photo__link--cabinet
+        background-color: var(--brand);
+
+        &:hover {
+            background: #2d5ebe;
+            color: white;
+        }
+    }
+}

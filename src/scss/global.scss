@@ -13,7 +13,7 @@
     background-color: var(--brand);
     color: white;
     border: none;
-    font-size: 1rem;
+    font-size: 0.8125rem;
     cursor: pointer;
     max-width: max-content;
 }
@@ -34,10 +34,12 @@
 
 .btn-primary:disabled {
     background-color: var(--grey);
+    color: white;
 }
 
 a {
     color: var(--brand);
+    cursor: pointer;
 }
 
 a:hover {
@@ -98,6 +100,21 @@ body {
     margin: auto;
 
     @media (max-width: $breakPointSmallMonitor) {
+        max-width: 100%;
+        margin: 0 40px;
+    }
+
+    @media (max-width: $breakPointPhone) {
+        max-width: 100%;
+        margin: 0 25px;
+    }
+}
+
+.container.container--very-narrow {
+    max-width: 870px;
+    margin: auto;
+
+    @media (max-width: $breakPointTablet) {
         max-width: 100%;
         margin: 0 40px;
     }

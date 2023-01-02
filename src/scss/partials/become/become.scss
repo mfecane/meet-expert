@@ -1,0 +1,47 @@
+:root {
+    --header-height-become: 93px;
+}
+
+body.become-expert {
+    background-color: var(--light);
+}
+
+.become-header {
+    background: white;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100vw;
+    height: var(--header-height-become);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.become__container {
+    min-height: calc(100vh - var(--header-height-become));
+    max-width: 590px;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 32px 0 32px 0;
+}
+
+.become__heading {
+    font-size: 1.9375rem;
+    line-height: 1.8125rem;
+    text-align: center;
+}
+
+.become__subheading {
+    font-size: 1.5rem;
+    line-height: 2.1875rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.become-form {
+    padding: 31px 36px;
+    background: white;
+}
