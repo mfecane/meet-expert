@@ -393,17 +393,19 @@ body.lock{
 }
 
 .search__container{
-  align-items:center;
-  display:flex;
   flex-direction:column;
   gap:22px;
   justify-content:center;
 }
 
+.search__container,.searchbar{
+  align-items:center;
+  display:flex;
+}
+
 .searchbar{
   background:#fff;
   border:2px solid var(--brand);
-  display:block;
   font-size:.8125rem;
   font-style:normal;
   font-weight:700;
@@ -412,9 +414,13 @@ body.lock{
   margin:auto;
   min-height:52px;
   min-width:830px;
-  padding:8px 112px 8px 36px;
+  padding:4px 12px 4px 36px;
   position:relative;
   text-transform:uppercase;
+}
+
+.searchbar--with-button{
+  padding-right:112px;
 }
 
 .searchbar__icon{
@@ -458,6 +464,7 @@ body.lock{
 .searchbar__content{
   align-items:center;
   display:flex;
+  flex:1 0 auto;
   flex-wrap:wrap;
   gap:12px;
 }
@@ -489,7 +496,7 @@ body.lock{
   color:var(--brand);
   display:inline-block;
   flex:1 1 auto;
-  font-size:.8125rem;
+  font-size:1rem;
   font-weight:700;
   position:relative;
   z-index:1;
