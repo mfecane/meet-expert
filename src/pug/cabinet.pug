@@ -1,5 +1,6 @@
 include ./partials/profile-photo.pug
 include ./partials/profile-action.pug
+include ./partials/profile-action-msg.pug
 include ./components/form-input.pug
 
 doctype html
@@ -21,7 +22,7 @@ html(lang="ru")
           +profile-photo("Update the photo", "profile-photo__link--cabinet", true)
           .cabinet__actions
             +profile-action("#help", "profile-action--dark", "", "Your profile")
-            +profile-action("#help", "profile-action--dark", "", "Your profile")
+            +profile-action-msg("#help", "Your profile")
             +profile-action("#help", "profile-action--dark", "", "Your profile")
             +profile-action("#help", "profile-action--dark", "", "Your profile")
         .cabinet__content
@@ -37,33 +38,39 @@ html(lang="ru")
             +form-input({
               label: "First name:",
               name: "firstname",
-              value: "Alexander"
+              value: "Alexander",
+              gap: "gap"
             })
             +form-input({
               label: "last name:",
               name: "secondname",
-              value: "kolesnikov"
+              value: "kolesnikov",
+              gap: "gap"
             })
             +form-input({
               label: "country:",
               name: "country",
-              value: "russia"
+              value: "russia",
+              gap: "gap"
             })
             +form-input({
               label: "City:",
               name: "city",
-              value: "moscow"
+              value: "moscow",
+              gap: "gap"
             })
             +form-input({
               label: "email:",
               name: "email",
               value: "Kolesnikov@gmail.com",
-              type: "email"
+              type: "email",
+              gap: "gap"
             })
             +form-input({
               label: "username:",
               name: "username",
               value: "@alex.kolesnik",
+              gap: "smallgap"
             })
             .form-input__hint A username can consist of letters, numbers, and underscores
 
@@ -74,11 +81,13 @@ html(lang="ru")
               label: "Company:",
               name: "company",
               value: "unicredit bank",
+              gap: "gap",
             })
             +form-input({
               label: "Current position:",
               name: "position",
               value: "IT Project Manager",
+              gap: "smallgap"
             })
 
             .form-textarea__container
@@ -130,34 +139,42 @@ html(lang="ru")
             +form-input({
               label: "1:",
               value: "data",
+              gap: "gap"
             })
             +form-input({
               label: "2:",
               value: "Services",
+              gap: "gap"
             })
             +form-input({
               label: "3:",
               value: "annual reports",
+              gap: "gap"
             })
             +form-input({
               label: "4:",
               value: "research & Testing",
+              gap: "gap"
             })
             +form-input({
               label: "5:",
               value: "Platform",
+              gap: "gap"
             })
             +form-input({
               label: "6:",
               value: "Infographics",
+              gap: "gap"
             })
             +form-input({
               label: "7:",
               value: "Business",
+              gap: "gap"
             })
             +form-input({
               label: "8:",
               value: "Digital produ",
+              gap: "smallgap"
             })
 
             .form-add
@@ -168,15 +185,16 @@ html(lang="ru")
             h3.cabinet-sub-heading.sub-heading of your services
 
             .price
-              .price__tag.active RUB
-              .price__tag USD
+              button.price__tag.active RUB
+              button.price__tag USD
 
-              +form-input({
-                label: "per hour:",
-                value: "2 800",
-              })
+              .cabinet__input--left-margin
+                +form-input({
+                  label: "per hour:",
+                  value: "2 800",
+                })
 
-              .price__hint 3 569 RUB after commissions
+              .price__hint.cabinet__input--left-margin 3 569 RUB after commissions
 
             .form-input__hint.
               Choose the main currency, as well as the cost of classes with you. When substituting

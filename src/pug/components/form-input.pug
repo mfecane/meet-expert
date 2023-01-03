@@ -1,5 +1,6 @@
 mixin form-input(options)
-  .form-input__container
+  - const className = options.gap ? 'form-input__container--' + options.gap : ''
+  .form-input__container(class=className)
     .form-input__label= options.label
-      - const type = options.type || "text"
-      input(type=type, class="form-input__input", value=options.value, name=options.name)
+    - const type = options.type || "text"
+    input(type=type, class="form-input__input", value=options.value, name=options.name)

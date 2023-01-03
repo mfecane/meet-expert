@@ -5,20 +5,21 @@
   border: 2px solid var(--light);
   padding: 21px;
 
-  &:not(:last-child) {
+  &--gap {
     margin-bottom: 23px;
+  }
+
+  &--smallgap {
+    margin-bottom: 12px;
   }
 
   &.active {
     border: 2px solid var(--brand);
   }
-
-  &--smallgap:not(:last-child) {
-    margin-bottom: 12px;
-  }
 }
 
 .form-input__label {
+  flex: 0 0 max-content;
   font-size: 0.8125rem;
   line-height: 0.75rem;
   letter-spacing: 0.08em;
@@ -27,7 +28,7 @@
 }
 
 .form-input__input {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   margin-left: 8px;
   font-weight: 700;
   font-size: 0.8125rem;
@@ -35,6 +36,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brand);
+  min-width: 0;
 }
 
 .form-input__photo-drag-container {
@@ -159,7 +161,7 @@
   color: var(--brand);
 }
 
-.active {
+.price__tag.active {
   background: var(--brand);
   color: white;
 }

@@ -1,70 +1,74 @@
 .constraints {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .constraints__item {
-    position: relative;
-    margin-left: 20px;
+  position: relative;
+  margin-left: 20px;
 
-    &.active {
-        color: var(--accent);
-    }
+  &.active {
+    color: var(--accent);
+  }
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: -20px;
-        width: 12px;
-        height: 2px;
-        transform: translateY(-50%);
-        background: var(--grey);
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 12px;
+    height: 2px;
+    transform: translateY(-50%);
+    background: var(--grey);
+  }
 
-    &:not(:last-child) {
-        margin-bottom: 16px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 .cabinet-form {
 }
 
 .cabinet-heading {
-    font-size: 1.75rem;
-    line-height: 1.5625rem;
+  font-size: 1.75rem;
+  line-height: 1.5625rem;
 }
 
 .cabinet-sub-heading {
-    font-size: 1.0625rem;
-    line-height: 1.5625rem;
-    margin-bottom: 27px;
+  font-size: 1.0625rem;
+  line-height: 1.5625rem;
+  margin-bottom: 27px;
 }
 
 .competencies {
-    background: white;
-    border: 2px solid var(--light);
-    padding: 21px 21px 18px 21px;
+  background: white;
+  border: 2px solid var(--light);
+  padding: 21px 21px 18px 21px;
 }
 
 .competencies__label {
-    font-size: 0.8125rem;
-    line-height: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--grey);
-    margin-bottom: 14px;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 14px;
 }
 
 .competencies__tags {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cabinet-form__text {
-    color: var(--dark);
+  color: var(--dark);
 
-    margin-bottom: 14px;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.625rem;
+  margin-bottom: 14px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.cabinet__input--left-margin {
+  margin-left: 20px;
 }
