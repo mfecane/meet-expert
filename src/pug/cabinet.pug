@@ -1,6 +1,7 @@
 include ./partials/profile-photo.pug
 include ./partials/profile-action.pug
 include ./partials/profile-action-msg.pug
+include ./components/action-button.pug
 include ./components/form-input.pug
 
 doctype html
@@ -34,7 +35,7 @@ html(lang="ru")
             .constraints__item Formats: JPEG, JPG, PNG
             .constraints__item Size up to 1.5 MB
 
-          form.cabinter-form(action="")
+          form.cabinet-form(action="")
             +form-input({
               label: "First name:",
               name: "firstname",
@@ -177,9 +178,10 @@ html(lang="ru")
               gap: "smallgap"
             })
 
-            .form-add
-              .form-add__icon
-              .form-add__label add one more line
+            +action-button({
+              text: 'add one more line',
+              class:'cabinet-add'
+            })
 
             h2.cabinet-heading.heading The cost
             h3.cabinet-sub-heading.sub-heading of your services
@@ -188,13 +190,12 @@ html(lang="ru")
               button.price__tag.active RUB
               button.price__tag USD
 
-              .cabinet__input--left-margin
-                +form-input({
-                  label: "per hour:",
-                  value: "2 800",
-                })
+              +form-input({
+                label: "per hour:",
+                value: "2 800",
+              })
 
-              .price__hint.cabinet__input--left-margin 3 569 RUB after commissions
+              .price__hint 3 569 RUB after commissions
 
             .form-input__hint.
               Choose the main currency, as well as the cost of classes with you. When substituting

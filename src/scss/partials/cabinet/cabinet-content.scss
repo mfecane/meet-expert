@@ -1,3 +1,7 @@
+.cabinet-form {
+  margin-bottom: 198px;
+}
+
 .constraints {
   margin-bottom: 28px;
 }
@@ -24,9 +28,6 @@
   &:not(:last-child) {
     margin-bottom: 16px;
   }
-}
-
-.cabinet-form {
 }
 
 .cabinet-heading {
@@ -69,6 +70,10 @@
   line-height: 1.625rem;
 }
 
-.cabinet__input--left-margin {
-  margin-left: 20px;
+.cabinet__input--right-margin {
+  margin-right: 20px;
+}
+
+.cabinet-add {
+  margin-bottom: 52px;
 }

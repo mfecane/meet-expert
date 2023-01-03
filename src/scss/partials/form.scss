@@ -114,44 +114,28 @@
   line-height: 1.4375rem;
   color: var(--dark);
   width: 100%;
-  min-height: 400px;
-}
-
-.form-add {
-  display: flex;
-  align-items: center;
-  margin-bottom: 52px;
-}
-
-.form-add__icon {
-  background: var(--light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex: 0 0 36px;
-  height: 36px;
-
-  &:before {
-    content: "\002B";
-    font-size: 25px;
-    font-weight: 400;
-    color: var(--brand);
-  }
-}
-
-.form-add__label {
-  font-size: 0.9375rem;
-  line-height: 1.0625rem;
-  text-transform: uppercase;
-  color: var(--grey);
-  margin-left: 12px;
+  min-height: 360px;
+  height: auto;
+  resize: vertical;
 }
 
 .price {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: $breakPointTablet) {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  & > * {
+    margin-top: 12px;
+  }
+
+  & > *:not(:last-child):not(:first-child) {
+    margin-right: 12px;
+  }
 }
 
 .price__tag {

@@ -1,126 +1,126 @@
 .btn {
-    display: flex;
-    justify-content: center;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    min-width: 181px;
-    text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 181px;
+  text-transform: uppercase;
 }
 
 .btn-primary {
-    background-color: var(--brand);
-    color: white;
-    border: none;
-    font-size: 0.8125rem;
-    cursor: pointer;
-    max-width: max-content;
+  background-color: var(--brand);
+  color: white;
+  border: none;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  max-width: max-content;
 }
 
 .btn-primary:hover {
-    color: white;
-    background-color: var(--dark-bg);
+  color: white;
+  background-color: var(--dark-bg);
 }
 
 .btn-primary:active {
-    background-color: #0d378d;
+  background-color: #0d378d;
 }
 
 .btn-primary:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px #8398c4;
+  outline: none;
+  box-shadow: 0 0 0 3px #8398c4;
 }
 
 .btn-primary:disabled {
-    background-color: var(--grey);
-    color: white;
+  background-color: var(--grey);
+  color: white;
 }
 
 a {
-    color: var(--brand);
-    cursor: pointer;
+  color: var(--brand);
+  cursor: pointer;
 }
 
 a:hover {
-    color: var(--dark);
+  color: var(--dark);
 }
 
 a.block-link {
-    display: block;
+  display: block;
 }
 
 .heading {
-    font-family: "Bodoni";
-    font-style: italic;
-    font-weight: 400;
-    font-size: 4.375rem;
-    line-height: 4.1875rem;
-    color: var(--dark);
+  font-family: "Bodoni";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 4.375rem;
+  line-height: 4.1875rem;
+  color: var(--dark);
 }
 
 .sub-heading {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3.125rem;
-    line-height: 4.1875rem;
-    text-transform: uppercase;
-    color: var(--brand);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.125rem;
+  line-height: 4.1875rem;
+  text-transform: uppercase;
+  color: var(--brand);
 }
 
 body {
-    font-family: "Gotham Pro", sans-serif;
-    font-weight: 700;
-    background: white;
-    color: var(--dark);
-    padding-top: var(--header-height);
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 700;
+  background: white;
+  color: var(--dark);
+  padding-top: var(--header-height);
 
-    &.lock {
-        overflow: hidden;
-    }
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
+  max-width: 1200px;
+  margin: auto;
 
-    @media (max-width: $breakPointSmallMonitor) {
-        max-width: 100%;
-        margin: 0 40px;
-    }
+  @media (max-width: $breakPointSmallMonitor) {
+    max-width: 100%;
+    margin: 0 40px;
+  }
 
-    @media (max-width: $breakPointPhone) {
-        max-width: 100%;
-        margin: 0 20px;
-    }
+  @media (max-width: $breakPointPhone) {
+    max-width: 100%;
+    margin: 0 20px;
+  }
 }
 
 .container.container--narrow {
-    max-width: 1050px;
-    margin: auto;
+  max-width: 1050px;
+  margin: auto;
 
-    @media (max-width: $breakPointSmallMonitor) {
-        max-width: 100%;
-        margin: 0 40px;
-    }
+  @media (max-width: $breakPointSmallMonitor) {
+    max-width: 100%;
+    margin: 0 40px;
+  }
 
-    @media (max-width: $breakPointPhone) {
-        max-width: 100%;
-        margin: 0 25px;
-    }
+  @media (max-width: $breakPointPhone) {
+    max-width: 100%;
+    margin: 0 25px;
+  }
 }
 
 .container.container--very-narrow {
-    max-width: 870px;
-    margin: auto;
+  max-width: 952px;
+  margin: auto;
 
-    @media (max-width: $breakPointTablet) {
-        max-width: 100%;
-        margin: 0 40px;
-    }
+  @media (max-width: $breakPointTablet) {
+    max-width: 100%;
+    margin: 0 40px;
+  }
 
-    @media (max-width: $breakPointPhone) {
-        max-width: 100%;
-        margin: 0 25px;
-    }
+  @media (max-width: $breakPointPhone) {
+    max-width: 100%;
+    margin: 0 25px;
+  }
 }
