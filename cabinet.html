@@ -68,10 +68,15 @@
       <div class="cabinet">
         <div class="cabinet__profile-container">
           <div class="profile-photo__container">
-            <div class="profile-photo__image-container profile-photo__link--cabinet">
-              <div class="profile-photo__icon"></div>
+            <div class="profile-photo__image-container">
+              <div class="profile-photo__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
+                  <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
+                  <rect x="20.25" y="28.27" width="7" height="21.83" />
+                  <rect x="35.56" y="28.27" width="7" height="21.83" />
+                </svg>
+              </div>
             </div>
-            <div class="block-link profile-photo__link">Update the photo</div>
+            <div class="block-link profile-photo__link profile-photo__link--cabinet">Update the photo</div>
           </div>
           <div class="cabinet__actions"><a class="block-link profile-action profile-action--dark" href="#help">
               <div class="profile-action__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.87 129.8">
@@ -104,7 +109,7 @@
             <div class="constraints__item">Formats: JPEG, JPG, PNG</div>
             <div class="constraints__item">Size up to 1.5 MB</div>
           </div>
-          <form class="cabinter-form" action="">
+          <form class="cabinet-form" action="">
             <div class="form-input__container form-input__container--gap">
               <div class="form-input__label">First name:</div><input class="form-input__input" type="text" value="Alexander" name="firstname">
             </div>
@@ -190,20 +195,17 @@ you to quickly adapt and gain momentum to reach heights in your future career.
             </div>
             <div class="form-input__container form-input__container--smallgap">
               <div class="form-input__label">8:</div><input class="form-input__input" type="text" value="Digital produ">
-            </div>
-            <div class="form-add">
-              <div class="form-add__icon"></div>
-              <div class="form-add__label">add one more line</div>
-            </div>
+            </div><a class="block-link action-button cabinet-add" href="#">
+              <div class="action-button__icon"></div>
+              <div class="action-button__text">add one more line</div>
+            </a>
             <h2 class="cabinet-heading heading">The cost</h2>
             <h3 class="cabinet-sub-heading sub-heading">of your services</h3>
             <div class="price"><button class="price__tag active">RUB</button><button class="price__tag">USD</button>
-              <div class="cabinet__input--left-margin">
-                <div class="form-input__container">
-                  <div class="form-input__label">per hour:</div><input class="form-input__input" type="text" value="2 800">
-                </div>
+              <div class="form-input__container">
+                <div class="form-input__label">per hour:</div><input class="form-input__input" type="text" value="2 800">
               </div>
-              <div class="price__hint cabinet__input--left-margin">3 569 RUB after commissions</div>
+              <div class="price__hint">3 569 RUB after commissions</div>
             </div>
             <div class="form-input__hint">Choose the main currency, as well as the cost of classes with you. When substituting the cost on the site, we will start from your base currency </div>
           </form>
