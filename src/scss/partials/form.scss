@@ -1,116 +1,172 @@
 .form-input__container {
-    display: flex;
-    align-items: center;
-    background: white;
-    border: 2px solid var(--light);
-    padding: 21px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid var(--light);
+  padding: 21px;
 
-    &:not(:last-child) {
-        margin-bottom: 23px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 23px;
+  }
 
-    &.active {
-        border: 2px solid var(--brand);
-    }
+  &.active {
+    border: 2px solid var(--brand);
+  }
 
-    &--smallgap:not(:last-child) {
-        margin-bottom: 12px;
-    }
+  &--smallgap:not(:last-child) {
+    margin-bottom: 12px;
+  }
 }
 
 .form-input__label {
-    font-size: 0.8125rem;
-    line-height: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--grey);
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
 }
 
 .form-input__input {
-    flex: 1 0 auto;
-    margin-left: 8px;
-    font-weight: 700;
-    font-size: 0.8125rem;
-    line-height: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--brand);
+  flex: 1 0 auto;
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand);
 }
 
 .form-input__photo-drag-container {
-    background: var(--light);
-    height: 88px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: var(--light);
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-input__photo-drag-title {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-    text-align: center;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #cdcdcd;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cdcdcd;
 }
 
 .form-input__photo-drag-subtitle {
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-    text-align: center;
-    letter-spacing: 0.08em;
-    color: #cdcdcd;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #cdcdcd;
 }
 
 .form__button {
-    padding: 13px 20px;
+  padding: 13px 20px;
 }
 
 .form-input__check {
-    flex: 0 0 max-content;
-    &:before {
-        content: "\2713";
-        color: var(--brand);
-    }
+  flex: 0 0 max-content;
+  &:before {
+    content: "\2713";
+    color: var(--brand);
+  }
 }
 
 .become-form__text {
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-    color: var(--grey);
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: var(--grey);
 }
 
 .form-input__hint {
-    color: var(--grey);
-    margin-bottom: 23px;
-    font-weight: 400;
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-    word-break: break-word;
+  color: var(--grey);
+  margin-bottom: 23px;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  word-break: break-word;
 }
 
 .form-textarea__container {
-    background: white;
-    border: 2px solid var(--light);
-    padding: 21px;
-    margin-bottom: 23px;
+  background: white;
+  border: 2px solid var(--light);
+  padding: 21px;
+  margin-bottom: 23px;
 }
 
 .form-textarea__label {
-    font-size: 0.8125rem;
-    line-height: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--grey);
-    margin-bottom: 14px;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 14px;
 }
 
 .form-textarea__input {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+  color: var(--dark);
+  width: 100%;
+  min-height: 400px;
+}
+
+.form-add {
+  display: flex;
+  align-items: center;
+  margin-bottom: 52px;
+}
+
+.form-add__icon {
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 36px;
+  height: 36px;
+
+  &:before {
+    content: "\002B";
+    font-size: 25px;
     font-weight: 400;
-    font-size: 0.9375rem;
-    line-height: 1.4375rem;
-    color: var(--dark);
-    width: 100%;
-    min-height: 400px;
+    color: var(--brand);
+  }
+}
+
+.form-add__label {
+  font-size: 0.9375rem;
+  line-height: 1.0625rem;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-left: 12px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price__tag {
+  flex: 0 0 max-content;
+  padding: 12px 18px;
+  background: var(--light);
+  color: var(--brand);
+}
+
+.active {
+  background: var(--brand);
+  color: white;
+}
+
+.price__hint {
+  flex: 1 0 auto;
+  color: var(--grey);
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
 }

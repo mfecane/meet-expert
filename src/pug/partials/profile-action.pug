@@ -1,0 +1,5 @@
+mixin profile-action(link, linkClass, iconclass, text)
+  a.block-link.profile-action(class=linkClass, href=link)
+    .profile-action__icon
+      .profile-action__icon--arrow(class=iconclass)
+    .profile-action__text= text

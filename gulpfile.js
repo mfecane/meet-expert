@@ -41,10 +41,10 @@ const updateBrowser = () => {
 };
 
 export const watcher = () => {
-  watch(["./src/html/**/*.html", "./data/*.json"], html).on(
-    "change",
-    updateBrowser
-  );
+  watch(
+    ["./src/html/**/*.html", "./data/*.json", "./src/pug/**/*.pug"],
+    html
+  ).on("change", updateBrowser);
   watch("./src/scss/**/*.scss", css).on("change", updateBrowser);
   watch("./src/js/**/*.js", js).on("change", updateBrowser);
 };

@@ -1,0 +1,5 @@
+mixin form-input(options)
+  .form-input__container
+    .form-input__label= options.label
+      - const type = options.type || "text"
+      input(type=type, class="form-input__input", value=options.value, name=options.name)
