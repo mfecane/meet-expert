@@ -1,0 +1,22 @@
+include ./partials/profile-photo.pug
+include ./partials/profile-action.pug
+include ./partials/profile-action-msg.pug
+include ./components/action-button.pug
+include ./components/form-input.pug
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge" )
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", type="image/x-icon", href="favicon.ico")
+    title become expert - meetExpert
+    link(rel="stylesheet" href="css/index.css")
+
+  body(id="top")
+    include ./partials/become/header.pug
+    include ./partials/become/main.pug
+
+  script(src="js/script.min.js" defer="true")
+  script(src="assets/js/index.global.min.js" defer="true")

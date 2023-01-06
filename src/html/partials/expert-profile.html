@@ -1,31 +1,31 @@
 <div class="container container--narrow">
   <div class="expert-profile">
     <!-- prettier-ignore -->
-    <div class="expert-profile__profile-container">
-      @@include('./profile-photo.html', { 
+    <div class="expert-profile__profile-container scroll-back__panel">
+      @@include('./profile-photo.html', {
         "linkText": "Запланировать встречу",
-        "linkClass": "", 
-        "icon": false 
+        "linkClass": "",
+        "icon": false
       })
 
       <div class="expert-profile__actions">
         <!-- prettier-ignore -->
-        @@include('./profile-action.html', { 
+        @@include('./profile-action.html', {
           "text": "Чем я могу помочь",
           "link": "#help"
         })
         <!-- prettier-ignore -->
-        @@include('./profile-action.html', { 
+        @@include('./profile-action.html', {
           "text": "Доступные даты",
           "link": "#calendar"
         })
         <!-- prettier-ignore -->
-        @@include('./profile-action.html', { 
+        @@include('./profile-action.html', {
           "text": "Отзывы" ,
           "link": "#comments"
         })
         <!-- prettier-ignore -->
-        @@include('./profile-action.html', { 
+        @@include('./profile-action.html', {
           "text": "в начало",
           "iconclass": "expert-profile__action-arrow-icon--rotate",
           "link": "#top"

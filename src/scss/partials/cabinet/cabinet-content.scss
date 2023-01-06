@@ -1,5 +1,8 @@
 .cabinet-form {
   margin-bottom: 198px;
+  & > *:not(:last-child) {
+    margin-bottom: 23px;
+  }
 }
 
 .constraints {
@@ -30,6 +33,14 @@
   }
 }
 
+.cabinet-form__title {
+  margin-top: 52px;
+}
+
+.cabinet-form__title--smallgap {
+  margin-bottom: 8px !important;
+}
+
 .cabinet-heading {
   font-size: 1.75rem;
   line-height: 1.5625rem;
@@ -38,7 +49,6 @@
 .cabinet-sub-heading {
   font-size: 1.0625rem;
   line-height: 1.5625rem;
-  margin-bottom: 27px;
 }
 
 .competencies {

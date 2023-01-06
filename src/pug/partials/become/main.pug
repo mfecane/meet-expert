@@ -1,0 +1,51 @@
+include ../../components/form-input.pug
+
+.become__container
+  h1.become__heading.heading Application to become an Expert
+  h2.become__subheading.sub-heading on meet Expert
+
+
+
+  form.become-form(action="#")
+    +form-input({
+      label: "First name:",
+      name: "firstname",
+      value: "Alexander",
+      check: true
+    })
+
+    +form-input({
+      label: "First name:",
+      name: "lastname",
+      value: "kolesn",
+    })
+
+    +form-input({
+      label: "country:",
+      name: "country",
+      value: "",
+    })
+
+    +form-input({
+      label: "city:",
+      name: "city",
+      value: "",
+    })
+
+    +form-input({
+      label: "email:",
+      name: "email",
+      value: "",
+    })
+
+    .form-input__photo-drag-container
+      span.form-input__photo-drag-title Upload from computer or drag and drop it here.
+      span.form-input__photo-drag-subtitle Only word or pdf format. Max file size 5 Mb.
+
+    .form__buttons
+      button.btn.btn-primary.become-form__button(disabled = true) Send a request
+
+    .become-form__text.
+      By submitting an application, you accept the terms of the
+      #[a(href="#") license agreement] and agree to the
+      #[a(href="#") personal data processing policy]

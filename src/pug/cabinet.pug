@@ -10,6 +10,7 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge" )
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", type="image/x-icon", href="favicon.ico")
     title Andrey Chizhov - cabinet
     link(rel="stylesheet" href="css/index.css")
 
@@ -19,7 +20,7 @@ html(lang="ru")
 
     .container.container--very-narrow
       .cabinet
-        .cabinet__profile-container
+        .cabinet__profile-container.scroll-back__panel
           +profile-photo("Update the photo", "profile-photo__link--cabinet", true)
           .cabinet__actions
             +profile-action("#help", "profile-action--dark", "", "Your profile")
@@ -36,59 +37,60 @@ html(lang="ru")
             .constraints__item Size up to 1.5 MB
 
           form.cabinet-form(action="")
+
             +form-input({
               label: "First name:",
               name: "firstname",
-              value: "Alexander",
-              gap: "gap"
+              value: "Alexander"
             })
+
             +form-input({
               label: "last name:",
               name: "secondname",
-              value: "kolesnikov",
-              gap: "gap"
+              value: "kolesnikov"
             })
+
             +form-input({
               label: "country:",
               name: "country",
-              value: "russia",
-              gap: "gap"
+              value: "russia"
             })
+
             +form-input({
               label: "City:",
               name: "city",
-              value: "moscow",
-              gap: "gap"
+              value: "moscow"
             })
+
             +form-input({
               label: "email:",
               name: "email",
               value: "Kolesnikov@gmail.com",
-              type: "email",
-              gap: "gap"
+              type: "email"
             })
-            +form-input({
-              label: "username:",
-              name: "username",
-              value: "@alex.kolesnik",
-              gap: "smallgap"
-            })
-            .form-input__hint A username can consist of letters, numbers, and underscores
 
-            h2.cabinet-heading.heading Tell us more about yourself and
-            h3.cabinet-sub-heading.sub-heading how you can help and at what cost
+            div.form-input__hint-container
+              +form-input({
+                label: "username:",
+                name: "username",
+                value: "@alex.kolesnik"
+              })
+              .form-input__hint A username can consist of letters, numbers, and underscores
+
+            div.cabinet-form__title
+              h2.cabinet-heading.heading Tell us more about yourself and
+              h3.cabinet-sub-heading.sub-heading how you can help and at what cost
 
             +form-input({
               label: "Company:",
               name: "company",
-              value: "unicredit bank",
-              gap: "gap",
+              value: "unicredit bank"
             })
+
             +form-input({
               label: "Current position:",
               name: "position",
-              value: "IT Project Manager",
-              gap: "smallgap"
+              value: "IT Project Manager"
             })
 
             .form-textarea__container
@@ -114,23 +116,24 @@ html(lang="ru")
                   that will help you enter the sphere of UX/UI design with confidence. It will allow
                   you to quickly adapt and gain momentum to reach heights in your future career.
 
+            div.form-input__hint-container
+              .competencies
+                .competencies__label Core competencies:
+                .competencies__tags
+                  -
+                    const tags = [
+                      "Team Management", "Product Management", "IT projects"
+                    ]
+                  each tag in tags
+                    .tags__tag= tag
 
-            .competencies
-              .competencies__label Core competencies:
-              .competencies__tags
-                -
-                  const tags = [
-                    "Team Management", "Product Management", "IT projects"
-                  ]
-                each tag in tags
-                  .tags__tag= tag
+              .form-input__hint.
+                Choose no more than 3 directions in which you understand deeply enough. If
+                you are Full Stack, then add both Frontend and Backend
 
-            .form-input__hint.
-              Choose no more than 3 directions in which you understand deeply enough. If
-              you are Full Stack, then add both Frontend and Backend
-
-            h2.cabinet-heading.heading How
-            h3.cabinet-sub-heading.sub-heading can i help you
+            div.cabinet-form__title.cabinet-form__title--smallgap
+              h2.cabinet-heading.heading How
+              h3.cabinet-sub-heading.sub-heading can i help you
 
             .cabinet-form__text.
               Here it is worth telling in more detail what you are ready to help potential
@@ -139,43 +142,42 @@ html(lang="ru")
 
             +form-input({
               label: "1:",
-              value: "data",
-              gap: "gap"
+              value: "data"
             })
+
             +form-input({
               label: "2:",
-              value: "Services",
-              gap: "gap"
+              value: "Services"
             })
+
             +form-input({
               label: "3:",
-              value: "annual reports",
-              gap: "gap"
+              value: "annual reports"
             })
+
             +form-input({
               label: "4:",
-              value: "research & Testing",
-              gap: "gap"
+              value: "research & Testing"
             })
+
             +form-input({
               label: "5:",
-              value: "Platform",
-              gap: "gap"
+              value: "Platform"
             })
+
             +form-input({
               label: "6:",
-              value: "Infographics",
-              gap: "gap"
+              value: "Infographics"
             })
+
             +form-input({
               label: "7:",
-              value: "Business",
-              gap: "gap"
+              value: "Business"
             })
+
             +form-input({
               label: "8:",
-              value: "Digital produ",
-              gap: "smallgap"
+              value: "Digital produ"
             })
 
             +action-button({
@@ -183,23 +185,25 @@ html(lang="ru")
               class:'cabinet-add'
             })
 
-            h2.cabinet-heading.heading The cost
-            h3.cabinet-sub-heading.sub-heading of your services
+            div.cabinet-form__title
+              h2.cabinet-heading.heading The cost
+              h3.cabinet-sub-heading.sub-heading of your services
 
-            .price
-              button.price__tag.active RUB
-              button.price__tag USD
+              div.form-input__hint-container
+                .price
+                  button.price__tag.active RUB
+                  button.price__tag USD
 
-              +form-input({
-                label: "per hour:",
-                value: "2 800",
-              })
+                  +form-input({
+                    label: "per hour:",
+                    value: "2 800",
+                  })
 
-              .price__hint 3 569 RUB after commissions
+                  .price__hint 3 569 RUB after commissions
 
-            .form-input__hint.
-              Choose the main currency, as well as the cost of classes with you. When substituting
-              the cost on the site, we will start from your base currency
+                .form-input__hint.
+                  Choose the main currency, as well as the cost of classes with you. When substituting
+                  the cost on the site, we will start from your base currency
 
     include ./partials/footer.pug
 

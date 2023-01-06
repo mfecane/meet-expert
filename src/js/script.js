@@ -71,9 +71,7 @@ function setUpCalendar() {
 
 function setUpBackScroll() {
   const scrollBackPanel = document.querySelector(".scroll-back");
-  const personPhoto = document.querySelector(
-    ".expert-profile__profile-container"
-  );
+  const personPhoto = document.querySelector(".scroll-back__panel");
   if (!scrollBackPanel) {
     return;
   }

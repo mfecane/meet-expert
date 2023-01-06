@@ -1,7 +1,6 @@
 .cabinet {
   display: flex;
   margin-top: 89px;
-  overflow: hidden;
 
   @media (max-width: $breakPointTablet) {
     flex-direction: column;
@@ -10,6 +9,18 @@
 
 .cabinet__profile-container {
   flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: sticky;
+  top: var(--header-height);
+  align-self: flex-start;
+  transition: top 200ms ease-out;
+  margin-bottom: 20px;
+
+  &.shift {
+    top: calc(var(--header-height) + 75px);
+  }
 
   @media (max-width: $breakPointTablet) {
     display: flex;
