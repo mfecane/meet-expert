@@ -911,8 +911,7 @@ body.lock{
   bottom:0;
   display:flex;
   height:100vh;
-  max-width:80vw;
-  min-width:50%;
+  max-width:883px;
   overflow:hidden;
   position:fixed;
   right:0;
@@ -929,16 +928,22 @@ body.lock{
   align-items:center;
   background:var(--brand);
   display:flex;
-  flex:0 0 42px;
+  flex:0 0 38px;
   justify-content:center;
+  position:relative;
 }
 
 .panel-gutter__label{
   color:#fff;
   cursor:pointer;
-  text-orientation:sideways-right;
+  font-size:13px;
+  left:50%;
+  min-width:-moz-max-content;
+  min-width:max-content;
+  position:absolute;
   text-transform:uppercase;
-  writing-mode:vertical-rl;
+  top:50%;
+  transform:translate(-50%, -50%) rotate(-90deg);
 }
 
 .panel-content{
@@ -947,7 +952,7 @@ body.lock{
   height:100%;
   max-height:100vh;
   overflow:auto;
-  padding:32px 42px;
+  padding:32px 25px 32px 40px;
 }
 
 .calendar--overlay{
@@ -1000,8 +1005,10 @@ body.lock{
   font-size:1.4375rem;
   font-style:italic;
   font-weight:400;
+  letter-spacing:0;
   line-height:1.5625rem;
   margin-bottom:5px;
+  margin-top:2px;
 }
 
 .person-details__title{
@@ -1009,24 +1016,26 @@ body.lock{
   font-size:.9375rem;
   font-style:normal;
   font-weight:700;
-  line-height:1.5625rem;
+  line-height:29px;
   margin-bottom:8px;
   text-transform:uppercase;
 }
 
 .person-details__cost{
-  color:#2e2e2e;
   font-size:1rem;
-  font-style:normal;
   font-weight:700;
   line-height:1.625rem;
   margin-bottom:19px;
 }
 
-.person-details__text{
+.person-details__cost,.person-details__text{
   color:#2e2e2e;
-  font-size:.9375rem;
   font-style:normal;
+  letter-spacing:0;
+}
+
+.person-details__text{
+  font-size:.9375rem;
   font-weight:400;
   line-height:1.4375rem;
 }
@@ -1041,6 +1050,11 @@ body.lock{
 
 .tags__container--center{
   justify-content:center;
+}
+
+.tags__container--overlay{
+  margin-bottom:10px;
+  margin-top:12px;
 }
 
 .tags__tag{
