@@ -114,6 +114,22 @@ body {
   }
 }
 
+.container.container--person {
+  max-width: 1176px;
+  margin: auto;
+  padding-left: 110px;
+
+  @media (max-width: $breakPointSmallMonitor) {
+    max-width: 100%;
+    margin: 0 40px;
+  }
+
+  @media (max-width: $breakPointPhone) {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+}
+
 .container.container--very-narrow {
   max-width: 952px;
   margin: auto;

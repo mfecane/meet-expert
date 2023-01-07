@@ -1,0 +1,144 @@
+include ../../components/tag-list.pug
+include ../../partials/profile-photo.pug
+include ../../partials/profile-action.pug
+
+mixin comment(options)
+  .comment__container
+    .comment_text= options.text
+    .comment__info
+      .comment__image= options.letter
+      .comment__author= options.author
+      .comment__date= options.date
+
+.container.container--person
+  .expert-profile
+    .expert-profile__profile-container.scroll-back__panel
+      +profile-photo({
+        linkText: "Запланировать встречу"
+      })
+      .expert-profile__actions
+        +profile-action("#help", "profile-action--dark", "", "Чем я могу помочь")
+        +profile-action("#calendar", "profile-action--dark", "", "Доступные даты")
+        +profile-action("#comments", "profile-action--dark", "", "Отзывы")
+        +profile-action("#top", "profile-action--dark", "", "в начало")
+
+    .expert-profile__info
+      .expert-profile__name Andrey Chizhov
+      .expert-profile__title Руководитель ИТ-проектов @UniCredit Russia
+      .expert-profile__cost 5–10 лет / Цена (за час): 5 000 руб
+      .expert-profile__text
+        p.
+          Я графический дизайнер, который обладает многими навыками в профессии:
+          брендинг, печать, стратегия дизайна, маркетинговые коммуникации, опыт
+          работы с клиентами, пользовательский опыт, исследования ux,
+          пользовательский интерфейс, эскиз, интерактивное прототипирование,
+          информационная архитектура и дизайн, управление контентом,
+          интерактивный дизайн, дизайн продукта, дизайн электронной почты,
+          системы и услуги дизайн, наборы пользовательского интерфейса.
+
+        p.
+          Я работаю в области дизайна более 15 лет и последние 7 лет занимаю
+          руководящую должность. С 2014 года я работаю в сфере электронной
+          коммерции и создаю цифровые продукты для таких компаний, как:
+          Эльдорадо, Ситилинк, Северсталь. Сейчас я возглавляю отдел дизайна и
+          пользовательского опыта в международной компании Decathlon.
+
+        p.
+          Я являюсь экспертом в области цифрового дизайна, а также обладаю
+          знаниями в следующих дисциплинах: маркетинг, психология, социология,
+          экономическая теория, менеджмент. Это необходимо для создания
+          продуктов высокого качества и эффективности.
+
+        p Это позволит вам быстро адаптироваться и набирать обороты.
+
+      +tag-list({
+        tags: [
+          "Agile", "Jira", "Kanban", "Scrum", "Analytics", "Java", "JavaScript",
+          "Python", "ProductManagement", "C++", "UX/UI", "DataScience",
+          "dart", "restapi", "googleservices", "flutter", "firebase",
+          "mvvm", "confluence"
+        ]
+      })
+
+      .person__help-heading
+        h2.expert-profile__heading Чем
+        h3.expert-profile__sub-heading я могу помочь
+
+      ul.help-list
+        li.help-list-item Данные
+        li.help-list-item Исследования
+        li.help-list-item Тестирование
+        li.help-list-item Консультирование
+        li.help-list-item Преобразование дизайна
+        li.help-list-item Технологии
+        li.help-list-item Сервис
+        li.help-list-item Платформы
+        li.help-list-item Цифровые продукты
+        li.help-list-item Маркетинг
+        li.help-list-item Разработка стратегии
+        li.help-list-item Фирменный стиль
+        li.help-list-item Годовые отчеты
+        li.help-list-item Инфографика
+        li.help-list-item Брендинг и дизайн логотипа
+        li.help-list-item UI/UX
+        li.help-list-item Сторителлинг
+
+      h2.expert-profile__heading Выберите подходящие
+      h3.expert-profile__sub-heading даты для встречи
+
+      .calendarEl.calendar--profile
+      .comments-header
+        .comments-header__left
+          h2.expert-profile__heading Что
+          h3.expert-profile__sub-heading обо мне говорят
+        .comments-header__right 7#[span.comments-header__emoji 🤝]
+
+      .comments-list#comments
+        -
+          const comments = [
+            {
+              "text": "I had no programming experience at all, I only knew SQL. My task was to implement the functionality in Python in a short time, while I had a desire to make a program with my own hands, so I turned to a mentor for help. Andrey listened to my task, understood the situation, offered several solutions, we chose the most suitable one, and as a result, under his guidance, I wrote my first program. The program works and solves a business problem. Andrey is a professional and knows his job. Thanks to him.",
+              "letter": "А",
+              "author": "Александер",
+              "date": "14 Ноября 2022"
+            },
+            {
+              "text": "I liked everything: Andrey quickly solves the issue, explains it clearly. I helped to deal with a non–trivial task.",
+              "letter": "А",
+              "author": "Альбина",
+              "date": "10 Ноября 2022"
+            },
+            {
+              "text": "Prompt assignment of the lesson and quick resolution of the issues raised. A thorough approach to learning. Gives not only technical knowledge, but also advice on further development in the profession.",
+              "letter": "Р",
+              "author": "Рифат",
+              "date": "13 Октября 2022"
+            },
+            {
+              "text": "Andrey suggested some debugging and development tricks. I helped to sort out the errors of the backend of the training project: documentation inconsistency, file upload errors, etc. Meetings were scheduled promptly. Andrey proved himself to be an experienced specialist who quickly finds the cause of errors and a solution.",
+              "letter": "К",
+              "author": "Константин",
+              "date": "13 Октября 2022"
+            },
+            {
+              "text": "We conducted several classes with Dmitry to solve a practical problem on the project. It turned out to quickly arrange meetings, to get a successful result in the required time.",
+              "letter": "Е",
+              "author": "Екатерина",
+              "date": "20 Сентября 2022"
+            },
+            {
+              "text": "Andrey helped me launch a project that will be useful for me to perform work tasks. I couldn't do it on my own. The mentor's experience in solving complex real-world problems is felt. If something doesn't work out for you, contact Andrey :)",
+              "letter": "М",
+              "author": "Михаил",
+              "date": "20 Сентября 2022"
+            },
+            {
+              "text": "I really liked it! Andrey explains very clearly and easily, answered all questions. He suggested it himself and we sorted out 2 options for solving the problem. Impressions are only positive, I am glad that Andrey helped with the solution of the issue.",
+              "letter": "Р",
+              "author": "Роман",
+              "date": "20 Сентября 2022"
+            }
+          ]
+        each comment in comments
+          +comment(comment)
+

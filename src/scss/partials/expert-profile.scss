@@ -1,6 +1,6 @@
 .expert-profile {
   display: flex;
-  margin-top: 89px;
+  margin-top: 221px;
 
   @media (max-width: $breakPointPhone) {
     flex-direction: column;
@@ -69,7 +69,8 @@
 }
 
 .expert-profile__info {
-  margin-left: 30px;
+  margin-left: 43px;
+  padding-top: 7px;
 
   @media (max-width: $breakPointPhone) {
     margin-top: 30px;
@@ -136,6 +137,11 @@
   }
 }
 
+.person__help-heading {
+  margin-top: 52px;
+  margin-bottom: 16px;
+}
+
 .expert-profile__heading {
   font-family: "Bodoni MT";
   font-style: italic;
@@ -194,6 +200,8 @@
 .comments-header {
   display: flex;
   margin: 0 0 22px 0;
+  max-width: 712px;
+  align-items: flex-end;
 }
 
 .comments-header__left {
@@ -207,14 +215,20 @@
   line-height: 1.0625rem;
   font-weight: 700;
   text-align: right;
+  padding-bottom: 10px;
+}
+
+.comments-header__emoji {
+  font-size: 24px;
 }
 
 .comments-list {
+  max-width: 712px;
   display: flex;
   flex-direction: column;
   margin: 0 0 138px 0;
 
   & > :not(:first-child) {
-    margin-top: 1.4375rem;
+    margin-top: 19px;
   }
 }

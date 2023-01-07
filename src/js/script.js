@@ -31,11 +31,15 @@ function setUpPanel() {
     });
   });
 
-  const gutterLabel = document.querySelector(".panel-gutter__label");
-  gutterLabel.addEventListener("click", () => {
-    overlay.classList.toggle("active", false);
-    overlayPanel.classList.toggle("active", false);
-    document.body.classList.toggle("lock", false);
+  const gutterElements = [
+    ...document.querySelectorAll(".panel-gutter,.overlay"),
+  ];
+  gutterElements.forEach((element) => {
+    element.addEventListener("click", () => {
+      overlay.classList.toggle("active", false);
+      overlayPanel.classList.toggle("active", false);
+      document.body.classList.toggle("lock", false);
+    });
   });
 }
 

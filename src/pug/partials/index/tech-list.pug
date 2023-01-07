@@ -1,0 +1,52 @@
+mixin card(options)
+  .card
+    .card__top
+      .card__title= options.title
+      .card__subtitle= options.subtitle
+    .card__bottom Find an expert
+
+
+.tech-list
+  .container
+    .tech-list__layout
+      -
+        const techList = [
+          {
+              "title": "Front–end",
+              "subtitle": "разработчик"
+          },
+          {
+              "title": "Back–end",
+              "subtitle": "разработчик"
+          },
+          {
+              "title": "Продакт",
+              "subtitle": "отдел Digital"
+          },
+          {
+              "title": "Маркетинг",
+              "subtitle": "отдел Digital"
+          },
+          {
+              "title": "QA Инженер",
+              "subtitle": "тестировщик"
+          },
+          {
+              "title": "Аналитик",
+              "subtitle": "HR департамент"
+          },
+          {
+              "title": "Юрисконсульт",
+              "subtitle": "Юридический отдел"
+          },
+          {
+              "title": "Аналитик",
+              "subtitle": "Digital marketing"
+          },
+          {
+              "title": "Бизнес",
+              "subtitle": "Процессы"
+          }
+        ]
+      each tech in techList
+        +card(tech)

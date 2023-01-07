@@ -1,7 +1,7 @@
-mixin profile-photo(linkText, linkClass, icon)
+mixin profile-photo(options)
   .profile-photo__container
     .profile-photo__image-container
-      if icon
+      if options.icon
         .profile-photo__icon
           include ../../svg/basket.svg
-    .block-link.profile-photo__link(class=linkClass)= linkText
+    .block-link.profile-photo__link(class=options.linkClass)= options.linkText

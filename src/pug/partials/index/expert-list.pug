@@ -1,0 +1,101 @@
+mixin expert-list-item(options)
+  .people-list__line.active
+    .container.people-list__line-inner
+      .people-list__details
+        .people-list__details-name
+          a(href="./person.html")= options.name
+        .people-list__details-job= options.job
+      .people-list__photo-container
+        .people-list__photo
+      .people-list__experience= options.experience
+      .people-list__price= options.price
+      .people-list__action
+        button.btn.btn-primary.people-list__action-button Проверить даты
+
+section.experts-list--index
+  .container
+    .people-list--no-result.experts-list__header--index
+      h2.people-list__heading.heading Найди эксперта
+      h3.people-list__sub-heading.sub-heading среди 370+ специалистов
+
+  div.people-list__layout
+    -
+      const people = [
+        {
+          "name": "Игорь Макаров",
+          "job": "Менеджер продукта @Netology",
+          "experience": "10+ лет",
+          "price": "5 000 руб."
+        },
+        {
+          "name": "Владимир Круглов",
+          "job": "Front-end/QA Team Lead @LIONSGATE",
+          "experience": "10+ лет",
+          "price": "3 500 руб."
+        },
+        {
+          "name": "Сергей Симов",
+          "job": "Директор по работе с клиентами @DOBRO Agency",
+          "experience": "10+ лет",
+          "price": "4 800 руб."
+        },
+        {
+          "name": "Андрей Чижов",
+          "job": "Руководитель ИТ-проектов @UniCredit Russia",
+          "experience": "5–10 лет",
+          "price": "5 000 руб."
+        },
+        {
+          "name": "Екатерина Якубчик",
+          "job": "CPO @The Coach: Men's Health App",
+          "experience": "5–10 лет",
+          "price": "2 500 руб."
+        },
+        {
+          "name": "Ольга Шелковникова",
+          "job": "Руководитель группы клиентских решений, EE @TikTok",
+          "experience": "10+ лет",
+          "price": "Бесплатно"
+        },
+        {
+          "name": "Михаил Сухов",
+          "job": "Agile Coach @Pandora",
+          "experience": "10+ лет",
+          "price": "Бесплатно"
+        },
+        {
+          "name": "Анастасия Сенникова",
+          "job": "Основатель @Conscious Leadership in Tech, Executive Coach",
+          "experience": "10+ лет",
+          "price": "4 000 руб."
+        },
+        {
+          "name": "Елена Пинчук",
+          "job": "менеджер проектов @UpTrader",
+          "experience": "5–10 лет",
+          "price": "Бесплатно"
+        },
+        {
+          "name": "Степан Баранников",
+          "job": "CPO @The Coach: Men's Health App",
+          "experience": "5–10 лет",
+          "price": "Бесплатно"
+        },
+        {
+          "name": "Сергей Никольский",
+          "job": "Менеджер по развитию бизнеса @Avito",
+          "experience": "5–10 лет",
+          "price": "Бесплатно"
+        },
+        {
+          "name": "Александра Лобода",
+          "job": "Ведущий маркетинг менеджер в Средней и Восточной Европе @SAP",
+          "experience": "5–10 лет",
+          "price": "3 500 руб."
+        }
+      ]
+    each p in people
+      +expert-list-item(p)
+
+    .container
+      a.btn.btn-primary.people-list__more-button(href="./experts.html") Смотреть больше экспертов

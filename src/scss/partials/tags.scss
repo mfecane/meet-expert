@@ -2,12 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   max-width: fit-content;
-  margin: 15px -6px 68px -6px;
+  margin: 15px -6px 0 -6px;
 }
 
-.tags__container--center {
+.tags__container--main {
   justify-content: center;
-  margin-bottom: 66px;
 }
 
 .tags__container--overlay {

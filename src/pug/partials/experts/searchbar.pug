@@ -1,7 +1,7 @@
 include ../../components/tag-list.pug
 
 mixin searchbar(options)
-  .search__section.search__section--alternative
+  .search__section(class=options.conainerClass)
     .container.search__container
       .searchbar
         .searchbar__icon

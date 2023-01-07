@@ -1,0 +1,26 @@
+include ./partials/experts/searchbar.pug
+include ./partials/experts/expert-list.pug
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge" )
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", type="image/x-icon", href="favicon.ico")
+    title Andrey Chizhov - cabinet
+    link(rel="stylesheet" href="css/index.css")
+
+  body
+    include ./partials/header-common.pug
+
+    include ./partials/cabinet/scroll-back.pug
+
+    include ./partials/person/person.pug
+
+    include ./partials/footer.pug
+
+    include ./partials/overlay-panel.pug
+
+    script(src="js/script.min.js" defer="true")
+    script(src="js/index.global.min.js" defer="true")

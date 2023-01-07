@@ -1,3 +1,12 @@
+.experts-list__header--index {
+  margin-top: 84px;
+  margin-bottom: 41px;
+}
+
+.experts-list--index {
+  margin: 0 0 100px 0;
+}
+
 .people-list__heading {
   text-align: center;
   line-height: 72px;
@@ -21,6 +30,7 @@
 }
 
 .people-list__heading--result {
+  margin-top: 58px;
   font-size: 31px;
   line-height: 29px;
   text-align: center;
@@ -30,6 +40,7 @@
   font-size: 19px;
   line-height: 36px;
   text-align: center;
+  margin-bottom: 36px;
 }
 
 .people-list {
@@ -41,7 +52,6 @@
 }
 
 .people-list__layout {
-  margin-top: 40px;
 }
 
 .people-list__more-button {
