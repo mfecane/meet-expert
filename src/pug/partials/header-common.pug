@@ -1,0 +1,15 @@
+header(class="site-header")
+  div(class="container header-container")
+    div(class="site-header__layout")
+      include ../components/logo.pug
+      nav
+        ul(class="nav")
+          li
+            a.nav__link(href="#") Free мероприятия
+          li
+            a.nav__link(href="./become.html") стать экспертом
+          li
+            a.nav__link(href="./cabinet.html") войти
+          li
+            a.btn.btn-primary.nav__link(href="./experts.html") Найти эксперта
+      include ../components/burger.pug

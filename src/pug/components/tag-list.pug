@@ -1,0 +1,5 @@
+
+mixin tag-list(options)
+  .tags__container(class=options.class)
+    each tag in options.tags
+      .tags__tag= tag

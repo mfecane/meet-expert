@@ -1,0 +1,34 @@
+mixin expert-list-item(options)
+  .people-list__line.active
+    .container.people-list__line-inner
+      .people-list__details
+        .people-list__details-name
+          a(href="./person.html")= options.name
+        .people-list__details-job= options.job
+      .people-list__photo-container
+        .people-list__photo
+      .people-list__experience= options.experience
+      .people-list__price= options.price
+      .people-list__action
+        button.btn.btn-primary.people-list__action-button Проверить даты
+
+
+mixin expert-list(options)
+
+  section.people-list
+    .container
+      .switcher
+        .people-list--result
+          h2.people-list__heading--result.heading Найди эксперта
+          h3.people-list__sub-heading--result.sub-heading среди 370+ специалистов
+
+        .people-list--no-result
+          h2.people-list__heading.heading Найди эксперта
+          h3.people-list__sub-heading.sub-heading среди 370+ специалистов
+
+    each p in options.people
+      div.people-list__layout
+        +expert-list-item(p)
+
+    .container
+      a.btn.btn-primary.people-list__more-button (href="./experts.html") Смотреть больше экспертов

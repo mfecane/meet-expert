@@ -2,6 +2,7 @@
 }
 
 .search__section--alternative {
+  padding-top: 195px;
   background-color: var(--light);
 }
 
@@ -33,6 +34,7 @@
 
   &--with-button {
     padding-right: 112px;
+    min-height: 54px;
   }
 
   @media (max-width: $breakPointTablet) {
@@ -42,6 +44,11 @@
   @media (max-width: $breakPointPhone) {
     min-width: 100%;
   }
+}
+
+.searchbar--experts {
+  max-width: 816px;
+  min-height: 54px;
 }
 
 .searchbar__icon {

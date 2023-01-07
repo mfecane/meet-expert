@@ -1,0 +1,18 @@
+include ../../components/tag-list.pug
+
+.search__section.search__section--alternative
+  .container.search__container
+    .searchbar
+      .searchbar__icon
+      .searchbar__content
+        input.searchbar__input(type="text", name="search")
+      .searchbar__helptext Не нашли его или не знаете, где искать?
+        span.searchbar__highlight Найдите эксперта по тегам
+    .searchbar__helptext-mobile Не нашли его или не знаете, где искать?
+      span.searchbar__highlight Найдите эксперта по тегам
+
+    +tag-list({
+      tags: [
+        "Java", "JavaScript", "Python", "ProductManagement", "C++", "UX/UI", "DataScience"
+      ]
+    })
