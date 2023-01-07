@@ -1,3 +1,4 @@
+include ./partials/experts/searchbar.pug
 include ./partials/experts/expert-list.pug
 
 doctype html
@@ -14,8 +15,16 @@ html(lang="ru")
     include ./partials/header-common.pug
 
     .switcher
-      include ./partials/experts/searchbar.pug
-      include ./partials/experts/searchbar-button.pug
+      +searchbar({
+        tags: false,
+        go: false,
+        hint: true
+      })
+      +searchbar({
+        tags: true,
+        go: true,
+        hint: false
+      })
 
     +expert-list({
       people: [

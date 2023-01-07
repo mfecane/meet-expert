@@ -14,21 +14,20 @@ mixin expert-list-item(options)
 
 
 mixin expert-list(options)
-
   section.people-list
     .container
       .switcher
         .people-list--result
-          h2.people-list__heading--result.heading Найди эксперта
-          h3.people-list__sub-heading--result.sub-heading среди 370+ специалистов
+          h2.people-list__heading--result.heading Результаты поиска по:
+          h3.people-list__sub-heading--result.sub-heading Swagger; Xcode; Openapi
 
         .people-list--no-result
           h2.people-list__heading.heading Найди эксперта
           h3.people-list__sub-heading.sub-heading среди 370+ специалистов
 
-    each p in options.people
-      div.people-list__layout
+    div.people-list__layout
+      each p in options.people
         +expert-list-item(p)
 
     .container
-      a.btn.btn-primary.people-list__more-button (href="./experts.html") Смотреть больше экспертов
+      a.btn.btn-primary.people-list__more-button(href="./experts.html") Смотреть больше экспертов
