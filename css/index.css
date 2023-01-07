@@ -193,6 +193,12 @@ body.lock{
   max-width:1050px;
 }
 
+.container.container--person{
+  margin:auto;
+  max-width:1176px;
+  padding-left:110px;
+}
+
 .container.container--very-narrow{
   margin:auto;
   max-width:952px;
@@ -1111,6 +1117,7 @@ body.lock{
 
 .scroll-back{
   background:var(--light);
+  padding-right:20px;
   position:fixed;
   top:var(--header-height);
   transform:translateY(-120px);
@@ -1125,7 +1132,7 @@ body.lock{
 
 .scroll-back__inner{
   justify-content:space-between;
-  padding:22px 0;
+  padding:17px 0;
 }
 
 .scroll-back__back-link,.scroll-back__inner{
@@ -1146,6 +1153,7 @@ body.lock{
 
 .scroll-back__caption{
   color:var(--gray);
+  color:var(--grey);
   flex:1 0 auto;
   font-size:.9375rem;
   font-style:normal;
@@ -1153,6 +1161,10 @@ body.lock{
   line-height:.9375rem;
   text-transform:uppercase;
   transform:translateY(2px);
+}
+
+.scroll-back__back-link:hover .scroll-back__caption{
+  color:var(--brand);
 }
 
 .scroll-back__heart{
@@ -1188,7 +1200,7 @@ body.lock{
 
 .expert-profile{
   display:flex;
-  margin-top:89px;
+  margin-top:221px;
 }
 
 .expert-profile__profile-container{
@@ -1227,7 +1239,8 @@ body.lock{
 }
 
 .expert-profile__info{
-  margin-left:30px;
+  margin-left:43px;
+  padding-top:7px;
 }
 
 .expert-profile__name{
@@ -1281,6 +1294,11 @@ body.lock{
   margin-top:17px;
 }
 
+.person__help-heading{
+  margin-bottom:16px;
+  margin-top:52px;
+}
+
 .expert-profile__heading{
   color:var(--dark);
   font-family:Bodoni MT;
@@ -1327,8 +1345,10 @@ body.lock{
 }
 
 .comments-header{
+  align-items:flex-end;
   display:flex;
   margin:0 0 22px;
+  max-width:712px;
 }
 
 .comments-header__left{
@@ -1341,23 +1361,29 @@ body.lock{
   font-size:1.0625rem;
   font-weight:700;
   line-height:1.0625rem;
+  padding-bottom:10px;
   text-align:right;
+}
+
+.comments-header__emoji{
+  font-size:24px;
 }
 
 .comments-list{
   display:flex;
   flex-direction:column;
   margin:0 0 138px;
+  max-width:712px;
 }
 
 .comments-list>:not(:first-child){
-  margin-top:1.4375rem;
+  margin-top:19px;
 }
 
 .comment__container{
   background:#fff;
   box-shadow:0 8px 31px rgba(28,81,185,.05);
-  padding:20px 32px 20px 23px;
+  padding:20px 25px 20px 23px;
 }
 
 .comment_text{
@@ -1365,6 +1391,7 @@ body.lock{
   font-size:.9375rem;
   font-style:normal;
   font-weight:400;
+  letter-spacing:0;
   line-height:1.5625rem;
   margin-bottom:19px;
 }
@@ -1375,7 +1402,7 @@ body.lock{
 }
 
 .comment__info :not(:first-child){
-  margin-left:20px;
+  margin-left:10px;
 }
 
 .comment__image{
@@ -2182,7 +2209,7 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
     margin:0 20px;
     max-width:100%;
   }
-  .container.container--narrow,.container.container--very-narrow{
+  .container.container--narrow,.container.container--person,.container.container--very-narrow{
     margin:0 25px;
     max-width:100%;
   }
@@ -2387,7 +2414,7 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
 }
 
 @media (max-width:1299.98px){
-  .container,.container.container--narrow{
+  .container,.container.container--narrow,.container.container--person{
     margin:0 40px;
     max-width:100%;
   }
