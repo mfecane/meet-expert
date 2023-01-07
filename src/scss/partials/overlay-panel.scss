@@ -1,165 +1,173 @@
 .overlay {
-    display: block;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    background: #03225c6e;
-    z-index: 3;
-    transition: opacity 200ms ease-out;
+  display: block;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: #03225c6e;
+  z-index: 3;
+  transition: opacity 200ms ease-out;
 }
 
 .overlay.active {
-    opacity: 1;
-    pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .overlay-panel {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    min-width: 50%;
-    max-width: 80vw;
-    height: 100vh;
-    background: white;
-    transition: all 200ms ease-out;
-    overflow: hidden;
-    display: flex;
-    z-index: 4;
-    transform: translateX(100%);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-width: 910px;
+  height: 100vh;
+  background: white;
+  transition: all 200ms ease-out;
+  overflow: hidden;
+  display: flex;
+  z-index: 4;
+  transform: translateX(100%);
 
-    @media (max-width: $breakPointTablet) {
-        max-width: 100vw;
-        min-width: 100vw;
-        height: 75vh;
-        transform: translateY(100%);
-        flex-direction: column;
-    }
+  @media (max-width: $breakPointTablet) {
+    max-width: 100vw;
+    min-width: 100vw;
+    height: 75vh;
+    transform: translateY(100%);
+    flex-direction: column;
+  }
 
-    @media (max-width: $breakPointPhone) {
-        min-height: 100vh;
-        max-height: 100vh;
-    }
+  @media (max-width: $breakPointPhone) {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
 }
 
 .overlay-panel.active {
-    transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .panel-gutter {
-    flex: 0 0 42px;
-    background: var(--brand);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex: 0 0 38px;
+  background: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .panel-gutter__label {
-    writing-mode: vertical-rl;
-    text-orientation: sideways-right;
-    text-transform: uppercase;
-    color: white;
-    cursor: pointer;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  position: absolute;
+  min-width: max-content;
+  text-transform: uppercase;
 
-    @media (max-width: $breakPointTablet) {
-        writing-mode: unset;
-        text-orientation: unset;
-    }
+  @media (max-width: $breakPointTablet) {
+    writing-mode: unset;
+    text-orientation: unset;
+  }
 }
 
 .panel-content {
-    padding: 32px 42px;
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
-    overflow: auto;
-    height: 100%;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  overflow: auto;
+  height: 100%;
 }
 
 .calendarEl {
 }
 
 .calendar--overlay {
-    margin: 22px 0;
-    flex: 1 1 auto;
-    overflow: hidden;
+  margin: 22px 0;
+  flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .panel-content__controls {
-    flex: 0 0 min-content;
+  flex: 0 0 min-content;
 }
 
 .person-details {
-    display: flex;
-    flex: 0 0 min-content;
+  display: flex;
+  flex: 0 0 min-content;
 }
 
 .person-details__profile-container {
-    flex: 0 0 152px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+  flex: 0 0 152px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .person-details__profile-image-container {
-    position: relative;
-    height: 174px;
-    background-image: url(../assets/images/expertface.png);
-    background-position: center center;
-    background-size: cover;
+  position: relative;
+  height: 174px;
+  background-image: url(../assets/images/expertface.png);
+  background-position: center center;
+  background-size: cover;
 }
 
 .person-details__profile-link {
-    padding: 13px 20px;
-    background: #ff683e;
-    font-weight: 700;
-    font-size: 0.8125rem;
-    line-height: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #ffffff;
+  padding: 13px 20px;
+  background: #ff683e;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .person-details__info {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .person-details__name {
-    font-family: "Bodoni";
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.4375rem;
-    line-height: 1.5625rem;
-    color: #2e2e2e;
-    margin-bottom: 5px;
+  font-family: "Bodoni MT";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4375rem;
+  line-height: 1.5625rem;
+  color: #2e2e2e;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  letter-spacing: 0;
 }
 
 .person-details__title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 0.9375rem;
-    line-height: 1.5625rem;
-    text-transform: uppercase;
-    color: #cdcdcd;
-    margin-bottom: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  color: #cdcdcd;
+  margin-bottom: 8px;
+  line-height: 29px;
 }
 
 .person-details__cost {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.625rem;
-    color: #2e2e2e;
-    margin-bottom: 19px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #2e2e2e;
+  margin-bottom: 19px;
+  letter-spacing: 0;
 }
 
 .person-details__text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.9375rem;
-    line-height: 1.4375rem;
-    color: #2e2e2e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+  color: #2e2e2e;
+  letter-spacing: 0;
 }

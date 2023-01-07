@@ -1,5 +1,5 @@
 .suggestion {
-  min-height: 500px;
+  min-height: 680px;
   background: #03225c;
 }
 
@@ -8,7 +8,6 @@
   transform: translateY(97px);
   align-items: flex-end;
   justify-content: space-between;
-  overflow: hidden;
 
   @media (max-width: $breakPointPhone) {
     flex-direction: column;
@@ -50,8 +49,9 @@
 }
 
 .suggestion__text {
-  margin-left: 43px;
-  padding: 0 0 159px 0;
+  margin-left: 61px;
+  margin-right: -20px;
+  padding: 0 0 141px 0;
 
   @media (max-width: $breakPointSmallMonitor) {
     flex: 1 1 auto;
@@ -72,8 +72,9 @@
 
 .suggestion__heading {
   font-size: 3.625rem;
-  line-height: 3.875rem;
   color: #ffffff;
+  line-height: 62px;
+  margin-bottom: 13px;
 
   @media (max-width: $breakPointPhone) {
     font-size: 2.5rem;
@@ -83,7 +84,7 @@
 
 .suggestion__sub-heading {
   font-size: 2.5rem;
-  line-height: 3.5rem;
+  line-height: 56px;
   color: #ff683e;
 
   @media (max-width: $breakPointPhone) {
@@ -98,7 +99,8 @@
   font-size: 1.125rem;
   line-height: 1.625rem;
   color: var(--light);
-  margin: 37px 0 27px 0;
+  margin: 44px 0 27px 0;
+  letter-spacing: 0;
 }
 
 .suggestion__button.btn:hover {

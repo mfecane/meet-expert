@@ -8,30 +8,31 @@ $burgerColor: black;
 $headerHeight: 123px;
 
 :root {
-    --accent: #ff683e;
-    --dark-bg: #03225c;
-    --dark: #2e2e2e;
-    --brand: #1c51b9;
-    --light: #f9f7f2;
-    --grey: #cdcdcd;
-    --accent-hover: #ff3700;
-    font-size: 16px;
+  --accent: #ff683e;
+  --dark-bg: #03225c;
+  --dark: #2e2e2e;
+  --brand: #1c51b9;
+  --light: #f9f7f2;
+  --grey: #cdcdcd;
+  --accent-hover: #ff3700;
+  font-size: 16px;
 
-    @media (max-width: $breakPointTablet) {
-        font-size: 13px;
-    }
+  @media (max-width: $breakPointTablet) {
+    font-size: 13px;
+  }
 
-    @media (max-width: $breakPointPhone) {
-        font-size: 14px;
-    }
+  @media (max-width: $breakPointPhone) {
+    font-size: 14px;
+  }
 
-    @media (max-width: $breakPointSmallPhone) {
-        font-size: 12px;
-    }
+  @media (max-width: $breakPointSmallPhone) {
+    font-size: 12px;
+  }
 
-    --header-height: 123px;
+  --header-height: 123px;
+  --header-small-height: 93px;
 
-    @media (max-width: $breakPointPhone) {
-        --header-height: 93px;
-    }
+  @media (max-width: $breakPointPhone) {
+    --header-height: 93px;
+  }
 }

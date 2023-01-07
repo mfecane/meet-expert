@@ -1,153 +1,151 @@
 .search__section {
-    padding: 70px 0 72px 0;
 }
 
 .search__section--alternative {
-    background-color: var(--light);
+  background-color: var(--light);
 }
 
 .search__container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .searchbar {
-    margin: auto;
-    min-width: 830px;
-    background: #ffffff;
-    border: 2px solid var(--brand);
-    padding: 4px 12px 4px 36px;
-    min-height: 52px;
-    margin-bottom: 20px;
+  margin: auto;
+  min-width: 834px;
+  background: #ffffff;
+  border: 2px solid var(--brand);
+  padding: 4px 12px 4px 48px;
+  min-height: 52px;
 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 0.8125rem;
-    line-height: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 
-    &--with-button {
-        padding-right: 112px;
-    }
+  &--with-button {
+    padding-right: 112px;
+  }
 
-    @media (max-width: $breakPointTablet) {
-        min-width: 700px;
-    }
+  @media (max-width: $breakPointTablet) {
+    min-width: 700px;
+  }
 
-    @media (max-width: $breakPointPhone) {
-        min-width: 100%;
-    }
+  @media (max-width: $breakPointPhone) {
+    min-width: 100%;
+  }
 }
 
 .searchbar__icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 12px;
-    width: 14px;
-    height: 14px;
-    background-image: url(../assets/images/glass.svg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  width: 18px;
+  height: 18px;
+  background-image: url(../assets/images/glass.svg);
 }
 
 .searchbar__helptext {
-    position: absolute;
-    top: 50%;
-    transform: translateY(calc(-50%));
-    left: 36px;
-    width: calc(100% - 42px);
-    height: 16px;
-    line-height: 1.25rem;
-    color: var(--grey);
-    opacity: 1;
-    transition: opacity 0.1s ease-out;
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50%));
+  left: 48px;
+  width: calc(100% - 42px);
+  height: 16px;
+  line-height: 1.25rem;
+  color: var(--grey);
+  opacity: 1;
+  transition: opacity 0.1s ease-out;
 
-    @media (max-width: $breakPointPhone) {
-        display: none;
-    }
+  @media (max-width: $breakPointPhone) {
+    display: none;
+  }
 }
 
 .searchbar__helptext-mobile {
-    display: none;
-    color: var(--grey);
-    text-transform: uppercase;
-    line-height: 1.25rem;
+  display: none;
+  color: var(--grey);
+  text-transform: uppercase;
+  line-height: 1.25rem;
 
-    @media (max-width: $breakPointPhone) {
-        display: block;
-    }
+  @media (max-width: $breakPointPhone) {
+    display: block;
+  }
 }
 
 .searchbar.active .searchbar__helptext {
-    opacity: 0;
+  opacity: 0;
 }
 
 .searchbar__highlight {
-    color: var(--brand);
+  color: var(--brand);
 }
 
 .searchbar__content {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
 }
 
 .searchbar__tag {
-    min-width: max-content;
-    padding: 12px 18px;
-    background: var(--light);
-    font-weight: 700;
-    font-size: 0.8125rem;
-    line-height: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #1c51b9;
-    display: inline-flex;
+  min-width: max-content;
+  padding: 12px 18px;
+  background: var(--light);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1c51b9;
+  display: inline-flex;
 
-    &:not(:last-child) {
-        margin-right: 12px;
-    }
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
 }
 
 .searchbar__tag-close {
-    margin-left: 10px;
-    &:before {
-        font-family: sans-serif;
-        font-weight: 700;
-        content: "\2716";
-        color: var(--dark);
-    }
+  margin-left: 10px;
+  &:before {
+    font-family: sans-serif;
+    font-weight: 700;
+    content: "\2716";
+    color: var(--dark);
+  }
 }
 
 .searchbar__input {
-    color: var(--brand);
-    position: relative;
-    z-index: 1;
-    flex: 1 1 auto;
-    background: transparent;
-    font-size: 1rem;
-    font-weight: 700;
-    display: inline-block;
+  color: var(--brand);
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-block;
 }
 
 .searchbar__go-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 12px;
-    flex: 0 0 max-content;
-    font-size: 0.8125rem;
-    line-height: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: white;
-    background: var(--brand);
-    padding: 12px 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  flex: 0 0 max-content;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  background: var(--brand);
+  padding: 12px 18px;
 }

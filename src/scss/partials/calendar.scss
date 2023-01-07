@@ -1,72 +1,72 @@
 :root .fc {
-    --fc-today-bg-color: #f9f7f2;
-    --fc-button-bg-color: var(--light);
-    --fc-button-border-color: transparent;
-    --fc-button-hover-bg-color: var(--brand);
-    --fc-button-hover-border-color: transparent;
-    --fc-button-active-bg-color: var(--brand);
-    --fc-button-active-border-color: transparent;
-    --fc-button-text-color: var(--brand);
-    --fc-neutral-text-color: var(--light);
-    --fc-border-color: #f2f2f2;
+  --fc-today-bg-color: #f9f7f2;
+  --fc-button-bg-color: var(--light);
+  --fc-button-border-color: transparent;
+  --fc-button-hover-bg-color: var(--brand);
+  --fc-button-hover-border-color: transparent;
+  --fc-button-active-bg-color: var(--brand);
+  --fc-button-active-border-color: transparent;
+  --fc-button-text-color: var(--brand);
+  --fc-neutral-text-color: var(--light);
+  --fc-border-color: #f2f2f2;
 }
 
 .fc a {
-    color: var(--dark);
-    &:hover {
-        color: var(--brand);
-        cursor: pointer;
-    }
+  color: var(--dark);
+  &:hover {
+    color: var(--brand);
+    cursor: pointer;
+  }
 }
 
 .fc .fc-icon-chevron-left:before {
-    content: "\1F850";
-    font-family: sans-serif;
-    display: block;
-    font-weight: 700;
+  content: "\1F850";
+  font-family: sans-serif;
+  display: block;
+  font-weight: 700;
 }
 
 .fc .fc-icon-chevron-right:before {
-    content: "\1F852";
-    font-family: sans-serif;
-    display: block;
-    font-weight: 700;
+  content: "\1F852";
+  font-family: sans-serif;
+  display: block;
+  font-weight: 700;
 }
 
 .fc button.fc-today-button {
-    display: none;
+  display: none;
 }
 
 .fc-toolbar-title {
-    font-family: "Bodoni";
-    font-style: italic;
+  font-family: "Bodoni MT";
+  font-style: italic;
 }
 
 .fc button.fc-button-primary {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .fc button.fc-button {
-    border-radius: unset;
+  border-radius: unset;
 }
 
 .fc button.fc-button-primary:hover {
-    color: white;
+  color: white;
 }
 
 .fc button.fc-button-primary:active {
-    color: white;
+  color: white;
 }
 
 .fc button.fc-button-primary:not(:disabled).fc-button-active {
-    color: white;
+  color: white;
 }
 
 // fc-scrollgrid-section-body  fc-scrollgrid-section-liquid
 tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid {
-    box-shadow: inset 0px 8px 31px rgba(28, 81, 185, 0.05);
+  box-shadow: inset 0px 8px 31px rgba(28, 81, 185, 0.05);
 }
 
 .fc td.fc-timegrid-slot-minor {
-    border-top-style: dashed;
+  border-top-style: dashed;
 }

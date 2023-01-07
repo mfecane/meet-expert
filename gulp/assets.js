@@ -6,17 +6,18 @@ import gifsicle from "imagemin-gifsicle";
 import jpegtran from "imagemin-jpegtran";
 import optipng from "imagemin-optipng";
 import svgo from "imagemin-svgo";
-import ttf2woff from "gulp-ttf2woff";
+// import ttf2woff from "gulp-ttf2woff";
 
 const { src, parallel, dest } = gulp;
 
 const paths = {
-  all: "./assets/**/*",
   jpg: "./assets/**/*.jpg",
   png: "./assets/**/*.png",
   svg: "./assets/**/*.svg",
   ttf: "./assets/**/*.ttf",
   ico: "./assets/images/favicon.ico",
+  fonts: "./assets/fonts/**/*",
+  js: "./assets/js/**/*",
 };
 
 const imageminOpts = [
@@ -32,26 +33,6 @@ const imageminOpts = [
   },
 ];
 
-const files = () => {
-  return src([
-    paths.all,
-    "!" + paths.jpg,
-    "!" + paths.png,
-    "!" + paths.svg,
-    "!" + paths.ttf,
-    "!" + paths.ico,
-  ])
-    .pipe(
-      plumber({
-        handleError: function (err) {
-          console.log(err);
-          this.emit("end");
-        },
-      })
-    )
-    .pipe(dest("dist/assets"));
-};
-
 const images = () =>
   src([paths.jpg, paths.png, paths.svg])
     .pipe(
@@ -65,21 +46,27 @@ const images = () =>
     .pipe(imagemin(...imageminOpts))
     .pipe(dest("dist/assets"));
 
-const fonts = () =>
-  src(paths.ttf)
-    .pipe(
-      plumber({
-        handleError: function (err) {
-          console.log(err);
-          this.emit("end");
-        },
-      })
-    )
-    .pipe(ttf2woff())
-    .pipe(dest("dist/assets"));
+// const fonts = () =>
+//   src(paths.ttf)
+//     .pipe(
+//       plumber({
+//         handleError: function (err) {
+//           console.log(err);
+//           this.emit("end");
+//         },
+//       })
+//     )
+//     .pipe(ttf2woff())
+//     .pipe(dest("dist/assets"));
+
+const fonts = () => src(paths.fonts).pipe(dest("dist/fonts"));
+
+const js = () => {
+  return src(paths.js).pipe(dest("dist/js"));
+};
 
 const favicon = () => {
   return src(paths.ico).pipe(dest("dist/"));
 };
 
-export default parallel(files, images, fonts, favicon);
+export default parallel(js, fonts, images, favicon);

@@ -171,6 +171,15 @@ function setUpFormFields() {
   });
 }
 
+function setUpHeaderScroll() {
+  const header = document.querySelector(".site-header");
+  if (header) {
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("small", window.scrollY > 0);
+    });
+  }
+}
+
 window.addEventListener("load", function () {
   setUpSearch();
   setUpPanel();
@@ -179,4 +188,5 @@ window.addEventListener("load", function () {
   setUpBurger();
   setUpSwitchers();
   setUpFormFields();
+  setUpHeaderScroll();
 });

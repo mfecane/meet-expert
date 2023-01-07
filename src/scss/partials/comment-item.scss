@@ -1,61 +1,61 @@
 .comment__container {
-    background: #ffffff;
-    box-shadow: 0px 8px 31px rgba(28, 81, 185, 0.05);
-    padding: 20px 32px 20px 23px;
+  background: #ffffff;
+  box-shadow: 0px 8px 31px rgba(28, 81, 185, 0.05);
+  padding: 20px 32px 20px 23px;
 }
 
 .comment_text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.9375rem;
-    line-height: 1.5625rem;
-    color: var(--dark);
-    margin-bottom: 19px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  color: var(--dark);
+  margin-bottom: 19px;
 }
 
 .comment__info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    @media (max-width: $breakPointSmallPhone) {
-        flex-wrap: wrap;
-    }
+  @media (max-width: $breakPointSmallPhone) {
+    flex-wrap: wrap;
+  }
 
-    & :not(:first-child) {
-        margin-left: 20px;
-    }
+  & :not(:first-child) {
+    margin-left: 20px;
+  }
 }
 
 .comment__image {
-    flex: 0 0 32px;
-    height: 32px;
-    background: #f9f7f2;
-    color: grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 0 0 32px;
+  height: 32px;
+  background: #f9f7f2;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .comment__author {
-    flex: 2 0 auto;
-    font-family: "Bodoni";
-    font-style: italic;
-    font-size: 1.4375rem;
-    line-height: 1.5625rem;
-    color: var(--dark);
+  flex: 2 0 auto;
+  font-family: "Bodoni MT";
+  font-style: italic;
+  font-size: 1.4375rem;
+  line-height: 1.5625rem;
+  color: var(--dark);
 }
 
 .comment__date {
-    flex: 0 0 max-content;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.8125rem;
-    line-height: 1.625rem;
-    text-align: right;
-    color: var(--grey);
+  flex: 0 0 max-content;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.625rem;
+  text-align: right;
+  color: var(--grey);
 
-    @media (max-width: $breakPointSmallPhone) {
-        flex: 0 0 100%;
-        text-align: unset;
-    }
+  @media (max-width: $breakPointSmallPhone) {
+    flex: 0 0 100%;
+    text-align: unset;
+  }
 }

@@ -1,39 +1,43 @@
 .people-list__heading {
-    text-align: center;
+  text-align: center;
+  line-height: 72px;
+  letter-spacing: 0.08em;
 
-    @media (max-width: $breakPointPhone) {
-        font-size: 3rem;
-        line-height: 2.75rem;
-    }
+  @media (max-width: $breakPointPhone) {
+    font-size: 3rem;
+    line-height: 2.75rem;
+  }
 }
 
 .people-list__sub-heading {
-    text-align: center;
+  text-align: center;
+  line-height: 72px;
+  letter-spacing: 0;
 
-    @media (max-width: $breakPointPhone) {
-        font-size: 2.5rem;
-        line-height: 2.75rem;
-    }
+  @media (max-width: $breakPointPhone) {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
 }
 
 .people-list {
-    margin: 24px 0 101px 0;
+  margin: 32px 0 101px 0;
 }
 
 .people-list__layout {
-    margin-top: 60px;
+  margin-top: 40px;
 }
 
 .people-list__more-button {
-    background: #ff683e;
-    text-transform: uppercase;
-    color: #ffffff;
-    margin: 59px auto 0 auto;
-    display: block;
-    padding-left: 32px;
-    padding-right: 32px;
+  background: #ff683e;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 44px auto 0 auto;
+  display: block;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .people-list__more-button:hover {
-    background: #ff3700;
+  background: #ff3700;
 }

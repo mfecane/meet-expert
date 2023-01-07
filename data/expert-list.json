@@ -1,68 +1,74 @@
 [
-    {
-        "name": "Игорь Макаров",
-        "job": "Менеджер продукта @Netology",
-        "experience": "10+ лет",
-        "price": "5 000 руб."
-    },
-    {
-        "name": "Владимир Круглов",
-        "job": "Front-end/QA Team Lead @LIONSGATE",
-        "experience": "10+ лет",
-        "price": "3 500 руб."
-    },
-    {
-        "name": "Сергей Симов",
-        "job": "Директор по работе с клиентами @DOBRO Agency",
-        "experience": "10+ лет",
-        "price": "4 800 руб."
-    },
-    {
-        "name": "Андрей Чижов",
-        "job": "Руководитель ИТ-проектов @UniCredit Russia",
-        "experience": "5–10 лет",
-        "price": "5 000 руб."
-    },
-    {
-        "name": "Екатерина Якубчик",
-        "job": "CPO @The Coach: Men's Health App",
-        "experience": "5–10 лет",
-        "price": "2 500 руб."
-    },
-    {
-        "name": "Ольга Шелковникова",
-        "job": "Руководитель группы клиентских решений, EE @TikTok",
-        "experience": "10+ лет",
-        "price": "Бесплатно"
-    },
-    {
-        "name": "Михаил Сухов",
-        "job": "Agile Coach @Pandora",
-        "experience": "10+ лет",
-        "price": "Бесплатно"
-    },
-    {
-        "name": "Анастасия Сенникова",
-        "job": "Основатель @Conscious Leadership in Tech, Executive Coach",
-        "experience": "10+ лет",
-        "price": "4 000 руб."
-    },
-    {
-        "name": "Елена Пинчук",
-        "job": "менеджер проектов @UpTrader",
-        "experience": "5–10 лет",
-        "price": "Бесплатно"
-    },
-    {
-        "name": "Степан Баранников",
-        "job": "CPO @The Coach: Men's Health App",
-        "experience": "5–10 лет",
-        "price": "Бесплатно"
-    },
-    {
-        "name": "Александра Лобода",
-        "job": "Ведущий маркетинг менеджер в Средней и Восточной Европе @SAP",
-        "experience": "5–10 лет",
-        "price": "3 500 руб."
-    }
+  {
+    "name": "Игорь Макаров",
+    "job": "Менеджер продукта @Netology",
+    "experience": "10+ лет",
+    "price": "5 000 руб."
+  },
+  {
+    "name": "Владимир Круглов",
+    "job": "Front-end/QA Team Lead @LIONSGATE",
+    "experience": "10+ лет",
+    "price": "3 500 руб."
+  },
+  {
+    "name": "Сергей Симов",
+    "job": "Директор по работе с клиентами @DOBRO Agency",
+    "experience": "10+ лет",
+    "price": "4 800 руб."
+  },
+  {
+    "name": "Андрей Чижов",
+    "job": "Руководитель ИТ-проектов @UniCredit Russia",
+    "experience": "5–10 лет",
+    "price": "5 000 руб."
+  },
+  {
+    "name": "Екатерина Якубчик",
+    "job": "CPO @The Coach: Men's Health App",
+    "experience": "5–10 лет",
+    "price": "2 500 руб."
+  },
+  {
+    "name": "Ольга Шелковникова",
+    "job": "Руководитель группы клиентских решений, EE @TikTok",
+    "experience": "10+ лет",
+    "price": "Бесплатно"
+  },
+  {
+    "name": "Михаил Сухов",
+    "job": "Agile Coach @Pandora",
+    "experience": "10+ лет",
+    "price": "Бесплатно"
+  },
+  {
+    "name": "Анастасия Сенникова",
+    "job": "Основатель @Conscious Leadership in Tech, Executive Coach",
+    "experience": "10+ лет",
+    "price": "4 000 руб."
+  },
+  {
+    "name": "Елена Пинчук",
+    "job": "менеджер проектов @UpTrader",
+    "experience": "5–10 лет",
+    "price": "Бесплатно"
+  },
+  {
+    "name": "Степан Баранников",
+    "job": "CPO @The Coach: Men's Health App",
+    "experience": "5–10 лет",
+    "price": "Бесплатно"
+  },
+  {
+    "name": "Сергей Никольский",
+    "job": "Менеджер по развитию бизнеса @Avito",
+    "experience": "5–10 лет",
+    "price": "Бесплатно"
+  },
+  {
+    "name": "Александра Лобода",
+    "job": "Ведущий маркетинг менеджер в Средней и Восточной Европе @SAP",
+    "experience": "5–10 лет",
+    "price": "3 500 руб."
+  }
 ]

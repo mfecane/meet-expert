@@ -1,75 +1,79 @@
 .hero {
-    background-color: var(--light);
-    height: 682px;
+  background-color: var(--light);
+  height: 804px;
+  padding-top: 163px;
 }
 
 .hero__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .hero__main {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 94px 0 3.75rem 0;
+  align-items: center;
 }
 
 .hero__bottom {
-    height: max-content;
+  height: max-content;
 }
 
 .hero__heading.heading {
-    text-align: center;
-    font-size: 4.375rem;
-    line-height: 4.1875rem;
+  text-align: center;
+  font-size: 4.375rem;
+  line-height: 5.1875rem;
+  letter-spacing: 0.04em;
 
-    @media (max-width: $breakPointPhone) {
-        font-size: 3rem;
-        line-height: 3rem;
-    }
+  @media (max-width: $breakPointPhone) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 .hero__sub-heading.sub-heading {
-    text-align: center;
-    font-size: 3.125rem;
-    line-height: 4.1875rem;
-    padding-bottom: 2.9375rem;
+  text-align: center;
+  font-size: 3.125rem;
+  line-height: 4.1875rem;
+  margin-bottom: 50px;
+  letter-spacing: 0;
 
-    span {
-        display: inline;
-        white-space: nowrap;
-    }
+  span {
+    display: inline;
+    white-space: nowrap;
+  }
 
-    @media (max-width: $breakPointPhone) {
-        font-size: 2.25rem;
-        line-height: 2.25rem;
-    }
+  @media (max-width: $breakPointPhone) {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
 }
 
 .hero__copy {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-    text-align: center;
-    color: var(--dark);
-    max-width: 720px;
-    padding-bottom: 1.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: var(--dark);
+  max-width: 730px;
+  margin-bottom: 1.8125rem;
+  letter-spacing: 0em;
 }
 
 .hero__info {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.8125rem;
-    line-height: 1.625rem;
-    text-align: center;
-    color: var(--grey);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: var(--grey);
+  letter-spacing: 0em;
 
-    margin-bottom: 62px;
+  margin-bottom: 83px;
 }

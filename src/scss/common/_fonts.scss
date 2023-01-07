@@ -1,11 +1,17 @@
 @font-face {
-    font-family: "Gotham Pro";
-    font-weight: 700;
-    src: url("../assets/fonts/Gotham_Pro_Bold.woff");
+  font-family: "Gotham Pro";
+  font-weight: 700;
+  src: url("../fonts/Gotham_Pro_Bold.woff");
 }
 
 @font-face {
-    font-family: "Gotham Pro";
-    font-weight: 400;
-    src: url("../assets/fonts/Gotham_Pro_Regular.woff");
+  font-family: "Gotham Pro";
+  font-weight: 400;
+  src: url("../fonts/Gotham_Pro_medium.woff");
+}
+
+@font-face {
+  font-family: "Bodoni MT";
+  font-weight: 400;
+  src: url("../fonts/Bodoni_MT_italic.woff");
 }
