@@ -438,6 +438,7 @@ body.lock{
 
 .search__section--alternative{
   background-color:var(--light);
+  padding-top:195px;
 }
 
 .search__container{
@@ -467,7 +468,13 @@ body.lock{
 }
 
 .searchbar--with-button{
+  min-height:54px;
   padding-right:112px;
+}
+
+.searchbar--experts{
+  max-width:816px;
+  min-height:54px;
 }
 
 .searchbar__icon{
@@ -570,6 +577,15 @@ body.lock{
   transform:translateY(-50%);
 }
 
+.experts-list__header--index{
+  margin-bottom:41px;
+  margin-top:84px;
+}
+
+.experts-list--index{
+  margin:0 0 100px;
+}
+
 .people-list__heading{
   letter-spacing:.08em;
   line-height:72px;
@@ -582,12 +598,26 @@ body.lock{
   text-align:center;
 }
 
+.people-list__heading--result{
+  font-size:31px;
+  line-height:29px;
+  margin-top:58px;
+  text-align:center;
+}
+
+.people-list__sub-heading--result{
+  font-size:19px;
+  line-height:36px;
+  margin-bottom:36px;
+  text-align:center;
+}
+
 .people-list{
   margin:32px 0 101px;
 }
 
-.people-list__layout{
-  margin-top:40px;
+.people-list--result{
+  margin:54px 0 0;
 }
 
 .people-list__more-button{
@@ -911,7 +941,7 @@ body.lock{
   bottom:0;
   display:flex;
   height:100vh;
-  max-width:883px;
+  max-width:910px;
   overflow:hidden;
   position:fixed;
   right:0;
@@ -952,7 +982,7 @@ body.lock{
   height:100%;
   max-height:100vh;
   overflow:auto;
-  padding:32px 25px 32px 40px;
+  padding:32px 40px;
 }
 
 .calendar--overlay{
@@ -1043,12 +1073,12 @@ body.lock{
 .tags__container{
   display:flex;
   flex-wrap:wrap;
-  margin:15px -6px 52px;
+  margin:15px -6px 0;
   max-width:-moz-fit-content;
   max-width:fit-content;
 }
 
-.tags__container--center{
+.tags__container--main{
   justify-content:center;
 }
 
