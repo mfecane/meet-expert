@@ -14,17 +14,18 @@ html(lang="ru")
   body
     include ./partials/header-common.pug
 
-    .switcher
-      +searchbar({
-        tags: false,
-        go: false,
-        hint: true
-      })
-      +searchbar({
-        tags: true,
-        go: true,
-        hint: false
-      })
+    .experts-search
+      .switcher
+        +searchbar({
+          tags: true,
+          go: true,
+          hint: false
+        })
+        +searchbar({
+          tags: false,
+          go: false,
+          hint: true
+        })
 
     +expert-list({
       people: [

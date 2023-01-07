@@ -13,7 +13,6 @@ mixin expert-list-item(options)
         button.btn.btn-primary.people-list__action-button Проверить даты
 
 mixin expert-list(options)
-  section.experts-list
     .container
       .switcher
         .people-list--result
@@ -24,6 +23,6 @@ mixin expert-list(options)
           h2.people-list__heading.heading Найди эксперта
           h3.people-list__sub-heading.sub-heading среди 370+ специалистов
 
-    div.people-list__layout
+    div.people-list__layout.people-list__experts
       each p in options.people
         +expert-list-item(p)
