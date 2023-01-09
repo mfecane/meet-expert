@@ -1655,7 +1655,7 @@ body.lock{
 
 .cabinet{
   display:flex;
-  margin-top:89px;
+  margin-top:222px;
 }
 
 .cabinet__profile-container{
@@ -1687,21 +1687,20 @@ body.lock{
 .cabinet__content{
   margin-left:45px;
   overflow:hidden;
+  padding-top:10px;
 }
 
 .cabinet-form{
   margin-bottom:198px;
 }
 
-.cabinet-form>:not(:last-child){
-  margin-bottom:23px;
-}
-
 .constraints{
-  margin-bottom:28px;
+  margin-bottom:24px;
 }
 
 .constraints__item{
+  font-size:13px;
+  line-height:30px;
   margin-left:20px;
   position:relative;
 }
@@ -1722,15 +1721,20 @@ body.lock{
 }
 
 .constraints__item:not(:last-child){
-  margin-bottom:16px;
+  margin-bottom:1px;
+}
+
+.cabinet-form__controls-group>:not(:last-child){
+  margin-bottom:19px;
 }
 
 .cabinet-form__title{
+  margin-bottom:25px;
   margin-top:52px;
 }
 
 .cabinet-form__title--smallgap{
-  margin-bottom:8px !important;
+  margin-bottom:10px !important;
 }
 
 .cabinet-heading{
@@ -1740,13 +1744,13 @@ body.lock{
 
 .cabinet-sub-heading{
   font-size:1.0625rem;
-  line-height:1.5625rem;
+  line-height:29px;
 }
 
 .competencies{
   background:#fff;
   border:2px solid var(--light);
-  padding:21px 21px 18px;
+  padding:21px 21px 10px;
 }
 
 .competencies__label{
@@ -1754,7 +1758,7 @@ body.lock{
   font-size:.8125rem;
   letter-spacing:.08em;
   line-height:.75rem;
-  margin-bottom:14px;
+  margin-bottom:8px;
   text-transform:uppercase;
 }
 
@@ -1768,7 +1772,7 @@ body.lock{
   font-size:1rem;
   font-weight:400;
   line-height:1.625rem;
-  margin-bottom:14px;
+  margin-bottom:25px;
 }
 
 .cabinet__input--right-margin{
@@ -1874,7 +1878,8 @@ body.become-expert{
   background:#fff;
   border:2px solid var(--light);
   display:flex;
-  padding:21px;
+  min-height:56px;
+  padding:19px;
 }
 
 .form-input__container.active{
@@ -1926,10 +1931,6 @@ body.become-expert{
   line-height:1.25rem;
 }
 
-.form-input__hint-container>:not(:last-child){
-  margin-bottom:12px;
-}
-
 .form__button{
   padding:13px 20px;
 }
@@ -1951,8 +1952,12 @@ body.become-expert{
 
 .form-input__hint{
   font-weight:400;
-  margin-bottom:23px;
+  margin-top:9px;
   word-break:break-word;
+}
+
+.form-input__hint--big-margin{
+  margin-top:17px;
 }
 
 .form-textarea__container{
@@ -1986,14 +1991,15 @@ body.become-expert{
   align-items:center;
   display:flex;
   justify-content:space-between;
+  margin-top:17px;
 }
 
-.price>*{
-  margin-top:12px;
+.price>:nth-child(2){
+  margin-right:52px;
 }
 
-.price>:not(:last-child):not(:first-child){
-  margin-right:12px;
+.price>:nth-child(3){
+  margin-right:10px;
 }
 
 .price__tag{
@@ -2270,6 +2276,9 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
   .price{
     flex-wrap:wrap;
     justify-content:start;
+  }
+  .price>*{
+    margin-top:12px;
   }
 }
 
