@@ -225,7 +225,7 @@ body.lock{
 
 .index__experts{
   margin-bottom:100px;
-  margin-top:132px;
+  margin-top:145px;
 }
 
 .index__mission{
@@ -495,7 +495,7 @@ body.lock{
   letter-spacing:.08em;
   line-height:.75rem;
   margin:auto;
-  min-height:52px;
+  min-height:54px;
   min-width:834px;
   padding:0 12px 0 48px;
   position:relative;
@@ -1144,7 +1144,7 @@ body.lock{
 .tags__container{
   display:flex;
   flex-wrap:wrap;
-  margin:15px -6px 0;
+  margin:0 -6px;
   max-width:-moz-fit-content;
   max-width:fit-content;
 }
@@ -1167,7 +1167,7 @@ body.lock{
   font-weight:700;
   letter-spacing:.08em;
   line-height:.75rem;
-  margin:6px;
+  margin:8px 6px;
   padding:12px 18px;
   text-transform:uppercase;
 }
@@ -1308,6 +1308,10 @@ body.lock{
   padding-top:7px;
 }
 
+.expert-profile__narrow-container{
+  max-width:712px;
+}
+
 .expert-profile__name{
   color:var(--dark);
   font-family:Bodoni MT;
@@ -1342,7 +1346,12 @@ body.lock{
   font-style:normal;
   font-weight:400;
   line-height:1.4375rem;
-  margin:20px 0;
+  margin-top:20px;
+}
+
+.expert-profile__tags{
+  margin-bottom:42px;
+  margin-top:5px;
 }
 
 .expert-profile__text p:not(:last-child){
@@ -1361,7 +1370,6 @@ body.lock{
 
 .person__help-heading{
   margin-bottom:16px;
-  margin-top:52px;
 }
 
 .expert-profile__heading{
@@ -1393,8 +1401,9 @@ body.lock{
   display:grid;
   gap:12px;
   grid-auto-flow:column;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(220px, max-content));
   grid-template-rows:repeat(6, min-content);
+  letter-spacing:0;
   margin:16px 0 52px;
 }
 
@@ -1413,7 +1422,6 @@ body.lock{
   align-items:flex-end;
   display:flex;
   margin:0 0 22px;
-  max-width:712px;
 }
 
 .comments-header__left{
@@ -1442,13 +1450,13 @@ body.lock{
 }
 
 .comments-list>:not(:first-child){
-  margin-top:19px;
+  margin-top:22px;
 }
 
 .comment__container{
   background:#fff;
   box-shadow:0 8px 31px rgba(28,81,185,.05);
-  padding:20px 25px 20px 23px;
+  padding:21px 25px 21px 23px;
 }
 
 .comment_text{
@@ -1458,7 +1466,7 @@ body.lock{
   font-weight:400;
   letter-spacing:0;
   line-height:1.5625rem;
-  margin-bottom:19px;
+  margin-bottom:15px;
 }
 
 .comment__info{
