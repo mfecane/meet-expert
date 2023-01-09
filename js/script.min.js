@@ -21,7 +21,7 @@ function setUpPanel() {
     return;
   }
 
-  const elements = document.querySelectorAll(".people-list__action");
+  const elements = document.querySelectorAll(".experts-list__action");
   const elementsArray = [...elements];
   elementsArray.forEach((element) => {
     element.addEventListener("click", () => {
