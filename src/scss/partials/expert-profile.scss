@@ -78,6 +78,10 @@
   }
 }
 
+.expert-profile__narrow-container {
+  max-width: 712px;
+}
+
 .expert-profile__name {
   font-family: "Bodoni MT";
   font-style: italic;
@@ -112,7 +116,12 @@
   font-size: 0.9375rem;
   line-height: 1.4375rem;
   color: var(--dark);
-  margin: 20px 0;
+  margin-top: 20px;
+}
+
+.expert-profile__tags {
+  margin-top: 5px;
+  margin-bottom: 42px;
 }
 
 .expert-profile__text p:not(:last-child) {
@@ -138,7 +147,6 @@
 }
 
 .person__help-heading {
-  margin-top: 52px;
   margin-bottom: 16px;
 }
 
@@ -171,9 +179,10 @@
   display: grid;
   margin: 16px 0 52px 0;
   gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
   grid-template-rows: repeat(6, min-content);
   grid-auto-flow: column;
+  letter-spacing: 0;
 
   @media (max-width: $breakPointSmallMonitor) {
     grid-template-rows: repeat(9, min-content);
@@ -200,7 +209,6 @@
 .comments-header {
   display: flex;
   margin: 0 0 22px 0;
-  max-width: 712px;
   align-items: flex-end;
 }
 
@@ -229,6 +237,6 @@
   margin: 0 0 138px 0;
 
   & > :not(:first-child) {
-    margin-top: 19px;
+    margin-top: 22px;
   }
 }

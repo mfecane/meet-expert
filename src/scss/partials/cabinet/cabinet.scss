@@ -1,6 +1,6 @@
 .cabinet {
   display: flex;
-  margin-top: 89px;
+  margin-top: 222px;
 
   @media (max-width: $breakPointTablet) {
     flex-direction: column;
@@ -55,6 +55,7 @@
 
 .cabinet__content {
   margin-left: 45px;
+  padding-top: 10px;
   overflow: hidden;
 
   @media (max-width: $breakPointTablet) {

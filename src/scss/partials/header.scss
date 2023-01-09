@@ -1,5 +1,5 @@
 .site-header {
-  width: 100vw;
+  width: 100%;
   height: var(--header-height);
   position: fixed;
   z-index: 2;
@@ -32,6 +32,12 @@
   @media (max-width: $breakPointTablet) {
     flex: 0 0 184px;
   }
+}
+
+.logo.logo--small {
+  flex: 0 0 175px;
+  height: 10px;
+  transform: translateY(-2px);
 }
 
 .nav {

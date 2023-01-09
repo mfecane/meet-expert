@@ -1,17 +1,16 @@
 .cabinet-form {
   margin-bottom: 198px;
-  & > *:not(:last-child) {
-    margin-bottom: 23px;
-  }
 }
 
 .constraints {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .constraints__item {
   position: relative;
   margin-left: 20px;
+  font-size: 13px;
+  line-height: 30px;
 
   &.active {
     color: var(--accent);
@@ -29,16 +28,21 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 1px;
   }
+}
+
+.cabinet-form__controls-group > *:not(:last-child) {
+  margin-bottom: 19px;
 }
 
 .cabinet-form__title {
   margin-top: 52px;
+  margin-bottom: 25px;
 }
 
 .cabinet-form__title--smallgap {
-  margin-bottom: 8px !important;
+  margin-bottom: 10px !important;
 }
 
 .cabinet-heading {
@@ -48,13 +52,13 @@
 
 .cabinet-sub-heading {
   font-size: 1.0625rem;
-  line-height: 1.5625rem;
+  line-height: 29px;
 }
 
 .competencies {
   background: white;
   border: 2px solid var(--light);
-  padding: 21px 21px 18px 21px;
+  padding: 21px 21px 10px 21px;
 }
 
 .competencies__label {
@@ -63,7 +67,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--grey);
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .competencies__tags {
@@ -74,7 +78,7 @@
 .cabinet-form__text {
   color: var(--dark);
 
-  margin-bottom: 14px;
+  margin-bottom: 25px;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.625rem;

@@ -1,6 +1,4 @@
 include ./partials/experts/searchbar.pug
-include ./partials/experts/expert-list.pug
-include ./partials/experts/searchbar.pug
 
 doctype html
 html(lang="ru")
@@ -19,17 +17,21 @@ html(lang="ru")
 
     include ./partials/index/tech-list.pug
 
-    +searchbar({
-      tags: false,
-      go: false,
-      hint: true
-    })
+    .index__search
+      +searchbar({
+        tags: false,
+        go: false,
+        hint: true
+      })
 
-    include ./partials/index/expert-list.pug
+    .index__experts
+      include ./partials/index/expert-list.pug
 
-    include ./partials/index/suggestion.pug
+    .index__suggestion
+      include ./partials/index/suggestion.pug
 
-    include ./partials/index/mission.pug
+    .index__mission
+      include ./partials/index/mission.pug
 
     include ./partials/footer.pug
 

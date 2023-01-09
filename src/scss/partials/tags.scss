@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: fit-content;
-  margin: 15px -6px 0 -6px;
+  margin: 0 -6px 0 -6px;
 }
 
 .tags__container--main {
@@ -25,9 +25,9 @@
   color: var(--grey);
   background: var(--light);
   cursor: pointer;
-  margin: 6px;
+  margin: 8px 6px;
 
-  .search__section--alternative & {
+  .experts__search & {
     background: white;
   }
 }

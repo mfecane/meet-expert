@@ -7,45 +7,46 @@ include ../../components/form-input.pug
 
 
   form.become-form(action="#")
-    +form-input({
-      label: "First name:",
-      name: "firstname",
-      value: "Alexander",
-      check: true
-    })
+    .become-form__controls-group
+      +form-input({
+        label: "Имя:",
+        name: "firstname",
+        value: "Alexander",
+        check: true
+      })
 
-    +form-input({
-      label: "First name:",
-      name: "lastname",
-      value: "kolesn",
-    })
+      +form-input({
+        label: "Фамилия:",
+        name: "lastname",
+        value: "kolesn",
+      })
 
-    +form-input({
-      label: "country:",
-      name: "country",
-      value: "",
-    })
+      +form-input({
+        label: "Страна:",
+        name: "country",
+        value: "",
+      })
 
-    +form-input({
-      label: "city:",
-      name: "city",
-      value: "",
-    })
+      +form-input({
+        label: "Город:",
+        name: "city",
+        value: "",
+      })
 
-    +form-input({
-      label: "email:",
-      name: "email",
-      value: "",
-    })
+      +form-input({
+        label: "email:",
+        name: "email",
+        value: "",
+      })
 
-    .form-input__photo-drag-container
-      span.form-input__photo-drag-title Upload from computer or drag and drop it here.
-      span.form-input__photo-drag-subtitle Only word or pdf format. Max file size 5 Mb.
+      .form-input__photo-drag-container
+        span.form-input__photo-drag-title Загрузите с компьютера или перетащите его сюда.
+        span.form-input__photo-drag-subtitle Только в формате word или pdf. Максимальный размер файла 5 Мб.
 
-    .form__buttons
-      button.btn.btn-primary.become-form__button(disabled = true) Send a request
+      .form__buttons
+        button.btn.btn-primary.become-form__button(disabled = true) Отправить запрос
 
-    .become-form__text.
-      By submitting an application, you accept the terms of the
-      #[a(href="#") license agreement] and agree to the
-      #[a(href="#") personal data processing policy]
+      .become-form__text.
+        Отправляя заявку, вы принимаете
+        #[a(href="#") условия лицензионного соглашения] и соглашаетесь с
+        #[a(href="#") политикой обработки персональных данных]

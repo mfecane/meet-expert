@@ -1,28 +1,60 @@
 mixin expert-list-item(options)
-  .people-list__line.active
-    .container.people-list__line-inner
-      .people-list__details
-        .people-list__details-name
+  .experts-list__line.active.experts-list__line--experts
+    .container.experts-list__line-inner.experts-list__line-inner--experts
+      .experts-list__details
+        .experts-list__details-name
           a(href="./person.html")= options.name
-        .people-list__details-job= options.job
-      .people-list__photo-container
-        .people-list__photo
-      .people-list__experience= options.experience
-      .people-list__price= options.price
-      .people-list__action
-        button.btn.btn-primary.people-list__action-button Проверить даты
+        .experts-list__details-job= options.job
+      .experts-list__photo-container
+        .experts-list__photo
+      .experts-list__reviews= options.reviews
+      .experts-list__experience= options.experience
+      .experts-list__price= options.price
+      .experts-list__action
+        button.btn.btn-primary.experts-list__action-button Проверить даты
 
-mixin expert-list(options)
-    .container
-      .switcher
-        .people-list--result
-          h2.people-list__heading--result.heading Результаты поиска по:
-          h3.people-list__sub-heading--result.sub-heading Swagger; Xcode; Openapi
+-
+  const experts = [
+    {
+      "name": "Артем зайцев",
+      "job": "Ведущий Backend Разработчик @FastVPS Ltd.",
+      "reviews": "15 отзывов",
+      "experience": "1–5 лет",
+      "price": "4 500 руб"
+    },
+    {
+      "name": "Владимир Круглов",
+      "job": "Principal инженер @Snapcart",
+      "reviews": "13 отзывов",
+      "experience": "5–10 лет",
+      "price": "5 000 руб"
+    },
+    {
+      "name": "Сергей Симов",
+      "job": "Ведущий специалист по обработке данных NLP @Lanit",
+      "reviews": "7 отзывов",
+      "experience": "1–5 лет",
+      "price": "3 500 руб"
+    },
+    {
+      "name": "Степан Баранников",
+      "job": "Архитектор решений @Korus Consulting",
+      "reviews": "3 отзывов",
+      "experience": "5–10 лет",
+      "price": "4 000 руб"
+    }
+  ]
 
-        .people-list--no-result
-          h2.people-list__heading.heading Найди эксперта
-          h3.people-list__sub-heading.sub-heading среди 370+ специалистов
+.container
+  .switcher
+    .experts-list--result
+      h2.experts-list__heading--result.heading Результаты поиска по:
+      h3.experts-list__sub-heading--result.sub-heading Swagger; Xcode; Openapi
 
-    div.people-list__layout.people-list__experts
-      each p in options.people
-        +expert-list-item(p)
+    .experts-list--no-result
+      h2.experts-list__heading.heading Найди эксперта
+      h3.experts-list__sub-heading.sub-heading среди 370+ специалистов
+
+div.experts-list__layout
+  each p in experts
+    +expert-list-item(p)

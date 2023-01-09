@@ -1,26 +1,8 @@
-.experts-search {
-  margin-top: 194px;
-  margin-bottom: 124px;
-}
-
 .experts-list__header--index {
-  margin-top: 84px;
   margin-bottom: 41px;
 }
 
-.experts-list--index {
-  margin: 0 0 100px 0;
-}
-
-.experts-list--experts {
-  margin: 0 0 100px 0;
-}
-
-.people-list__experts {
-  margin-bottom: 102px;
-}
-
-.people-list__heading {
+.experts-list__heading {
   text-align: center;
   line-height: 72px;
   letter-spacing: 0.08em;
@@ -31,7 +13,7 @@
   }
 }
 
-.people-list__sub-heading {
+.experts-list__sub-heading {
   text-align: center;
   line-height: 72px;
   letter-spacing: 0;
@@ -42,32 +24,29 @@
   }
 }
 
-.people-list__heading--result {
-  margin-top: 58px;
+.experts-list__heading--result {
+  margin-top: 54px;
   font-size: 31px;
   line-height: 29px;
   text-align: center;
 }
 
-.people-list__sub-heading--result {
+.experts-list__sub-heading--result {
   font-size: 19px;
   line-height: 36px;
   text-align: center;
   margin-bottom: 36px;
 }
 
-.people-list {
+.experts-list {
   margin: 32px 0 101px 0;
 }
 
-.people-list--result {
+.experts-list--result {
   margin: 54px 0 0 0;
 }
 
-.people-list__layout {
-}
-
-.people-list__more-button {
+.experts-list__more-button {
   background: #ff683e;
   text-transform: uppercase;
   color: #ffffff;
@@ -77,6 +56,172 @@
   padding-right: 22px;
 }
 
-.people-list__more-button:hover {
+.experts-list__more-button:hover {
   background: #ff3700;
+}
+
+.experts-list__line {
+  min-height: 91px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--light);
+
+  @media (max-width: $breakPointPhone) {
+    &:nth-child(odd) {
+      background-color: var(--light);
+    }
+    .btn {
+      border: 1px solid var(--brand);
+    }
+  }
+}
+
+.experts-list__line--experts {
+  min-height: 92px;
+}
+
+.experts-list__line:hover {
+  @media (min-width: $breakPointPhone) {
+    background-color: var(--light);
+  }
+}
+
+.experts-list__line-inner {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: auto 0px 111px 134px max-content;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  width: 1200px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.625rem;
+
+  @media (max-width: $breakPointTablet) {
+    gap: 10px;
+    grid-template-columns: 5fr 180px minmax(80px, 1fr) minmax(90px, 1fr) auto;
+  }
+
+  @media (max-width: $breakPointPhone) {
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+
+  @media (max-width: $breakPointSmallPhone) {
+    display: flex;
+    flex-direction: column;
+    transform: unset;
+    position: static;
+  }
+}
+
+.experts-list__line-inner--experts {
+  grid-template-columns: auto 0px 120px 105px 118px max-content;
+}
+
+.experts-list__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.experts-list__details-name {
+  font-family: "Bodoni MT";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4375rem;
+  line-height: 27px;
+  color: var(--dark);
+
+  a {
+    color: var(--dark);
+    &:hover {
+      color: var(--brand);
+    }
+  }
+}
+
+.experts-list__details-job {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--grey);
+  letter-spacing: 0;
+
+  @media (max-width: $breakPointPhone) {
+    font-size: 0.8125rem;
+  }
+}
+
+.experts-list__photo-container {
+  position: relative;
+
+  @media (max-width: $breakPointPhone) {
+    grid-row: span 5;
+    height: 100%;
+  }
+}
+
+.experts-list__photo {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.1s ease-out;
+  width: 166px;
+  height: 190px;
+  background-image: url(../assets/images/expertface.png);
+  background-position: center center;
+  background-size: cover;
+
+  @media (max-width: $breakPointPhone) {
+    transform: unset;
+    position: static;
+    opacity: 1;
+  }
+}
+
+.experts-list__line:hover .experts-list__photo {
+  opacity: 1;
+}
+
+.experts-list__reviews {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--brand);
+  letter-spacing: 0;
+}
+
+.experts-list__experience {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--dark);
+  letter-spacing: 0;
+}
+
+.experts-list__price {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--dark);
+  letter-spacing: 0;
+}
+
+.experts-list__action {
+  @media (max-width: $breakPointPhone) {
+    padding-top: 20px;
+  }
+}
+
+.experts-list__action-button {
+  width: max-content;
+}
+
+.experts-list__line:not(:hover) .experts-list__action .btn {
+  background: var(--light);
+  color: var(--brand);
 }

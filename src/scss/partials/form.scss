@@ -3,7 +3,8 @@
   align-items: center;
   background: white;
   border: 2px solid var(--light);
-  padding: 21px;
+  padding: 19px;
+  min-height: 56px;
 
   &.active {
     border: 2px solid var(--brand);
@@ -33,16 +34,17 @@
 
 .form-input__photo-drag-container {
   background: var(--light);
-  height: 88px;
+  // height: 88px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 27px 23px;
 }
 
 .form-input__photo-drag-title {
-  font-size: 0.8125rem;
-  line-height: 1rem;
+  font-size: 13px;
+  line-height: 21px;
   text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -50,15 +52,16 @@
 }
 
 .form-input__photo-drag-subtitle {
-  font-size: 0.8125rem;
-  line-height: 1.25rem;
+  font-size: 13px;
+  line-height: 20px;
   text-align: center;
   letter-spacing: 0.08em;
   color: #cdcdcd;
+  letter-spacing: 0;
 }
 
 .form-input__hint-container > *:not(:last-child) {
-  margin-bottom: 12px;
+  // margin-bottom: 12px;
 }
 
 .form__button {
@@ -77,15 +80,20 @@
   font-size: 0.8125rem;
   line-height: 1.25rem;
   color: var(--grey);
+  letter-spacing: 0;
 }
 
 .form-input__hint {
+  margin-top: 9px;
   color: var(--grey);
-  margin-bottom: 23px;
   font-weight: 400;
   font-size: 0.8125rem;
   line-height: 1.25rem;
   word-break: break-word;
+}
+
+.form-input__hint--big-margin {
+  margin-top: 17px;
 }
 
 .form-textarea__container {
@@ -119,19 +127,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 17px;
 
   @media (max-width: $breakPointTablet) {
     flex-wrap: wrap;
     justify-content: start;
+    & > * {
+      margin-top: 12px;
+    }
   }
 
-  & > * {
-    margin-top: 12px;
+  & > *:nth-child(2) {
+    margin-right: 52px;
   }
 
-  & > *:not(:last-child):not(:first-child) {
-    margin-right: 12px;
+  & > *:nth-child(3) {
+    margin-right: 10px;
   }
+
+  // & > *:not(:last-child):not(:first-child) {
+  //   margin-right: 12px;
+  // }
 }
 
 .price__tag {

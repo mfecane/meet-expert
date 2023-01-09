@@ -1,13 +1,13 @@
 include ../../components/tag-list.pug
 
 mixin searchbar(options)
-  .search__section(class=options.conainerClass)
+  .search__section
     .container.search__container
-      .searchbar
+      .searchbar(class= options.searchbarModifier)
         .searchbar__icon
         .searchbar__content
 
-          if (options.tags)
+          if (options.tagsInner)
             .searchbar__tag.
               swagger
               #[span.searchbar__tag-close]
@@ -32,7 +32,5 @@ mixin searchbar(options)
         span.searchbar__highlight Найдите эксперта по тегам
 
       +tag-list({
-        tags: [
-          "Java", "JavaScript", "Python", "ProductManagement", "C++", "UX/UI", "DataScience"
-        ]
+        tags: options.tags
       })

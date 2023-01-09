@@ -1,5 +1,4 @@
 include ./partials/experts/searchbar.pug
-include ./partials/experts/expert-list.pug
 
 doctype html
 html(lang="ru")
@@ -8,61 +7,41 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible" content="IE=edge" )
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="shortcut icon", type="image/x-icon", href="favicon.ico")
-    title Andrey Chizhov - cabinet
+    title Andrey Chizhov - experts
     link(rel="stylesheet" href="css/index.css")
 
   body
     include ./partials/header-common.pug
 
-    .experts-search
+    .experts__search
       .switcher
         +searchbar({
-          tags: true,
+          tagsInner: true,
           go: true,
-          hint: false
+          hint: false,
+          searchbarModifier: "searchbar--experts",
+          tags: [
+            "dart", "restapi", "googleservices", "flutter", "firebase", "mvvm", "confluence"
+          ]
         })
         +searchbar({
-          tags: false,
+          tagsInner: false,
           go: false,
-          hint: true
+          hint: true,
+          searchbarModifier: "searchbar--experts",
+          tags: [
+            "Java", "JavaScript", "Python", "ProductManagement", "C++", "UX/UI", "DataScience"
+          ]
         })
 
-    +expert-list({
-      people: [
-        {
-          "name": "Артем зайцев",
-          "job": "Ведущий Backend Разработчик @FastVPS Ltd.",
-          "reviews": "15 отзывов",
-          "experience": "1–5 лет",
-          "price": "4 500 руб"
-        },
-        {
-          "name": "Владимир Круглов",
-          "job": "Principal инженер @Snapcart",
-          "reviews": "13 отзывов",
-          "experience": "5–10 лет",
-          "price": "5 000 руб"
-        },
-        {
-          "name": "Сергей Симов",
-          "job": "Ведущий специалист по обработке данных NLP @Lanit",
-          "reviews": "7 отзывов",
-          "experience": "1–5 лет",
-          "price": "3 500 руб"
-        },
-        {
-          "name": "Степан Баранников",
-          "job": "Архитектор решений @Korus Consulting",
-          "reviews": "3 отзывов",
-          "experience": "5–10 лет",
-          "price": "4 000 руб"
-        }
-      ]
-    })
+    .experts__experts
+      include ./partials/experts/expert-list.pug
 
-    include ./partials/experts/nothing.pug
+    .experts__nothing
+      include ./partials/experts/nothing.pug
 
-    include ./partials/mission-section.pug
+    .experts-mission
+      include ./partials/mission-section.pug
 
     include ./partials/footer.pug
 
