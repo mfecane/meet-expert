@@ -2279,12 +2279,12 @@ body.lock{
 }
 
 .form-input__check{
-  flex:0 0 max-content;
+  flex:0 0 fit-content;
 }
 
-.form-input__check:before{
-  color:var(--brand);
-  content:"✓";
+.form-input__check svg{
+  height:16px;
+  width:16px;
 }
 
 .become-form__text,.form-input__hint{
