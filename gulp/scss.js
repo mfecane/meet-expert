@@ -21,28 +21,30 @@ var plugins = [
 ];
 
 export default () => {
-  return gulp
-    .src("./src/scss/index.scss")
-    .pipe(sourcemaps.init())
-    .pipe(
-      plumber({
-        handleError: function (err) {
-          console.log(err);
+  return (
+    gulp
+      .src("./src/scss/index.scss")
+      // .pipe(sourcemaps.init())
+      .pipe(
+        plumber({
+          handleError: function (err) {
+            console.log(err);
+            this.emit("end");
+          },
+        })
+      )
+      .pipe(
+        sassInstance({
+          includePaths: ["./src/scss/"],
+          outputStyle: "compressed",
+        }).on("error", function (err) {
+          console.log(err.message);
+          // sass.logError
           this.emit("end");
-        },
-      })
-    )
-    .pipe(
-      sassInstance({
-        includePaths: ["./src/scss/"],
-        outputStyle: "compressed",
-      }).on("error", function (err) {
-        console.log(err.message);
-        // sass.logError
-        this.emit("end");
-      })
-    )
-    .pipe(postcss(plugins))
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./dist/css/"));
+        })
+      )
+      .pipe(postcss(plugins))
+      // .pipe(sourcemaps.write("."))
+      .pipe(gulp.dest("./dist/css/"))
+  );
 };

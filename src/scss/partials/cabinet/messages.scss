@@ -57,7 +57,7 @@
   font-size: 23px;
   line-height: 25px;
   color: var(--dark);
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .messages-dialog__left {
@@ -113,6 +113,7 @@
 .messages-dialog__target {
   text-transform: uppercase;
   color: var(--brand);
+  margin-right: 4px;
 }
 
 .messages-dialog__text {
@@ -121,5 +122,6 @@
 
   &--new {
     color: var(--accent);
+    font-weight: 500;
   }
 }

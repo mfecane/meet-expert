@@ -68,10 +68,11 @@
 }
 
 .form-input__check {
-  flex: 0 0 max-content;
-  &:before {
-    content: "\2713";
-    color: var(--brand);
+  flex: 0 0 fit-content;
+
+  svg {
+    width: 16px;
+    height: 16px;
   }
 }
 

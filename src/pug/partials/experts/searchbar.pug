@@ -31,6 +31,8 @@ mixin searchbar(options)
       .searchbar__helptext-mobile Не нашли его или не знаете, где искать?
         span.searchbar__highlight Найдите эксперта по тегам
 
-      +tag-list({
-        tags: options.tags
-      })
+      .searchbar__tags
+        +tag-list({
+          tags: options.tags,
+          class: "tags__container--center"
+        })

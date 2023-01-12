@@ -5,6 +5,21 @@ mixin panel-message(options)
       .panel-message__time= options.time
     .panel-message__text= options.text
 
+-
+  messages = [{
+    name: "Степан Баранников",
+    time: "09:13",
+    text: "Добрый день, мне нужна помощь с архитектурой кода разработки продукта и его автоматизацией. Я хочу, чтобы вы провели для меня небольшой курс)"
+  },{
+    name: "Вы",
+    time: "09:17",
+    text: "Нам нужно определить с вами цели, которых вы хотите достичь в будущем, и время, которое нам будет удобно"
+  },{
+    name: "Степан Баранников",
+    time: "09:21",
+    text: "Тогда я напишу тебе все сейчас. Я вернусь через 20-30 минут"
+  }]
+
 .message-panel
   .message-panel__header
     .message-panel__avatar
@@ -14,27 +29,17 @@ mixin panel-message(options)
       .message-panel__job Архитектор решений @Korus Consulting
     .message-panel__icon
       include ../../../svg/basket.svg
+  .message-panel__bottom
+    .message-panel__messages-container
+      .message-panel__messages-container-inner
+        each message in messages
+          +panel-message(message)
 
-  -
-    messages = [{
-      name: "Степан Баранников",
-      time: "09:13",
-      text: "Добрый день, мне нужна помощь с архитектурой кода разработки продукта и его автоматизацией. Я хочу, чтобы вы провели для меня небольшой курс)"
-    },{
-      name: "Вы",
-      time: "09:17",
-      text: "Нам нужно определить с вами цели, которых вы хотите достичь в будущем, и время, которое нам будет удобно"
-    },{
-      name: "Степан Баранников",
-      time: "09:21",
-      text: "Тогда я напишу тебе все сейчас. Я вернусь через 20-30 минут"
-    }]
+    .message-panel__input-container
+      .message-input
+        .message-input__inner
+          textarea.message-input__textarea
+          .message-input__hint Написать сообщение
+          .message-input__description Чтобы отправить сообщение, нажмите #[span Enter]
 
-  .message-panel__messages-container
-    each message in messages
-      +panel-message(message)
-
-  .message-panel__input-container
-    .message-input
-      .message-input__inner Jebacz
 
