@@ -196,6 +196,26 @@ function setUpHeaderScroll() {
   });
 }
 
+function setUpMessage() {
+  const textarea = document.querySelector(".message-input__textarea");
+  const hint = document.querySelector(".message-input__hint");
+  if (!textarea || !hint) {
+    return;
+  }
+
+  const updateElement = (state) => {
+    const text = textarea.value || state;
+    hint.classList.toggle("hidden", text);
+  };
+
+  textarea.addEventListener("focus", updateElement.bind(null, true));
+  textarea.addEventListener("blur", updateElement.bind(null, false));
+
+  // textarea.addEventListener("input", () => {
+  //   hint.classList.toggle("hidden", !!textarea.value.length);
+  // });
+}
+
 window.addEventListener("load", function () {
   setUpSearch();
   setUpPanel();
@@ -205,6 +225,7 @@ window.addEventListener("load", function () {
   setUpSwitchers();
   setUpFormFields();
   setUpHeaderScroll();
+  setUpMessage();
 
   const panels = [...document.querySelectorAll(`.overlay-panel`)];
   panels.forEach((panel) => {
