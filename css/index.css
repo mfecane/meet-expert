@@ -2059,7 +2059,7 @@ body.lock{
 }
 
 .message-panel__avatar-image{
-  background:no-repeat url(/assets/images/avatar.jpg) 50%/cover;
+  background:no-repeat url(../assets/images/avatar.jpg) 50%/cover;
   height:52px;
   width:52px;
 }
