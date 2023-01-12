@@ -1,0 +1,23 @@
+.overlay-person
+  .person-details
+    .person-details__profile-container
+      .person-details__profile-image-container
+      .person-details__profile-link См. профиль
+    .person-details__info
+      .person-details__name Андрей чижов
+      .person-details__title Руководитель ИТ-проектов @UniCredit Russia
+      .person-details__cost 5–10 лет / Цена (за час): 5 000 руб
+      .person-details__text.
+        7 лет продуктового подхода к разработке ИТ-решений. Я вышел на рынок
+        США, теперь я отвечаю за рост показателей...
+        #[a(href="/person.html") Подробнее]
+
+      +tag-list({
+        tags: [
+          "Agile", "Jira", "Kanban", "Scrum", "Analytics", "..."
+        ]
+      })
+  .calendarEl.calendar--overlay
+
+  .panel-content__controls
+    button.btn.btn-primary(diabled = true) Отправить заявку

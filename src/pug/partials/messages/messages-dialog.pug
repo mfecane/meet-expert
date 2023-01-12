@@ -1,0 +1,12 @@
+
+mixin messages-dialog(options)
+  .messages-dialog.panel-activator(data-panel-id="messagesPanel")
+    .messages-dialog__left
+      .messages-dialog__name= options.name
+      if options.target
+        span.messages-dialog__target= options.target
+      span.messages-dialog__text(class=options.textClass)= options.message
+    .messages-dialog__right
+      .messages-dialog__date= options.date
+      .messages-dialog__icon
+        include ../../../svg/basket.svg

@@ -1,0 +1,9 @@
+mixin overlay
+  .overlay
+
+mixin overlay-panel(options)
+  .overlay-panel(class=options.panelClass).inactive
+    .panel-gutter
+      .panel-gutter__label Закрыть окно
+    .panel-content
+      block

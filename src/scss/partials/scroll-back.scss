@@ -1,12 +1,18 @@
 .scroll-back {
   background: var(--light);
   position: fixed;
-  top: var(--header-height);
   width: 100vw;
   z-index: 1;
-  transition: transform 200ms ease-out;
+  transition: all 200ms ease-out;
   transform: translateY(-120px);
   padding-right: 20px;
+  top: 0;
+
+  padding-top: var(--header-height);
+}
+
+.scroll-back.reduced {
+  padding-top: var(--header-small-height);
 }
 
 .scroll-back.visible {

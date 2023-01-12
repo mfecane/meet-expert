@@ -1,8 +1,5 @@
-include ./partials/profile-photo.pug
-include ./partials/profile-action.pug
-include ./partials/profile-action-msg.pug
-include ./components/action-button.pug
 include ./components/form-input.pug
+include ./components/action-button.pug
 
 doctype html
 html(lang="ru")
@@ -20,18 +17,8 @@ html(lang="ru")
 
     .container.container--very-narrow
       .cabinet
-        .cabinet__profile-container.scroll-back__panel
-          +profile-photo({
-            linkText: "Измените фото",
-            linkClass: "profile-photo__link--cabinet"
-          })
-          .cabinet__actions
-            +profile-action("#help", "profile-action--dark", "", "Your profile")
-            +profile-action-msg("#help", "Your profile")
-            +profile-action("#help", "profile-action--dark", "", "Your profile")
-            +profile-action("#help", "profile-action--dark", "", "Your profile")
+        include ./partials/cabinet/profile.pug
         .cabinet__content
-
           .constraints
             .constraints__item.active Все поля обязательны для заполнения
             .constraints__item Фотография профиля поможет студентам узнать вас лучше

@@ -1,0 +1,37 @@
+include ../../components/form-input.pug
+
+.login__container
+  .login-container__top
+    .login__heading.heading Войдите в свой профиль
+    .login__sub-heading.sub-heading или зарегистрируйтесь
+
+    .login__controls-container
+      +form-input({
+        label: "Email:",
+        name: "email",
+        value: "Kolesnikov@gmail.com",
+        check: true
+      })
+
+      +form-input({
+        label: "пароль:",
+        name: "password",
+        value: "password",
+        type: "password"
+      })
+      button.btn.btn-primary.login__button(disabled="true") Войти
+      button.btn.btn-secondary Забыли пароль?
+      button.btn.btn-secondary У меня еще нет аккаунта эксперта
+
+
+  .login-container__bottom
+    .cabinet-form__controls-group
+      button.btn.login-btn
+        span Войти с помощью Gmail
+        .login-btn__image.login-btn__image--google
+      button.btn.login-btn
+        span Войти с помощью facebook
+        .login-btn__image.login-btn__image--facebook
+      button.btn.login-btn
+        span Войти с помощью vk
+        .login-btn__image.login-btn__image--vk

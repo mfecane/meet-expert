@@ -1,0 +1,13 @@
+include ../profile-photo.pug
+include ../profile-action.pug
+include ../profile-action-msg.pug
+
+.cabinet__profile-container.scroll-back__panel
+  +profile-photo({
+    linkText: "Измените фото",
+    linkClass: "profile-photo__link--cabinet"
+  })
+  .cabinet__actions
+    +profile-action("#help", "profile-action--dark", "", "Your profile")
+    +profile-action-msg("./messages.html", "Сообщения")
+    +profile-action("#help", "profile-action--dark", "", "Настройки")

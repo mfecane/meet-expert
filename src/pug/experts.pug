@@ -1,4 +1,5 @@
 include ./partials/experts/searchbar.pug
+include ./partials/messages/overlay.pug
 
 doctype html
 html(lang="ru")
@@ -45,7 +46,16 @@ html(lang="ru")
 
     include ./partials/footer.pug
 
-    include ./partials/overlay-panel.pug
+    +overlay
+    +overlay-panel({
+      panelClass: "panel-expertPanel"
+    })
+      include ./partials/overlay/person.pug
+
+    +overlay-panel({
+      panelClass: "panel-loginPanel"
+    })
+      include ./partials/overlay/login.pug
 
     script(src="js/script.min.js" defer="true")
     script(src="js/index.global.min.js" defer="true")

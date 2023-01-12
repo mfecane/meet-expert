@@ -1,0 +1,140 @@
+.message-panel {
+  width: 855px;
+  height: 100vh;
+  overflow: hidden;
+  padding: 34px 40px 32px 42px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.message-panel__header {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.message-panel__avatar {
+  flex: 0 0 52px;
+}
+
+.message-panel__avatar-image {
+  background: no-repeat url(/assets/images/avatar.jpg) center center/cover;
+  width: 52px;
+  height: 52px;
+}
+
+.message-panel__details {
+  margin-left: 16px;
+  flex: 1 0 auto;
+}
+
+.message-panel__icon {
+  flex: 0 0 52px;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+
+    rect,
+    path {
+      fill: var(--grey);
+    }
+  }
+}
+
+.message-panel__name {
+  font-family: "Bodoni";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 25px;
+  color: var(--dark);
+  letter-spacing: 0;
+}
+
+.message-panel__job {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 38px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+
+  color: var(--grey);
+}
+
+.message-panel__messages-container {
+  border-top: 2px solid var(--light);
+  flex: 2 0 auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.panel-message__container {
+  margin-bottom: 26px;
+}
+
+.panel-message__header {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.panel-message__name {
+  flex: 1 0 auto;
+  font-family: "Bodoni";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 25px;
+  color: var(--accent);
+}
+
+.panel-message__time {
+  flex: 0 0 52px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: right;
+  color: var(--grey);
+}
+
+.panel-message__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--dark);
+  letter-spacing: 0;
+}
+
+.message-panel__input-container {
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+
+.message-input {
+  width: 100%;
+  height: 100%;
+}
+
+.message-input__inner {
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--grey);
+  border: 1px solid var(--light);
+}

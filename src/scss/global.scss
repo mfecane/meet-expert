@@ -39,6 +39,20 @@
   color: white;
 }
 
+.btn-secondary {
+  background-color: var(--light);
+  color: var(--brand);
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 20px 21px;
+  font-size: 13px;
+
+  &:hover {
+    color: var(--dark);
+  }
+}
+
 a {
   color: var(--brand);
   cursor: pointer;

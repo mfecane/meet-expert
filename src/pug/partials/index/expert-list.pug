@@ -9,7 +9,7 @@ mixin expert-list-item(options)
         .experts-list__photo
       .experts-list__experience= options.experience
       .experts-list__price= options.price
-      .experts-list__action
+      .experts-list__action.panel-activator(data-panel-id="expertPanel")
         button.btn.btn-primary.experts-list__action-button Проверить даты
 
 section.experts-list--index

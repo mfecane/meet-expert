@@ -12,6 +12,10 @@
   transition: opacity 200ms ease-out;
 }
 
+.inactive {
+  display: none;
+}
+
 .overlay.active {
   opacity: 1;
   pointer-events: all;
@@ -19,14 +23,12 @@
 
 .overlay-panel {
   position: fixed;
+  top: 0;
   bottom: 0;
   right: 0;
-  max-width: 910px;
-  height: 100vh;
   background: white;
   transition: all 200ms ease-out;
   overflow: hidden;
-  display: flex;
   z-index: 4;
   transform: translateX(100%);
 
@@ -49,12 +51,13 @@
 }
 
 .panel-gutter {
-  flex: 0 0 38px;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 100%;
   background: var(--brand);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  position: absolute;
+  z-index: 5;
 }
 
 .panel-gutter__label {
@@ -69,18 +72,18 @@
   text-transform: uppercase;
 
   @media (max-width: $breakPointTablet) {
-    writing-mode: unset;
-    text-orientation: unset;
+    transform: translate(-50%, -50%);
   }
 }
 
 .panel-content {
-  padding: 32px 40px;
-  display: flex;
-  flex-direction: column;
-  max-height: 100vh;
-  overflow: auto;
+  width: fit-content;
+  padding: 0 0 0 38px;
   height: 100%;
+  overflow-y: auto;
+}
+
+.overlay__switcher {
 }
 
 .calendarEl {

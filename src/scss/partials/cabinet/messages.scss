@@ -1,0 +1,125 @@
+.messages__container {
+  margin-top: 222px;
+  width: 100%;
+  display: flex;
+}
+
+.messages__heading {
+  font-size: 28px;
+  line-height: 25px;
+}
+
+.messages__sub-heading {
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.messages__left {
+  padding-right: 124px;
+}
+
+.messages__right {
+  flex: 1 0 auto;
+  margin-left: 44px;
+  padding-top: 20px;
+}
+
+.messages__dialogs {
+  margin: 29px 0;
+}
+
+.messages-dialog {
+  border-top: 1px solid var(--light);
+  border-bottom: 1px solid var(--light);
+  padding: 5px 24px;
+  cursor: pointer;
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 0;
+  justify-content: space-between;
+
+  &:hover {
+    background: var(--light);
+  }
+}
+
+.messages-dialog__name {
+  font-family: "Bodoni";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 25px;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+
+.messages-dialog__left {
+  flex: 0 1 auto;
+}
+
+// .messages-dialog__data {
+//   display: flex;
+
+//   font-size: 15px;
+//   line-height: 23px;
+//   letter-spacing: 0;
+//   justify-content: space-between;
+// }
+
+.messages-dialog__message {
+}
+
+.messages-dialog__right {
+  flex: 0 0 84px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.messages-dialog__date {
+  font-size: 13px;
+  line-height: 26px;
+
+  text-align: right;
+
+  color: var(--grey);
+  .messages-dialog:hover & {
+    display: none;
+  }
+}
+
+.messages-dialog__icon {
+  background: white;
+  padding: 11px;
+  width: 52px;
+  height: 52px;
+
+  path,
+  rect {
+    fill: var(--grey);
+  }
+
+  .messages-dialog:not(:hover) & {
+    display: none;
+  }
+}
+
+.messages-dialog__target {
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.messages-dialog__text {
+  flex: 1 0 min-content;
+  font-weight: 400;
+
+  &--new {
+    color: var(--accent);
+  }
+}
