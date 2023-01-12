@@ -2105,13 +2105,24 @@ body.lock{
   text-transform:uppercase;
 }
 
+.message-panel__bottom{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  overflow:hidden;
+}
+
 .message-panel__messages-container{
   border-top:2px solid var(--light);
+  height:70%;
+  overflow-y:auto;
+}
+
+.message-panel__messages-container-inner{
   display:flex;
-  flex:2 0 auto;
   flex-direction:column;
   justify-content:flex-end;
-  overflow-y:auto;
+  min-height:100%;
 }
 
 .panel-message__container{
@@ -2152,7 +2163,7 @@ body.lock{
 }
 
 .message-panel__input-container{
-  flex:1 0 auto;
+  height:30%;
   overflow:hidden;
 }
 
