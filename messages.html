@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <title>Andrey Chizhov - experts</title>
+    <title>Andrey Chizhov - cabinet</title>
     <link rel="stylesheet" href="css/index.css">
   </head>
-  <body>
+  <body id="top">
     <header class="site-header">
       <div class="container header-container">
         <div class="site-header__layout">
@@ -29,7 +29,7 @@
             <ul class="nav">
               <li><a class="nav__link" href="#">Free мероприятия</a></li>
               <li><a class="nav__link" href="./become.html">стать экспертом</a></li>
-              <li><a class="nav__link panel-activator" data-panel-id="loginPanel">войти</a></li>
+              <li><a class="nav__link active" href="./become.html">Андрей</a></li>
               <li><a class="btn btn-primary nav__link" href="./experts.html">Найти эксперта</a></li>
             </ul>
           </nav>
@@ -41,154 +41,199 @@
         </div>
       </div>
     </header>
-    <div class="experts__search">
-      <div class="switcher">
-        <div class="search__section">
-          <div class="container search__container">
-            <div class="searchbar searchbar--experts">
-              <div class="searchbar__icon"></div>
-              <div class="searchbar__content">
-                <div class="searchbar__tag">swagger <span class="searchbar__tag-close"></span></div>
-                <div class="searchbar__tag">Xcode <span class="searchbar__tag-close"></span></div>
-                <div class="searchbar__tag">Openapi <span class="searchbar__tag-close"></span>
-                </div><input class="searchbar__input" type="text" name="search">
+    <div class="scroll-back visible">
+      <div class="container container--person">
+        <div class="scroll-back__inner"><a class="scroll-back__back-link" href="./experts.html">
+            <div class="scroll-back__icon"></div>
+            <div class="scroll-back__caption">Назад к экспертам</div>
+          </a>
+          <div class="scroll-back__heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213.12 188.04">
+              <defs>
+                <style>
+                  .a
+                  {
+                    fill: none;
+                    ;
+                    stroke-linejoin: round;
+                    stroke-width: 26px;
+                  }
+                </style>
+              </defs>
+              <path class="a" stroke="#f26842" d="M106.56,41.94S117.79,13,153.16,13c24.51,0,47,16.73,47,49.67,0,47.23-49.64,91.27-93.56,112.37C62.65,153.94,13,109.9,13,62.67,13,29.73,35.45,13,60,13,95.33,13,106.56,41.94,106.56,41.94Z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="messages__container">
+        <div class="messages__left"></div>
+        <div class="cabinet__profile-container scroll-back__panel">
+          <div class="profile-photo__container">
+            <div class="profile-photo__image-container"></div>
+            <div class="block-link profile-photo__link profile-photo__link--cabinet">Измените фото</div>
+          </div>
+          <div class="cabinet__actions"><a class="block-link profile-action profile-action--dark" href="#help">
+              <div class="profile-action__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.87 129.8">
+                  <path fill="#2f56a6" class="a" d="M160.86,52.9,108,0,90.72,17.23,126.39,52.9H0v24H126.39L90.72,112.57,108,129.8l52.91-52.9,1.78-1.78a14.44,14.44,0,0,0,0-20.44Z" />
+                </svg>
               </div>
-              <div class="searchbar__go-button">to find</div>
-            </div>
-            <div class="searchbar__helptext-mobile">Не нашли его или не знаете, где искать?<span class="searchbar__highlight">Найдите эксперта по тегам</span></div>
-            <div class="tags__container">
-              <div class="tags__tag">dart</div>
-              <div class="tags__tag">restapi</div>
-              <div class="tags__tag">googleservices</div>
-              <div class="tags__tag">flutter</div>
-              <div class="tags__tag">firebase</div>
-              <div class="tags__tag">mvvm</div>
-              <div class="tags__tag">confluence</div>
-            </div>
-          </div>
+              <div class="profile-action__text">Your profile</div>
+            </a><a class="block-link profile-action" href="./messages.html">
+              <div class="profile-action__icon profile-action__icon--messages">2</div>
+              <div class="profile-action__text">Сообщения</div>
+            </a><a class="block-link profile-action profile-action--dark" href="#help">
+              <div class="profile-action__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.87 129.8">
+                  <path fill="#2f56a6" class="a" d="M160.86,52.9,108,0,90.72,17.23,126.39,52.9H0v24H126.39L90.72,112.57,108,129.8l52.91-52.9,1.78-1.78a14.44,14.44,0,0,0,0-20.44Z" />
+                </svg>
+              </div>
+              <div class="profile-action__text">Настройки</div>
+            </a></div>
         </div>
-        <div class="search__section">
-          <div class="container search__container">
-            <div class="searchbar searchbar--experts">
-              <div class="searchbar__icon"></div>
-              <div class="searchbar__content"><input class="searchbar__input" type="text" name="search"></div>
-              <div class="searchbar__helptext">Не нашли его или не знаете, где искать? <span class="searchbar__highlight">Найдите эксперта по тегам</span>
+        <div class="messages__right">
+          <div class="messages__heading heading">Ваши диалоги</div>
+          <div class="messages__sub-heading sub-heading">с будущими специалистами</div>
+          <div class="messages__dialogs">
+            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
+              <div class="messages-dialog__left">
+                <div class="messages-dialog__name">Артем зайцев</div><span class="messages-dialog__text messages-dialog__text--new">Спасибо вам за консультацию, она была очень интересной и полезной!</span>
+              </div>
+              <div class="messages-dialog__right">
+                <div class="messages-dialog__date">11.01.2023</div>
+                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
+                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
+                    <rect x="20.25" y="28.27" width="7" height="21.83" />
+                    <rect x="35.56" y="28.27" width="7" height="21.83" />
+                  </svg>
+                </div>
               </div>
             </div>
-            <div class="searchbar__helptext-mobile">Не нашли его или не знаете, где искать?<span class="searchbar__highlight">Найдите эксперта по тегам</span></div>
-            <div class="tags__container">
-              <div class="tags__tag">Java</div>
-              <div class="tags__tag">JavaScript</div>
-              <div class="tags__tag">Python</div>
-              <div class="tags__tag">ProductManagement</div>
-              <div class="tags__tag">C++</div>
-              <div class="tags__tag">UX/UI</div>
-              <div class="tags__tag">DataScience</div>
+            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
+              <div class="messages-dialog__left">
+                <div class="messages-dialog__name">Владимир Круглов</div><span class="messages-dialog__text">Можем ли мы созвониться на следующей неделе и договориться о дате новой ...</span>
+              </div>
+              <div class="messages-dialog__right">
+                <div class="messages-dialog__date">13.01.2023</div>
+                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
+                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
+                    <rect x="20.25" y="28.27" width="7" height="21.83" />
+                    <rect x="35.56" y="28.27" width="7" height="21.83" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
+              <div class="messages-dialog__left">
+                <div class="messages-dialog__name">Сергей Симов</div><span class="messages-dialog__target">Вы:</span><span class="messages-dialog__text">Будет ли вам удобно с помощью Zoom или Google Meet?</span>
+              </div>
+              <div class="messages-dialog__right">
+                <div class="messages-dialog__date">14.01.2023</div>
+                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
+                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
+                    <rect x="20.25" y="28.27" width="7" height="21.83" />
+                    <rect x="35.56" y="28.27" width="7" height="21.83" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
+              <div class="messages-dialog__left">
+                <div class="messages-dialog__name">Сергей Симов</div><span class="messages-dialog__target">Вы:</span><span class="messages-dialog__text">Будет ли вам удобно с помощью Zoom или Google Meet?</span>
+              </div>
+              <div class="messages-dialog__right">
+                <div class="messages-dialog__date">14.01.2023</div>
+                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
+                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
+                    <rect x="20.25" y="28.27" width="7" height="21.83" />
+                    <rect x="35.56" y="28.27" width="7" height="21.83" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
+              <div class="messages-dialog__left">
+                <div class="messages-dialog__name">Степан Баранников</div><span class="messages-dialog__text">Хорошо! Скоро увидимся</span>
+              </div>
+              <div class="messages-dialog__right">
+                <div class="messages-dialog__date">21.01.2023</div>
+                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
+                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
+                    <rect x="20.25" y="28.27" width="7" height="21.83" />
+                    <rect x="35.56" y="28.27" width="7" height="21.83" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
+              <div class="messages-dialog__left">
+                <div class="messages-dialog__name">Андрей Чижов</div><span class="messages-dialog__target">Вы:</span><span class="messages-dialog__text">Ты можешь сделать это сегодня?</span>
+              </div>
+              <div class="messages-dialog__right">
+                <div class="messages-dialog__date">25.01.2023</div>
+                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
+                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
+                    <rect x="20.25" y="28.27" width="7" height="21.83" />
+                    <rect x="35.56" y="28.27" width="7" height="21.83" />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="experts__experts">
-      <div class="container">
-        <div class="switcher">
-          <div class="experts-list--result">
-            <h2 class="experts-list__heading--result heading">Результаты поиска по:</h2>
-            <h3 class="experts-list__sub-heading--result sub-heading">Swagger; Xcode; Openapi</h3>
+    <div class="overlay"></div>
+    <div class="overlay-panel panel-messagesPanel inactive">
+      <div class="panel-gutter">
+        <div class="panel-gutter__label">Закрыть окно</div>
+      </div>
+      <div class="panel-content">
+        <div class="message-panel">
+          <div class="message-panel__header">
+            <div class="message-panel__avatar">
+              <div class="message-panel__avatar-image"></div>
+            </div>
+            <div class="message-panel__details">
+              <div class="message-panel__name">Степан Баранников</div>
+              <div class="message-panel__job">Архитектор решений @Korus Consulting</div>
+            </div>
+            <div class="message-panel__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
+                <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
+                <rect x="20.25" y="28.27" width="7" height="21.83" />
+                <rect x="35.56" y="28.27" width="7" height="21.83" />
+              </svg>
+            </div>
           </div>
-          <div class="experts-list--no-result">
-            <h2 class="experts-list__heading heading">Найди эксперта</h2>
-            <h3 class="experts-list__sub-heading sub-heading">среди 370+ специалистов</h3>
+          <div class="message-panel__messages-container">
+            <div class="panel-message__container">
+              <div class="panel-message__header">
+                <div class="panel-message__name">Степан Баранников</div>
+                <div class="panel-message__time">09:13</div>
+              </div>
+              <div class="panel-message__text">Добрый день, мне нужна помощь с архитектурой кода разработки продукта и его автоматизацией. Я хочу, чтобы вы провели для меня небольшой курс)</div>
+            </div>
+            <div class="panel-message__container">
+              <div class="panel-message__header">
+                <div class="panel-message__name">Вы</div>
+                <div class="panel-message__time">09:17</div>
+              </div>
+              <div class="panel-message__text">Нам нужно определить с вами цели, которых вы хотите достичь в будущем, и время, которое нам будет удобно</div>
+            </div>
+            <div class="panel-message__container">
+              <div class="panel-message__header">
+                <div class="panel-message__name">Степан Баранников</div>
+                <div class="panel-message__time">09:21</div>
+              </div>
+              <div class="panel-message__text">Тогда я напишу тебе все сейчас. Я вернусь через 20-30 минут</div>
+            </div>
+          </div>
+          <div class="message-panel__input-container">
+            <div class="message-input">
+              <div class="message-input__inner">Jebacz</div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="experts-list__layout">
-        <div class="experts-list__line active experts-list__line--experts">
-          <div class="container experts-list__line-inner experts-list__line-inner--experts">
-            <div class="experts-list__details">
-              <div class="experts-list__details-name"><a href="./person.html">Артем зайцев</a></div>
-              <div class="experts-list__details-job">Ведущий Backend Разработчик @FastVPS Ltd.</div>
-            </div>
-            <div class="experts-list__photo-container">
-              <div class="experts-list__photo"></div>
-            </div>
-            <div class="experts-list__reviews">15 отзывов</div>
-            <div class="experts-list__experience">1–5 лет</div>
-            <div class="experts-list__price">4 500 руб</div>
-            <div class="experts-list__action panel-activator" data-panel-id="expertPanel"><button class="btn btn-primary experts-list__action-button">Проверить даты</button></div>
-          </div>
-        </div>
-        <div class="experts-list__line active experts-list__line--experts">
-          <div class="container experts-list__line-inner experts-list__line-inner--experts">
-            <div class="experts-list__details">
-              <div class="experts-list__details-name"><a href="./person.html">Владимир Круглов</a></div>
-              <div class="experts-list__details-job">Principal инженер @Snapcart</div>
-            </div>
-            <div class="experts-list__photo-container">
-              <div class="experts-list__photo"></div>
-            </div>
-            <div class="experts-list__reviews">13 отзывов</div>
-            <div class="experts-list__experience">5–10 лет</div>
-            <div class="experts-list__price">5 000 руб</div>
-            <div class="experts-list__action panel-activator" data-panel-id="expertPanel"><button class="btn btn-primary experts-list__action-button">Проверить даты</button></div>
-          </div>
-        </div>
-        <div class="experts-list__line active experts-list__line--experts">
-          <div class="container experts-list__line-inner experts-list__line-inner--experts">
-            <div class="experts-list__details">
-              <div class="experts-list__details-name"><a href="./person.html">Сергей Симов</a></div>
-              <div class="experts-list__details-job">Ведущий специалист по обработке данных NLP @Lanit</div>
-            </div>
-            <div class="experts-list__photo-container">
-              <div class="experts-list__photo"></div>
-            </div>
-            <div class="experts-list__reviews">7 отзывов</div>
-            <div class="experts-list__experience">1–5 лет</div>
-            <div class="experts-list__price">3 500 руб</div>
-            <div class="experts-list__action panel-activator" data-panel-id="expertPanel"><button class="btn btn-primary experts-list__action-button">Проверить даты</button></div>
-          </div>
-        </div>
-        <div class="experts-list__line active experts-list__line--experts">
-          <div class="container experts-list__line-inner experts-list__line-inner--experts">
-            <div class="experts-list__details">
-              <div class="experts-list__details-name"><a href="./person.html">Степан Баранников</a></div>
-              <div class="experts-list__details-job">Архитектор решений @Korus Consulting</div>
-            </div>
-            <div class="experts-list__photo-container">
-              <div class="experts-list__photo"></div>
-            </div>
-            <div class="experts-list__reviews">3 отзывов</div>
-            <div class="experts-list__experience">5–10 лет</div>
-            <div class="experts-list__price">4 000 руб</div>
-            <div class="experts-list__action panel-activator" data-panel-id="expertPanel"><button class="btn btn-primary experts-list__action-button">Проверить даты</button></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="experts__nothing">
-      <section class="suggestion">
-        <div class="container">
-          <div class="suggestion__layout">
-            <div class="suggestion__image suggestion__image--nothing"></div>
-            <div class="suggestion__text">
-              <h2 class="suggestion__heading heading">Ничего не нашел? Нет ничего подходящего?</h2>
-              <h3 class="suggestion__sub-heading sub-heading">ОПИШИТЕ ПОДРОБНО, ЧТО ВЫ ИЩЕТЕ</h3>
-              <p class="suggestion__paragraph-text">Напишите нам свое видение и потребности, и мы подберем для вас наиболее подходящие варианты. Для нас важно, чтобы вы получилите знания, за которыми пришли.</p><a class="btn btn-primary suggestion__button" href="./experts.html">Найти эксперта</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="experts-mission">
-      <section class="mission">
-        <div class="container">
-          <div class="mission-inner">
-            <h2 class="mission-inner__heading heading">Мы хотим помочь вам начать делать то,</h2>
-            <h3 class="mission-inner__sub-heading sub-heading">что больше доставляет удовольствие</h3>
-            <p class="mission__copy">Наша миссия довольно проста. Дать вам возможность самим решить, у кого вы хотите учиться или набираться опыта. И мы просто даем вам возможность выбрать этого эксперта</p><a class="btn btn-primary">Найти эксперта, сейчас!</a>
-          </div>
-        </div>
-      </section>
     </div>
     <div class="footer">
       <div class="container">
@@ -224,70 +269,6 @@
             <div class="footer__legal"><pre>Все права защищены
 © 2022 meet expert</pre>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="overlay"></div>
-    <div class="overlay-panel panel-expertPanel inactive">
-      <div class="panel-gutter">
-        <div class="panel-gutter__label">Закрыть окно</div>
-      </div>
-      <div class="panel-content">
-        <div class="overlay-person">
-          <div class="person-details">
-            <div class="person-details__profile-container">
-              <div class="person-details__profile-image-container"></div>
-              <div class="person-details__profile-link">См. профиль</div>
-            </div>
-            <div class="person-details__info">
-              <div class="person-details__name">Андрей чижов</div>
-              <div class="person-details__title">Руководитель ИТ-проектов @UniCredit Russia</div>
-              <div class="person-details__cost">5–10 лет / Цена (за час): 5 000 руб</div>
-              <div class="person-details__text">7 лет продуктового подхода к разработке ИТ-решений. Я вышел на рынок США, теперь я отвечаю за рост показателей... <a href="/person.html">Подробнее</a>
-              </div>
-              <div class="tags__container">
-                <div class="tags__tag">Agile</div>
-                <div class="tags__tag">Jira</div>
-                <div class="tags__tag">Kanban</div>
-                <div class="tags__tag">Scrum</div>
-                <div class="tags__tag">Analytics</div>
-                <div class="tags__tag">...</div>
-              </div>
-            </div>
-          </div>
-          <div class="calendarEl calendar--overlay"></div>
-          <div class="panel-content__controls"><button class="btn btn-primary" diabled>Отправить заявку</button></div>
-        </div>
-      </div>
-    </div>
-    <div class="overlay-panel panel-loginPanel inactive">
-      <div class="panel-gutter">
-        <div class="panel-gutter__label">Закрыть окно</div>
-      </div>
-      <div class="panel-content">
-        <div class="login__container">
-          <div class="login-container__top">
-            <div class="login__heading heading">Войдите в свой профиль</div>
-            <div class="login__sub-heading sub-heading">или зарегистрируйтесь</div>
-            <div class="login__controls-container">
-              <div class="form-input__container">
-                <div class="form-input__label">Email:</div><input class="form-input__input" type="text" value="Kolesnikov@gmail.com" name="email">
-                <div class="form-input__check"></div>
-              </div>
-              <div class="form-input__container">
-                <div class="form-input__label">пароль:</div><input class="form-input__input" type="password" value="password" name="password">
-              </div><button class="btn btn-primary login__button" disabled="true">Войти</button><button class="btn btn-secondary">Забыли пароль?</button><button class="btn btn-secondary">У меня еще нет аккаунта эксперта</button>
-            </div>
-          </div>
-          <div class="login-container__bottom">
-            <div class="cabinet-form__controls-group"><button class="btn login-btn"><span>Войти с помощью Gmail</span>
-                <div class="login-btn__image login-btn__image--google"></div>
-              </button><button class="btn login-btn"><span>Войти с помощью facebook</span>
-                <div class="login-btn__image login-btn__image--facebook"></div>
-              </button><button class="btn login-btn"><span>Войти с помощью vk</span>
-                <div class="login-btn__image login-btn__image--vk"></div>
-              </button></div>
           </div>
         </div>
       </div>
