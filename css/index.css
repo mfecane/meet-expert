@@ -580,6 +580,10 @@ body.lock{
   flex-wrap:wrap;
 }
 
+.searchbar__tags{
+  margin-top:22px;
+}
+
 .searchbar__tag{
   background:var(--light);
   color:#1c51b9;
@@ -653,6 +657,11 @@ body.lock{
   line-height:29px;
   margin-top:54px;
   text-align:center;
+}
+
+.experts-list--no-result{
+  margin-bottom:40px;
+  margin-top:73px;
 }
 
 .experts-list__sub-heading--result{
@@ -1160,7 +1169,7 @@ body.lock{
   max-width:fit-content;
 }
 
-.tags__container--main{
+.tags__container--center,.tags__container--main{
   justify-content:center;
 }
 
