@@ -1976,7 +1976,7 @@ body.lock{
   font-style:italic;
   font-weight:400;
   line-height:25px;
-  margin-bottom:3px;
+  margin-bottom:4px;
 }
 
 .messages-dialog__left{
@@ -2017,6 +2017,7 @@ body.lock{
 
 .messages-dialog__target{
   color:var(--brand);
+  margin-right:4px;
   text-transform:uppercase;
 }
 
@@ -2027,6 +2028,7 @@ body.lock{
 
 .messages-dialog__text--new{
   color:var(--accent);
+  font-weight:500;
 }
 
 .message-panel{
