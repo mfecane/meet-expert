@@ -27,7 +27,6 @@
   line-height: 52px;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 0;
 
   @media (max-width: $breakPointPhone) {
     font-size: 2.2rem;
@@ -46,5 +45,4 @@
   max-width: 905px;
   color: var(--dark);
   margin-bottom: 47px;
-  letter-spacing: 0;
 }

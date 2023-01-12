@@ -72,7 +72,7 @@ a.block-link {
   font-weight: 400;
   font-size: 4.375rem;
   line-height: 4.1875rem;
-  letter-spacing: 0;
+
   color: var(--dark);
 }
 
@@ -81,7 +81,7 @@ a.block-link {
   font-weight: 700;
   font-size: 3.125rem;
   line-height: 4.1875rem;
-  letter-spacing: 0;
+
   text-transform: uppercase;
   color: var(--brand);
 }
@@ -91,7 +91,6 @@ body {
   font-weight: 700;
   background: white;
   color: var(--dark);
-  letter-spacing: 0.08em;
 
   &.lock {
     overflow: hidden;

@@ -16,7 +16,6 @@
 .experts-list__sub-heading {
   text-align: center;
   line-height: 72px;
-  letter-spacing: 0;
 
   @media (max-width: $breakPointPhone) {
     font-size: 2.5rem;
@@ -150,7 +149,6 @@
   line-height: 30px;
   text-transform: uppercase;
   color: var(--grey);
-  letter-spacing: 0;
 
   @media (max-width: $breakPointPhone) {
     font-size: 0.8125rem;
@@ -194,21 +192,18 @@
   font-style: normal;
   font-weight: 400;
   color: var(--brand);
-  letter-spacing: 0;
 }
 
 .experts-list__experience {
   font-style: normal;
   font-weight: 400;
   color: var(--dark);
-  letter-spacing: 0;
 }
 
 .experts-list__price {
   font-style: normal;
   font-weight: 400;
   color: var(--dark);
-  letter-spacing: 0;
 }
 
 .experts-list__action {

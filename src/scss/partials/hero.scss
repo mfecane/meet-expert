@@ -28,7 +28,6 @@
   text-align: center;
   font-size: 70px;
   line-height: 80px;
-  letter-spacing: 0;
 
   @media (max-width: $breakPointPhone) {
     font-size: 3rem;
@@ -41,7 +40,6 @@
   font-size: 3.125rem;
   line-height: 4.1875rem;
   margin-bottom: 50px;
-  letter-spacing: 0;
 
   span {
     display: inline;
@@ -56,14 +54,13 @@
 
 .hero__copy {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.625rem;
   text-align: center;
   color: var(--dark);
   max-width: 730px;
   margin-bottom: 1.8125rem;
-  letter-spacing: 0em;
 }
 
 .hero__info {
@@ -73,7 +70,5 @@
   line-height: 1.625rem;
   text-align: center;
   color: var(--grey);
-  letter-spacing: 0em;
-
   margin-bottom: 83px;
 }
