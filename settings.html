@@ -65,9 +65,8 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="messages__container">
-        <div class="messages__left"></div>
+    <div class="container__settings">
+      <div class="settings__left">
         <div class="cabinet__profile-container scroll-back__panel">
           <div class="profile-photo__container">
             <div class="profile-photo__image-container"></div>
@@ -90,153 +89,40 @@
               <div class="profile-action__text">Настройки</div>
             </a></div>
         </div>
-        <div class="messages__right">
-          <div class="messages__heading heading">Ваши диалоги</div>
-          <div class="messages__sub-heading sub-heading">с будущими специалистами</div>
-          <div class="messages__dialogs">
-            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
-              <div class="messages-dialog__left">
-                <div class="messages-dialog__name">Артем зайцев</div><span class="messages-dialog__text messages-dialog__text--new">Спасибо вам за консультацию, она была очень интересной и полезной!</span>
-              </div>
-              <div class="messages-dialog__right">
-                <div class="messages-dialog__date">11.01.2023</div>
-                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
-                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
-                    <rect x="20.25" y="28.27" width="7" height="21.83" />
-                    <rect x="35.56" y="28.27" width="7" height="21.83" />
-                  </svg>
-                </div>
-              </div>
+      </div>
+      <div class="settings__right">
+        <div class="settings">
+          <div class="settings__header">
+            <div class="settings__heading heading">Уведомления, которые будут отправлены</div>
+            <div class="settings__sub-heading sub-heading">на вашу электронную почту</div>
+          </div>
+          <div class="settings__group">
+            <div class="switch"><button class="switch__button active">Да</button><button class="switch__button">Нет</button>
+              <div class="switch__label">Новые запросы на урок с экспертом</div>
             </div>
-            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
-              <div class="messages-dialog__left">
-                <div class="messages-dialog__name">Владимир Круглов</div><span class="messages-dialog__text">Можем ли мы созвониться на следующей неделе и договориться о дате новой ...</span>
-              </div>
-              <div class="messages-dialog__right">
-                <div class="messages-dialog__date">13.01.2023</div>
-                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
-                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
-                    <rect x="20.25" y="28.27" width="7" height="21.83" />
-                    <rect x="35.56" y="28.27" width="7" height="21.83" />
-                  </svg>
-                </div>
-              </div>
+            <div class="switch"><button class="switch__button active">Да</button><button class="switch__button">Нет</button>
+              <div class="switch__label">Новые сообщения от студентов</div>
             </div>
-            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
-              <div class="messages-dialog__left">
-                <div class="messages-dialog__name">Сергей Симов</div><span class="messages-dialog__target">Вы:</span><span class="messages-dialog__text">Будет ли вам удобно с помощью Zoom или Google Meet?</span>
-              </div>
-              <div class="messages-dialog__right">
-                <div class="messages-dialog__date">14.01.2023</div>
-                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
-                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
-                    <rect x="20.25" y="28.27" width="7" height="21.83" />
-                    <rect x="35.56" y="28.27" width="7" height="21.83" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
-              <div class="messages-dialog__left">
-                <div class="messages-dialog__name">Сергей Симов</div><span class="messages-dialog__target">Вы:</span><span class="messages-dialog__text">Будет ли вам удобно с помощью Zoom или Google Meet?</span>
-              </div>
-              <div class="messages-dialog__right">
-                <div class="messages-dialog__date">14.01.2023</div>
-                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
-                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
-                    <rect x="20.25" y="28.27" width="7" height="21.83" />
-                    <rect x="35.56" y="28.27" width="7" height="21.83" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
-              <div class="messages-dialog__left">
-                <div class="messages-dialog__name">Степан Баранников</div><span class="messages-dialog__text">Хорошо! Скоро увидимся</span>
-              </div>
-              <div class="messages-dialog__right">
-                <div class="messages-dialog__date">21.01.2023</div>
-                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
-                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
-                    <rect x="20.25" y="28.27" width="7" height="21.83" />
-                    <rect x="35.56" y="28.27" width="7" height="21.83" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="messages-dialog panel-activator" data-panel-id="messagesPanel">
-              <div class="messages-dialog__left">
-                <div class="messages-dialog__name">Андрей Чижов</div><span class="messages-dialog__target">Вы:</span><span class="messages-dialog__text">Ты можешь сделать это сегодня?</span>
-              </div>
-              <div class="messages-dialog__right">
-                <div class="messages-dialog__date">25.01.2023</div>
-                <div class="messages-dialog__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
-                    <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
-                    <rect x="20.25" y="28.27" width="7" height="21.83" />
-                    <rect x="35.56" y="28.27" width="7" height="21.83" />
-                  </svg>
-                </div>
-              </div>
+            <div class="switch"><button class="switch__button">Да</button><button class="switch__button active">Нет</button>
+              <div class="switch__label">Приглашения на общие собрания экспертов</div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="overlay"></div>
-    <div class="overlay-panel panel-messagesPanel inactive">
-      <div class="panel-gutter">
-        <div class="panel-gutter__label">Закрыть окно</div>
-      </div>
-      <div class="panel-content">
-        <div class="message-panel">
-          <div class="message-panel__header">
-            <div class="message-panel__avatar">
-              <div class="message-panel__avatar-image"></div>
-            </div>
-            <div class="message-panel__details">
-              <div class="message-panel__name">Степан Баранников</div>
-              <div class="message-panel__job">Архитектор решений @Korus Consulting</div>
-            </div>
-            <div class="message-panel__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.81 64.32">
-                <path d="M62.55,13.66H45.88V7.52A7.52,7.52,0,0,0,38.36,0H24.45a7.52,7.52,0,0,0-7.52,7.52v6.14H0v7H3.94l4.78,37.1a7.53,7.53,0,0,0,7.46,6.56H46.63a7.54,7.54,0,0,0,7.46-6.56l4.78-37.1h3.94v-7ZM23.93,7.52A.52.52,0,0,1,24.45,7H38.36a.52.52,0,0,1,.52.52v6.14h-15ZM47.15,56.86a.53.53,0,0,1-.52.46H16.18a.52.52,0,0,1-.52-.46L11,20.66H51.81Z" />
-                <rect x="20.25" y="28.27" width="7" height="21.83" />
-                <rect x="35.56" y="28.27" width="7" height="21.83" />
-              </svg>
-            </div>
+          <div class="settings__change-password">
+            <div class="settings__heading heading">Уведомления, которые будут отправлены</div>
+            <div class="settings__sub-heading sub-heading">на вашу электронную почту</div>
           </div>
-          <div class="message-panel__bottom">
-            <div class="message-panel__messages-container">
-              <div class="message-panel__messages-container-inner">
-                <div class="panel-message__container">
-                  <div class="panel-message__header">
-                    <div class="panel-message__name">Степан Баранников</div>
-                    <div class="panel-message__time">09:13</div>
-                  </div>
-                  <div class="panel-message__text">Добрый день, мне нужна помощь с архитектурой кода разработки продукта и его автоматизацией. Я хочу, чтобы вы провели для меня небольшой курс)</div>
-                </div>
-                <div class="panel-message__container">
-                  <div class="panel-message__header">
-                    <div class="panel-message__name">Вы</div>
-                    <div class="panel-message__time">09:17</div>
-                  </div>
-                  <div class="panel-message__text">Нам нужно определить с вами цели, которых вы хотите достичь в будущем, и время, которое нам будет удобно</div>
-                </div>
-                <div class="panel-message__container">
-                  <div class="panel-message__header">
-                    <div class="panel-message__name">Степан Баранников</div>
-                    <div class="panel-message__time">09:21</div>
-                  </div>
-                  <div class="panel-message__text">Тогда я напишу тебе все сейчас. Я вернусь через 20-30 минут</div>
-                </div>
-              </div>
+          <div class="settings__password-inputs">
+            <div class="form-input__container">
+              <div class="form-input__label">Старый пароль:</div><input class="form-input__input" type="text" value="•••••••" name="city">
+              <div class="form-input__inlay">Показать</div>
             </div>
-            <div class="message-panel__input-container">
-              <div class="message-input">
-                <div class="message-input__inner"><textarea class="message-input__textarea"></textarea>
-                  <div class="message-input__hint">Написать сообщение</div>
-                  <div class="message-input__description">Чтобы отправить сообщение, нажмите <span>Enter</span></div>
-                </div>
-              </div>
+            <div class="form-input__container">
+              <div class="form-input__label">Новый пароль:</div><input class="form-input__input" type="text" value="•••••••" name="city">
+              <div class="form-input__inlay">Показать</div>
+            </div>
+            <div class="form-input__container">
+              <div class="form-input__label">ПОвторите новый пароль:</div><input class="form-input__input" type="text" value="K@lesniko1982" name="city">
+              <div class="form-input__inlay form-input__inlay--accent">Скрыть</div>
             </div>
           </div>
         </div>

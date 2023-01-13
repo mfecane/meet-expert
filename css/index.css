@@ -2222,6 +2222,88 @@ body.lock{
   color:var(--brand);
 }
 
+.container__settings{
+  display:flex;
+  margin:222px auto auto;
+  max-width:980px;
+  padding:0 20px;
+}
+
+.settings__left{
+  flex:0 0 260px;
+}
+
+.settings__right{
+  flex:1 0 auto;
+  margin-left:44px;
+  padding-top:20px;
+}
+
+.settings__heading{
+  font-size:28px;
+  line-height:25px;
+}
+
+.settings__sub-heading{
+  font-size:17px;
+  line-height:25px;
+}
+
+.settings__header{
+  margin-bottom:34px;
+}
+
+.settings__change-password{
+  margin-bottom:30px;
+}
+
+.switch{
+  align-items:center;
+  display:flex;
+}
+
+.switch__button{
+  background:var(--light);
+  color:var(--brand);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.08em;
+  line-height:12px;
+  padding:12px 18px;
+  text-transform:uppercase;
+}
+
+.switch__button.active{
+  background:var(--brand);
+  color:#fff;
+}
+
+.switch__label{
+  color:var(--dark);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.08em;
+  line-height:17px;
+  margin-left:20px;
+  text-transform:uppercase;
+}
+
+.settings__group{
+  margin-bottom:58px;
+}
+
+.settings__group>:not(:last-child){
+  margin-bottom:32px;
+}
+
+.settings__password-inputs{
+  margin-bottom:77px;
+}
+
+.settings__password-inputs>:not(:last-child){
+  margin-bottom:23px;
+}
+
 :root{
   --header-height-become:98px;
 }
@@ -2282,8 +2364,8 @@ body.lock{
   background:#fff;
   border:2px solid var(--light);
   display:flex;
-  min-height:56px;
-  padding:19px;
+  min-height:54px;
+  padding:0 19px;
 }
 
 .form-input__container.active{
@@ -2605,6 +2687,16 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
   color:#999;
 }
 
+.form-input__inlay{
+  color:var(--grey);
+  font-size:13px;
+  line-height:26px;
+}
+
+.form-input__inlay--accent{
+  color:var(--accent);
+}
+
 @media (max-width:991.98px){
   :root{
     font-size:13px;
@@ -2855,6 +2947,10 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
   .cabinet__actions,.expert-profile__actions{
     margin-top:0;
   }
+  .container__settings{
+    margin:0 20px;
+    max-width:100%;
+  }
   .burger,.burger.active{
     display:flex;
   }
@@ -2927,6 +3023,10 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
   }
   .help-list{
     grid-template-rows:repeat(9, min-content);
+  }
+  .container__settings{
+    margin:0 40px;
+    max-width:100%;
   }
 }
 
