@@ -634,12 +634,9 @@ body.lock{
   font-size:.8125rem;
   font-weight:700;
   line-height:.75rem;
+  margin-left:20px;
   padding:12px 18px;
-  position:absolute;
-  right:12px;
   text-transform:uppercase;
-  top:50%;
-  transform:translateY(-50%);
 }
 
 .experts-list__header--index{
