@@ -36,6 +36,10 @@
 .footer__nav-container {
   flex: 0 1 max-content;
   margin: 0 10px;
+
+  @media (max-width: $breakPointTablet) {
+    margin: 0;
+  }
 }
 
 .footer__nav {

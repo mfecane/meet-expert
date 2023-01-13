@@ -42,13 +42,13 @@
 }
 
 .login__heading {
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
 }
 
 .login__sub-heading {
-  font-size: 17px;
-  line-height: 28px;
+  font-size: 1.0625rem;
+  line-height: 1.75rem;
   margin-bottom: 26px;
 }
 
@@ -64,7 +64,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 16px 16px 16px 21px;
-  font-size: 13px;
+  font-size: 0.8125rem;
 
   &:hover span {
     color: var(--brand);

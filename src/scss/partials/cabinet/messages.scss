@@ -9,13 +9,13 @@
 }
 
 .messages__heading {
-  font-size: 28px;
-  line-height: 25px;
+  font-size: 1.75rem;
+  line-height: 1.5625rem;
 }
 
 .messages__sub-heading {
-  font-size: 17px;
-  line-height: 25px;
+  font-size: 1.0625rem;
+  line-height: 1.5625rem;
 }
 
 .messages__left {
@@ -52,8 +52,8 @@
   width: 100%;
   overflow: hidden;
 
-  font-size: 15px;
-  line-height: 23px;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
 
   justify-content: space-between;
 
@@ -70,8 +70,8 @@
   font-family: "Bodoni";
   font-style: italic;
   font-weight: 400;
-  font-size: 23px;
-  line-height: 25px;
+  font-size: 1.4375rem;
+  line-height: 1.5625rem;
   color: var(--dark);
   margin-bottom: 4px;
   @media (max-width: $breakPointPhone) {
@@ -93,8 +93,8 @@
 }
 
 .messages-dialog__date {
-  font-size: 13px;
-  line-height: 26px;
+  font-size: 0.8125rem;
+  line-height: 1.625rem;
 
   text-align: right;
 

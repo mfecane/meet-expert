@@ -36,13 +36,13 @@
 }
 
 .settings__heading {
-  font-size: 28px;
-  line-height: 25px;
+  font-size: 1.75rem;
+  line-height: 1.5625rem;
 }
 
 .settings__sub-heading {
-  font-size: 17px;
-  line-height: 25px;
+  font-size: 1.0625rem;
+  line-height: 1.5625rem;
 }
 
 .settings__header {
@@ -63,8 +63,8 @@
   // flex: 0 0 60px;
 
   font-weight: 700;
-  font-size: 13px;
-  line-height: 12px;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 
@@ -80,8 +80,8 @@
 .switch__label {
   margin-left: 20px;
   font-weight: 700;
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--dark);

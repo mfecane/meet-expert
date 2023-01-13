@@ -50,8 +50,8 @@
   font-family: "Bodoni";
   font-style: italic;
   font-weight: 400;
-  font-size: 23px;
-  line-height: 25px;
+  font-size: 1.4375rem;
+  line-height: 1.5625rem;
   color: var(--dark);
 }
 
@@ -59,8 +59,8 @@
   font-family: "Gotham Pro";
   font-style: normal;
   font-weight: 700;
-  font-size: 15px;
-  line-height: 38px;
+  font-size: 0.9375rem;
+  line-height: 2.375rem;
   text-transform: uppercase;
 
   color: var(--grey);
@@ -100,8 +100,8 @@
   font-family: "Bodoni";
   font-style: italic;
   font-weight: 400;
-  font-size: 23px;
-  line-height: 25px;
+  font-size: 1.4375rem;
+  line-height: 1.5625rem;
   color: var(--accent);
 }
 
@@ -109,8 +109,8 @@
   flex: 0 0 52px;
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 26px;
+  font-size: 0.8125rem;
+  line-height: 1.625rem;
   text-align: right;
   color: var(--grey);
 }
@@ -118,8 +118,8 @@
 .panel-message__text {
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 23px;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
   color: var(--dark);
 }
 
@@ -138,8 +138,8 @@
   height: 100%;
   font-style: normal;
   font-weight: 700;
-  font-size: 13px;
-  line-height: 12px;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
   letter-spacing: 0.08em;
 
   color: var(--grey);
@@ -157,15 +157,15 @@
   flex: 1 0 auto;
 
   font-weight: 400;
-  font-size: 15px;
-  line-height: 23px;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
 
   color: var(--dark);
 }
 
 .message-input__hint {
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
   text-transform: uppercase;
   position: absolute;
   top: 21px;
@@ -181,8 +181,8 @@
 }
 
 .message-input__description {
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
 
   span {
     color: var(--brand);
