@@ -67,12 +67,12 @@
     </div>
     <div class="container container--very-narrow">
       <div class="cabinet">
-        <div class="cabinet__profile-container scroll-back__panel">
+        <aside class="cabinet__profile-container scroll-back__panel">
           <div class="profile-photo__container">
             <div class="profile-photo__image-container"></div>
             <div class="block-link profile-photo__link profile-photo__link--cabinet">Измените фото</div>
           </div>
-          <div class="cabinet__actions"><a class="block-link profile-action profile-action--dark" href="#help">
+          <nav class="cabinet__actions"><a class="block-link profile-action profile-action--dark" href="#help">
               <div class="profile-action__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.87 129.8">
                   <path fill="#2f56a6" class="a" d="M160.86,52.9,108,0,90.72,17.23,126.39,52.9H0v24H126.39L90.72,112.57,108,129.8l52.91-52.9,1.78-1.78a14.44,14.44,0,0,0,0-20.44Z" />
                 </svg>
@@ -81,23 +81,23 @@
             </a><a class="block-link profile-action" href="./messages.html">
               <div class="profile-action__icon profile-action__icon--messages">2</div>
               <div class="profile-action__text">Сообщения</div>
-            </a><a class="block-link profile-action profile-action--dark" href="#help">
+            </a><a class="block-link profile-action profile-action--dark" href="./settings.html">
               <div class="profile-action__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.87 129.8">
                   <path fill="#2f56a6" class="a" d="M160.86,52.9,108,0,90.72,17.23,126.39,52.9H0v24H126.39L90.72,112.57,108,129.8l52.91-52.9,1.78-1.78a14.44,14.44,0,0,0,0-20.44Z" />
                 </svg>
               </div>
               <div class="profile-action__text">Настройки</div>
-            </a></div>
-        </div>
+            </a></nav>
+        </aside>
         <div class="cabinet__content">
-          <div class="constraints">
-            <div class="constraints__item active">Все поля обязательны для заполнения</div>
-            <div class="constraints__item">Фотография профиля поможет студентам узнать вас лучше</div>
-            <div class="constraints__item">Ваше лицо должно быть хорошо видно на фотографии</div>
-            <div class="constraints__item">Фотография должна быть сделана при хорошем освещении</div>
-            <div class="constraints__item">Форматы: JPEG, JPG, PNG</div>
-            <div class="constraints__item">Размер до 1.5 MB</div>
-          </div>
+          <ul class="constraints">
+            <li class="constraints__item active">Все поля обязательны для заполнения</li>
+            <li class="constraints__item">Фотография профиля поможет студентам узнать вас лучше</li>
+            <li class="constraints__item">Ваше лицо должно быть хорошо видно на фотографии</li>
+            <li class="constraints__item">Фотография должна быть сделана при хорошем освещении</li>
+            <li class="constraints__item">Форматы: JPEG, JPG, PNG</li>
+            <li class="constraints__item">Размер до 1.5 MB</li>
+          </ul>
           <form class="cabinet-form" action="">
             <div class="cabinet-form__controls-group">
               <div class="form-input__container">
@@ -218,7 +218,7 @@
         </div>
       </div>
     </div>
-    <div class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer__upper-layout">
           <div class="logo"><a class="block-link footer__logo" href="./"><svg viewBox="0 0 217 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -234,14 +234,16 @@
                 <path d="M204.567 23.0001H209.495V5.1441H216.311V0.600098H197.751V5.1441H204.567V23.0001Z" fill="#1C51B9" />
               </svg>
             </a></div>
-          <ul class="footer__nav">
-            <li class="footer__nav-item"><a href="#">Free мероприятия</a></li>
-            <li class="footer__nav-item"><a href="#">Политика конфиденциальности</a></li>
-            <li class="footer__nav-item"><a href="#">станть экспертом</a></li>
-            <li class="footer__nav-item"><a href="#">Политика cookie файлов</a></li>
-            <li class="footer__nav-item"><a href="#">войдити</a></li>
-            <li class="footer__nav-item"><a href="#">правила и условия</a></li>
-          </ul>
+          <nav class="footer__nav-container">
+            <ul class="footer__nav">
+              <li class="footer__nav-item"><a href="#">Free мероприятия</a></li>
+              <li class="footer__nav-item"><a href="#">Политика конфиденциальности</a></li>
+              <li class="footer__nav-item"><a href="#">станть экспертом</a></li>
+              <li class="footer__nav-item"><a href="#">Политика cookie файлов</a></li>
+              <li class="footer__nav-item"><a href="#">войдити</a></li>
+              <li class="footer__nav-item"><a href="#">правила и условия</a></li>
+            </ul>
+          </nav>
         </div>
         <div class="footer__lower-layout">
           <div class="footer__lower-left">
@@ -255,7 +257,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </footer>
     <script src="js/script.min.js" defer="true"></script>
     <script src="js/index.global.min.js" defer="true"></script>
   </body>

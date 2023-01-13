@@ -237,12 +237,11 @@ body.lock{
 }
 
 .index__search{
-  margin:0 0 100px;
+  margin:0 0 80px;
 }
 
 .index__experts{
   margin-bottom:100px;
-  margin-top:145px;
 }
 
 .index__mission{
@@ -582,6 +581,10 @@ body.lock{
 
 .searchbar__tags{
   margin-top:22px;
+}
+
+.searchbar__tags--gap{
+  margin-top:13px;
 }
 
 .searchbar__tag{
@@ -941,13 +944,16 @@ body.lock{
   max-width:217px;
 }
 
+.footer__nav-container{
+  flex:0 1 max-content;
+  margin:0 10px;
+}
+
 .footer__nav{
   -moz-column-gap:58px;
        column-gap:58px;
   display:grid;
-  flex:0 1 max-content;
   grid-template-columns:max-content max-content;
-  margin:0 10px;
   row-gap:5px;
 }
 

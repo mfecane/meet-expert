@@ -41,7 +41,7 @@
         </div>
       </div>
     </header>
-    <section class="hero">
+    <main class="hero">
       <div class="ontainer hero__container">
         <div class="hero__main">
           <h1 class="hero__heading heading">Прокачай свой скиллы</h1>
@@ -52,7 +52,7 @@
           <p class="hero__info">*Здесь вы можете разместить некоторую информацию для описания или конкретики. Или вообще, что вам нужно знать, чтобы не расстраиваться</p>
         </div>
       </div>
-    </section>
+    </main>
     <div class="tech-list">
       <div class="container">
         <div class="tech-list__layout">
@@ -132,13 +132,21 @@
             </div>
           </div>
           <div class="searchbar__helptext-mobile">Не нашли его или не знаете, где искать?<span class="searchbar__highlight">Найдите эксперта по тегам</span></div>
-          <div class="searchbar__tags">
-            <div class="tags__container tags__container--center"></div>
+          <div class="searchbar__tags searchbar__tags--gap">
+            <ul class="tags__container tags__container--center">
+              <li class="tags__tag">Java</li>
+              <li class="tags__tag">JavaScript</li>
+              <li class="tags__tag">Python</li>
+              <li class="tags__tag">ProductManagement</li>
+              <li class="tags__tag">C++</li>
+              <li class="tags__tag">UX/UI</li>
+              <li class="tags__tag">DataScience</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="index__experts">
+    <section class="index__experts">
       <section class="experts-list--index">
         <div class="container">
           <div class="experts-list--no-result experts-list__header--index">
@@ -318,8 +326,8 @@
           <div class="container"><a class="btn btn-primary experts-list__more-button" href="./experts.html">Смотреть больше экспертов</a></div>
         </div>
       </section>
-    </div>
-    <div class="index__suggestion">
+    </section>
+    <section class="index__suggestion">
       <section class="suggestion">
         <div class="container">
           <div class="suggestion__layout">
@@ -332,8 +340,8 @@
           </div>
         </div>
       </section>
-    </div>
-    <div class="index__mission">
+    </section>
+    <section class="index__mission">
       <section class="mission">
         <div class="container">
           <div class="mission-inner">
@@ -343,8 +351,8 @@
           </div>
         </div>
       </section>
-    </div>
-    <div class="footer">
+    </section>
+    <footer class="footer">
       <div class="container">
         <div class="footer__upper-layout">
           <div class="logo"><a class="block-link footer__logo" href="./"><svg viewBox="0 0 217 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -360,14 +368,16 @@
                 <path d="M204.567 23.0001H209.495V5.1441H216.311V0.600098H197.751V5.1441H204.567V23.0001Z" fill="#1C51B9" />
               </svg>
             </a></div>
-          <ul class="footer__nav">
-            <li class="footer__nav-item"><a href="#">Free мероприятия</a></li>
-            <li class="footer__nav-item"><a href="#">Политика конфиденциальности</a></li>
-            <li class="footer__nav-item"><a href="#">станть экспертом</a></li>
-            <li class="footer__nav-item"><a href="#">Политика cookie файлов</a></li>
-            <li class="footer__nav-item"><a href="#">войдити</a></li>
-            <li class="footer__nav-item"><a href="#">правила и условия</a></li>
-          </ul>
+          <nav class="footer__nav-container">
+            <ul class="footer__nav">
+              <li class="footer__nav-item"><a href="#">Free мероприятия</a></li>
+              <li class="footer__nav-item"><a href="#">Политика конфиденциальности</a></li>
+              <li class="footer__nav-item"><a href="#">станть экспертом</a></li>
+              <li class="footer__nav-item"><a href="#">Политика cookie файлов</a></li>
+              <li class="footer__nav-item"><a href="#">войдити</a></li>
+              <li class="footer__nav-item"><a href="#">правила и условия</a></li>
+            </ul>
+          </nav>
         </div>
         <div class="footer__lower-layout">
           <div class="footer__lower-left">
@@ -381,9 +391,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </footer>
     <div class="overlay"></div>
-    <div class="overlay-panel panel-expertPanel inactive">
+    <aside class="overlay-panel panel-expertPanel inactive">
       <div class="panel-gutter">
         <div class="panel-gutter__label">Закрыть окно</div>
       </div>
@@ -400,27 +410,27 @@
               <div class="person-details__cost">5–10 лет / Цена (за час): 5 000 руб</div>
               <div class="person-details__text">7 лет продуктового подхода к разработке ИТ-решений. Я вышел на рынок США, теперь я отвечаю за рост показателей... <a href="/person.html">Подробнее</a>
               </div>
-              <div class="tags__container">
-                <div class="tags__tag">Agile</div>
-                <div class="tags__tag">Jira</div>
-                <div class="tags__tag">Kanban</div>
-                <div class="tags__tag">Scrum</div>
-                <div class="tags__tag">Analytics</div>
-                <div class="tags__tag">...</div>
-              </div>
+              <ul class="tags__container">
+                <li class="tags__tag">Agile</li>
+                <li class="tags__tag">Jira</li>
+                <li class="tags__tag">Kanban</li>
+                <li class="tags__tag">Scrum</li>
+                <li class="tags__tag">Analytics</li>
+                <li class="tags__tag">...</li>
+              </ul>
             </div>
           </div>
           <div class="calendarEl calendar--overlay"></div>
           <div class="panel-content__controls"><button class="btn btn-primary" diabled>Отправить заявку</button></div>
         </div>
       </div>
-    </div>
-    <div class="overlay-panel panel-loginPanel inactive">
+    </aside>
+    <aside class="overlay-panel panel-loginPanel inactive">
       <div class="panel-gutter">
         <div class="panel-gutter__label">Закрыть окно</div>
       </div>
       <div class="panel-content">
-        <div class="login__container">
+        <form class="login__container" action="">
           <div class="login-container__top">
             <div class="login__heading heading">Войдите в свой профиль</div>
             <div class="login__sub-heading sub-heading">или зарегистрируйтесь</div>
@@ -453,9 +463,9 @@
                 <div class="login-btn__image login-btn__image--vk"></div>
               </button></div>
           </div>
-        </div>
+        </form>
       </div>
-    </div>
+    </aside>
     <script src="js/script.min.js" defer="true"></script>
     <script src="js/index.global.min.js" defer="true"></script>
   </body>
