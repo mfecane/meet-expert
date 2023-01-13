@@ -151,10 +151,6 @@
 }
 
 .searchbar__go-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 12px;
   flex: 0 0 max-content;
   font-size: 0.8125rem;
   line-height: 0.75rem;
@@ -163,4 +159,5 @@
   color: white;
   background: var(--brand);
   padding: 12px 18px;
+  margin-left: 20px;
 }
