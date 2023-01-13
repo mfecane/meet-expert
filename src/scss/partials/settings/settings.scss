@@ -1,0 +1,93 @@
+.container__settings {
+  max-width: 980px;
+  padding: 0 20px;
+  margin: auto;
+  margin-top: 222px;
+  display: flex;
+
+  @media (max-width: $breakPointSmallMonitor) {
+    max-width: 100%;
+    margin: 0 40px;
+  }
+
+  @media (max-width: $breakPointPhone) {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+}
+
+.settings__left {
+  flex: 0 0 260px;
+}
+
+.settings__right {
+  flex: 1 0 auto;
+  margin-left: 44px;
+  padding-top: 20px;
+}
+
+.settings__heading {
+  font-size: 28px;
+  line-height: 25px;
+}
+
+.settings__sub-heading {
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.settings__header {
+  margin-bottom: 34px;
+}
+
+.settings__change-password {
+  margin-bottom: 30px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch__button {
+  padding: 12px 18px;
+  // flex: 0 0 60px;
+
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  background: var(--light);
+  color: var(--brand);
+
+  &.active {
+    background: var(--brand);
+    color: white;
+  }
+}
+
+.switch__label {
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.settings__group {
+  & > *:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  margin-bottom: 58px;
+}
+
+.settings__password-inputs {
+  & > *:not(:last-child) {
+    margin-bottom: 23px;
+  }
+  margin-bottom: 77px;
+}

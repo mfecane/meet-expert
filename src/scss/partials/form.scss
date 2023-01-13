@@ -3,8 +3,8 @@
   align-items: center;
   background: white;
   border: 2px solid var(--light);
-  padding: 19px;
-  min-height: 56px;
+  padding: 0 19px;
+  min-height: 54px;
 
   &.active {
     border: 2px solid var(--brand);

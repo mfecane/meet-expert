@@ -1,0 +1,9 @@
+.form-input__inlay {
+  color: var(--grey);
+  font-size: 13px;
+  line-height: 26px;
+
+  &--accent {
+    color: var(--accent);
+  }
+}

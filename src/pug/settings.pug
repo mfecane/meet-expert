@@ -1,5 +1,12 @@
 include ./partials/messages/messages-dialog.pug
 include ./partials/messages/overlay.pug
+include ./components/form-input.pug
+
+mixin switch(options)
+  .switch
+    button.switch__button(class= options.value && "active")= options.left || "Да"
+    button.switch__button(class= !options.value && "active")= options.right || "Нет"
+    .switch__label= options.label
 
 doctype html
 html(lang="ru")
@@ -15,54 +22,55 @@ html(lang="ru")
     include ./partials/header.pug
     include ./partials/cabinet/scroll-back.pug
 
-    .container
-      .messages__container
-        .messages__left
+    .container__settings
+      .settings__left
         include ./partials/cabinet/profile.pug
-        .messages__right
-          .messages__heading.heading Ваши диалоги
-          .messages__sub-heading.sub-heading с будущими специалистами
+      .settings__right
+        .settings
+          .settings__header
+            .settings__heading.heading Уведомления, которые будут отправлены
+            .settings__sub-heading.sub-heading на вашу электронную почту
 
+          .settings__group
+            +switch({
+              label: "Новые запросы на урок с экспертом",
+              value: true
+            })
 
-          .messages__dialogs
-            -
-              const dialogs = [{
-                name: "Артем зайцев",
-                textClass: "messages-dialog__text--new",
-                message: "Спасибо вам за консультацию, она была очень интересной и полезной!",
-                date: "11.01.2023"
-              },{
-                name: "Владимир Круглов",
-                message: "Можем ли мы созвониться на следующей неделе и договориться о дате новой ...",
-                date: "13.01.2023"
-              },{
-                name: "Сергей Симов",
-                target: "Вы:",
-                message: "Будет ли вам удобно с помощью Zoom или Google Meet?",
-                date: "14.01.2023"
-              },{
-                name: "Сергей Симов",
-                target: "Вы:",
-                message: "Будет ли вам удобно с помощью Zoom или Google Meet?",
-                date: "14.01.2023"
-              },{
-                name: "Степан Баранников",
-                message: "Хорошо! Скоро увидимся",
-                date: "21.01.2023"
-              },{
-                name: "Андрей Чижов",
-                target: "Вы:",
-                message: "Ты можешь сделать это сегодня?",
-                date: "25.01.2023"
-              }]
-            each dialog in dialogs
-              +messages-dialog(dialog)
+            +switch({
+              label: "Новые сообщения от студентов",
+              value: true
+            })
 
-    +overlay
-    +overlay-panel({
-      panelClass: "panel-messagesPanel"
-    })
-      include ./partials/messages/messages-panel-content.pug
+            +switch({
+              label: "Приглашения на общие собрания экспертов"
+            })
+
+          .settings__change-password
+            .settings__heading.heading Уведомления, которые будут отправлены
+            .settings__sub-heading.sub-heading на вашу электронную почту
+
+          .settings__password-inputs
+            +form-input({
+              label: "Старый пароль:",
+              name: "city",
+              value: "•••••••",
+              inlay: "Показать"
+            })
+            +form-input({
+              label: "Новый пароль:",
+              name: "city",
+              value: "•••••••",
+              inlay: "Показать"
+            })
+            +form-input({
+              label: "ПОвторите новый пароль:",
+              name: "city",
+              value: "K@lesniko1982",
+              inlay: "Скрыть",
+              inlayClass: "form-input__inlay--accent"
+            })
+
 
     include ./partials/footer.pug
 

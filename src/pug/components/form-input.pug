@@ -3,6 +3,9 @@ mixin form-input(options)
     .form-input__label= options.label
     - const type = options.type || "text"
     input(type=type, class="form-input__input", value=options.value, name=options.name)
+
     if options.check
       .form-input__check
         include ../../svg/check.svg
+    if options.inlay
+      .form-input__inlay(class=options.inlayClass)= options.inlay
