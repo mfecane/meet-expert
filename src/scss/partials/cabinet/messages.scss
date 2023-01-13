@@ -2,6 +2,10 @@
   margin-top: 222px;
   width: 100%;
   display: flex;
+
+  @media (max-width: $breakPointTablet) {
+    flex-direction: column;
+  }
 }
 
 .messages__heading {
@@ -15,13 +19,21 @@
 }
 
 .messages__left {
-  padding-right: 124px;
+  padding-left: 124px;
+
+  @media (max-width: $breakPointTablet) {
+    padding-left: 0;
+  }
 }
 
 .messages__right {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   margin-left: 44px;
   padding-top: 20px;
+
+  @media (max-width: $breakPointTablet) {
+    margin-left: 0;
+  }
 }
 
 .messages__dialogs {
@@ -31,7 +43,7 @@
 .messages-dialog {
   border-top: 1px solid var(--light);
   border-bottom: 1px solid var(--light);
-  padding: 5px 24px;
+  padding: 10px 24px;
   cursor: pointer;
   min-height: 92px;
 
@@ -48,6 +60,10 @@
   &:hover {
     background: var(--light);
   }
+
+  @media (max-width: $breakPointTablet) {
+    padding: 15px 15px 15px 0;
+  }
 }
 
 .messages-dialog__name {
@@ -58,20 +74,14 @@
   line-height: 25px;
   color: var(--dark);
   margin-bottom: 4px;
+  @media (max-width: $breakPointPhone) {
+    margin-bottom: 10px;
+  }
 }
 
 .messages-dialog__left {
   flex: 0 1 auto;
 }
-
-// .messages-dialog__data {
-//   display: flex;
-
-//   font-size: 15px;
-//   line-height: 23px;
-//
-//   justify-content: space-between;
-// }
 
 .messages-dialog__message {
 }
@@ -117,7 +127,6 @@
 }
 
 .messages-dialog__text {
-  flex: 1 0 min-content;
   font-weight: 400;
 
   &--new {

@@ -3,7 +3,7 @@ include ../../components/tag-list.pug
 mixin searchbar(options)
   .search__section
     .container.search__container
-      .searchbar(class= options.searchbarModifier)
+      form.searchbar(class= options.searchbarModifier)
         .searchbar__icon
         .searchbar__content
 
@@ -31,7 +31,7 @@ mixin searchbar(options)
       .searchbar__helptext-mobile Не нашли его или не знаете, где искать?
         span.searchbar__highlight Найдите эксперта по тегам
 
-      .searchbar__tags
+      .searchbar__tags(class=options.searchbarTagsClass)
         +tag-list({
           tags: options.tags,
           class: "tags__container--center"

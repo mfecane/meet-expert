@@ -23,7 +23,8 @@
   }
 
   @media (max-width: $breakPointTablet) {
-    display: flex;
+    flex-direction: row;
+    position: static;
     margin-bottom: 23px;
     .cabinet__actions {
       margin-left: 12px;

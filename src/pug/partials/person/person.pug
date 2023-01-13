@@ -12,11 +12,11 @@ mixin comment(options)
 
 .container.container--person
   .expert-profile
-    .expert-profile__profile-container.scroll-back__panel
+    aside.expert-profile__profile-container.scroll-back__panel
       +profile-photo({
         linkText: "Запланировать встречу"
       })
-      .expert-profile__actions
+      nav.expert-profile__actions
         +profile-action("#help", "profile-action--dark", "", "Чем я могу помочь")
         +profile-action("#calendar", "profile-action--dark", "", "Доступные даты")
         +profile-action("#comments", "profile-action--dark", "", "Отзывы")
@@ -27,7 +27,7 @@ mixin comment(options)
         .expert-profile__name Andrey Chizhov
         .expert-profile__title Руководитель ИТ-проектов @UniCredit Russia
         .expert-profile__cost 5–10 лет / Цена (за час): 5 000 руб
-        .expert-profile__text
+        article.expert-profile__text
           p.
             Я графический дизайнер, который обладает многими навыками в профессии:
             брендинг, печать, стратегия дизайна, маркетинговые коммуникации, опыт

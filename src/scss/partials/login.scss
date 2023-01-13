@@ -8,6 +8,11 @@
   padding: 48px 36px;
   min-width: 628px;
   min-height: 100vh;
+
+  @media (max-width: $breakPointTablet) {
+    min-width: unset;
+    min-height: unset;
+  }
 }
 
 .login-container__top {

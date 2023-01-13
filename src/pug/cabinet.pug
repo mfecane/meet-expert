@@ -19,13 +19,13 @@ html(lang="ru")
       .cabinet
         include ./partials/cabinet/profile.pug
         .cabinet__content
-          .constraints
-            .constraints__item.active Все поля обязательны для заполнения
-            .constraints__item Фотография профиля поможет студентам узнать вас лучше
-            .constraints__item Ваше лицо должно быть хорошо видно на фотографии
-            .constraints__item Фотография должна быть сделана при хорошем освещении
-            .constraints__item Форматы: JPEG, JPG, PNG
-            .constraints__item Размер до 1.5 MB
+          ul.constraints
+            li.constraints__item.active Все поля обязательны для заполнения
+            li.constraints__item Фотография профиля поможет студентам узнать вас лучше
+            li.constraints__item Ваше лицо должно быть хорошо видно на фотографии
+            li.constraints__item Фотография должна быть сделана при хорошем освещении
+            li.constraints__item Форматы: JPEG, JPG, PNG
+            li.constraints__item Размер до 1.5 MB
 
           form.cabinet-form(action="")
             .cabinet-form__controls-group

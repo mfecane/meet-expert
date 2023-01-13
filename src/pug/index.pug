@@ -22,16 +22,20 @@ html(lang="ru")
       +searchbar({
         tags: false,
         go: false,
-        hint: true
+        hint: true,
+        searchbarTagsClass: "searchbar__tags--gap",
+        tags: [
+          "Java", "JavaScript", "Python", "ProductManagement", "C++", "UX/UI", "DataScience"
+        ]
       })
 
-    .index__experts
+    section.index__experts
       include ./partials/index/expert-list.pug
 
-    .index__suggestion
+    section.index__suggestion
       include ./partials/index/suggestion.pug
 
-    .index__mission
+    section.index__mission
       include ./partials/index/mission.pug
 
     include ./partials/footer.pug
