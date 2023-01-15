@@ -1,5 +1,7 @@
 
+
+
 mixin tag-list(options)
   ul.tags__container(class=options.class)
     each tag in options.tags
-      li.tags__tag= tag
+      li.tags__tag(class=(tag === '...') ? 'tags__tag--dark' : '')= tag

@@ -28,8 +28,9 @@ mixin searchbar(options)
         if (options.go)
           .searchbar__go-button to find
 
-      .searchbar__helptext-mobile Не нашли его или не знаете, где искать?
-        span.searchbar__highlight Найдите эксперта по тегам
+      .searchbar__helptext-mobile.
+        Не нашли его или не знаете, где искать?
+        #[span.searchbar__highlight Найдите эксперта по тегам]
 
       .searchbar__tags(class=options.searchbarTagsClass)
         +tag-list({

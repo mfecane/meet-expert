@@ -17,10 +17,27 @@ mixin comment(options)
         linkText: "Запланировать встречу"
       })
       nav.expert-profile__actions
-        +profile-action("#help", "profile-action--dark", "", "Чем я могу помочь")
-        +profile-action("#calendar", "profile-action--dark", "", "Доступные даты")
-        +profile-action("#comments", "profile-action--dark", "", "Отзывы")
-        +profile-action("#top", "profile-action--dark", "", "в начало")
+        +profile-action({
+          link: "#help",
+          linkClass: "profile-action--default",
+          text: "Чем я могу помочь"
+        })
+        +profile-action({
+          link: "#calendar",
+          linkClass: "profile-action--default",
+          text: "Доступные даты"
+        })
+        +profile-action({
+          link: "#comments",
+          linkClass: "profile-action--default",
+          text: "Отзывы"
+        })
+        +profile-action({
+          link: "#top",
+          linkClass: "profile-action--default",
+          iconClass: "profile-action__icon--arrow--rotate",
+          text: "в начало"
+        })
 
     .expert-profile__info
       .expert-profile__narrow-container
@@ -88,7 +105,7 @@ mixin comment(options)
       h2.expert-profile__heading Выберите подходящие
       h3.expert-profile__sub-heading даты для встречи
 
-      .calendarEl.calendar--profile
+      .calendarEl.calendar--profile#calendar
 
       .expert-profile__narrow-container
 

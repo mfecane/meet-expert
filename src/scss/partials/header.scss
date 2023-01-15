@@ -9,6 +9,7 @@
 
   &.small {
     height: var(--header-small-height);
+    box-shadow: 0px 8px 31px rgba(28, 81, 185, 0.05);
   }
 }
 
@@ -29,6 +30,13 @@
   flex: 0 0 216px;
   margin-right: 20px;
   transform: translateY(-2px);
+  transition: all 200ms ease;
+
+  .site-header.small & {
+    flex: 0 0 180px;
+    height: 19px;
+  }
+
   @media (max-width: $breakPointTablet) {
     flex: 0 0 184px;
   }

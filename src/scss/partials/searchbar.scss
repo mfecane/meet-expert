@@ -82,7 +82,10 @@
   display: none;
   color: var(--grey);
   text-transform: uppercase;
+  font-size: 1rem;
   line-height: 1.25rem;
+  margin-top: 16px;
+  text-align: center;
 
   @media (max-width: $breakPointPhone) {
     display: block;
@@ -127,6 +130,10 @@
   &:not(:last-child) {
     margin-right: 12px;
   }
+
+  @media (max-width: $breakPointPhone) {
+    display: none;
+  }
 }
 
 .searchbar__tag-close {
@@ -148,6 +155,7 @@
   font-size: 1rem;
   font-weight: 700;
   display: inline-block;
+  width: 0;
 }
 
 .searchbar__go-button {

@@ -1,5 +1,8 @@
-mixin profile-action(link, linkClass, iconclass, text)
-  a.block-link.profile-action(class=linkClass, href=link)
-    .profile-action__icon(class=iconclass)
-      include ../../svg/arrow.svg
-    .profile-action__text= text
+mixin profile-action(options)
+  a.block-link.profile-action(class=options.linkClass, href=options.link)
+    if (options.linkContent)
+      .profile-action__icon(class=options.iconClass)= options.linkContent
+    else
+      .profile-action__icon(class=options.iconClass)
+        include ../../svg/arrow.svg
+    .profile-action__text= options.text

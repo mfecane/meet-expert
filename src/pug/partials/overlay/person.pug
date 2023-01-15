@@ -2,7 +2,8 @@
   .person-details
     .person-details__profile-container
       .person-details__profile-image-container
-      .person-details__profile-link См. профиль
+      .person-details__profile-link
+        a(href="./person.html") См. профиль
     .person-details__info
       .person-details__name Андрей чижов
       .person-details__title Руководитель ИТ-проектов @UniCredit Russia
@@ -10,7 +11,7 @@
       .person-details__text.
         7 лет продуктового подхода к разработке ИТ-решений. Я вышел на рынок
         США, теперь я отвечаю за рост показателей...
-        #[a(href="/person.html") Подробнее]
+        #[a.person-details__text-more(href="/person.html") Подробнее]
 
       +tag-list({
         tags: [

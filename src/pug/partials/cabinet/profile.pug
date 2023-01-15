@@ -1,6 +1,5 @@
 include ../profile-photo.pug
 include ../profile-action.pug
-include ../profile-action-msg.pug
 
 aside.cabinet__profile-container.scroll-back__panel
   +profile-photo({
@@ -8,6 +7,19 @@ aside.cabinet__profile-container.scroll-back__panel
     linkClass: "profile-photo__link--cabinet"
   })
   nav.cabinet__actions
-    +profile-action("#help", "profile-action--dark", "", "Your profile")
-    +profile-action-msg("./messages.html", "Сообщения")
-    +profile-action("./settings.html", "profile-action--dark", "", "Настройки")
+    +profile-action({
+      link: "#help",
+      linkClass: "profile-action--light",
+      text: "Ваш профиль"
+    })
+    +profile-action({
+      link: "./messages.html",
+      linkClass: "profile-action--orange",
+      text: "Сообщения",
+      linkContent: "2"
+    })
+    +profile-action({
+      link: "./settings.html",
+      linkClass: "profile-action--light",
+      text: "Настройки"
+    })

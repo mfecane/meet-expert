@@ -107,7 +107,8 @@
 }
 
 .suggestion__button.btn:hover {
-  background-color: #456fcb;
+  background-color: var(--light);
+  color: var(--dark-bg);
 }
 
 .suggestion__button a {

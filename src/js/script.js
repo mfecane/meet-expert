@@ -38,7 +38,10 @@ function setUpPanel() {
     const panel = document.querySelector(`.overlay-panel.panel-${panelId}`);
     if (!panel) return;
 
-    activator.addEventListener("click", () => {
+    activator.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
       panel.classList.toggle("active", true);
       overlay.classList.toggle("active", true);
       document.body.classList.toggle("lock", true);

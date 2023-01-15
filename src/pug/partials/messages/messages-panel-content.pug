@@ -1,7 +1,7 @@
 mixin panel-message(options)
   .panel-message__container
     .panel-message__header
-      .panel-message__name= options.name
+      .panel-message__name(class=(options.name === "Вы" ? "panel-message__name--you" : ""))= options.name
       .panel-message__time= options.time
     .panel-message__text= options.text
 
@@ -32,6 +32,7 @@ mixin panel-message(options)
   .message-panel__bottom
     .message-panel__messages-container
       .message-panel__messages-container-inner
+        .message-panel__messages-date 17 Января 2023
         each message in messages
           +panel-message(message)
 

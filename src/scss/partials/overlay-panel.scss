@@ -67,6 +67,11 @@
     height: 38px;
     width: 100%;
   }
+
+  &:hover {
+    background-color: var(--accent);
+    cursor: pointer;
+  }
 }
 
 .panel-gutter__label {
@@ -100,7 +105,7 @@
 }
 
 .calendar--overlay {
-  margin: 22px 0;
+  margin: 43px 0 22px 0;
   flex: 1 1 auto;
   overflow: hidden;
 }
@@ -138,6 +143,19 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: hover;
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: white;
+  }
+
+  &:hover {
+    background: var(--dark-bg);
+  }
 }
 
 .person-details__info {
@@ -180,4 +198,8 @@
   font-size: 0.9375rem;
   line-height: 1.4375rem;
   color: #2e2e2e;
+}
+
+.person-details__text-more {
+  font-weight: 600;
 }

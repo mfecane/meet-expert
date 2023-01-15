@@ -14,7 +14,7 @@
 .form-input__label {
   flex: 0 0 max-content;
   font-size: 0.8125rem;
-  line-height: 0.75rem;
+  line-height: 0.9375rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--grey);
@@ -25,11 +25,12 @@
   margin-left: 8px;
   font-weight: 700;
   font-size: 0.8125rem;
-  line-height: 0.75rem;
+  line-height: 0.9375rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brand);
   min-width: 0;
+  height: fit-content;
 }
 
 .form-input__photo-drag-container {
@@ -43,8 +44,9 @@
 }
 
 .form-input__photo-drag-title {
-  font-size: 0.8125rem;
-  line-height: 1.3125rem;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -52,11 +54,12 @@
 }
 
 .form-input__photo-drag-subtitle {
-  font-size: 0.8125rem;
-  line-height: 1.25rem;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
   text-align: center;
-  letter-spacing: 0.08em;
   color: #cdcdcd;
+  letter-spacing: 0;
 }
 
 .form-input__hint-container > *:not(:last-child) {
@@ -79,6 +82,7 @@
 .become-form__text {
   font-size: 0.8125rem;
   line-height: 1.25rem;
+  font-weight: 400;
   color: var(--grey);
 }
 

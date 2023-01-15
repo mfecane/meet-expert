@@ -58,17 +58,24 @@
   display: block;
   padding-left: 22px;
   padding-right: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .experts-list__more-button:hover {
-  background: #ff3700;
+  background: var(--dark-bg);
 }
 
 .experts-list__line {
   min-height: 91px;
   display: flex;
   align-items: center;
-  border: 1px solid var(--light);
+
+  border-top: 1px solid var(--light);
+  &:last-child {
+    border-bottom: 1px solid var(--light);
+  }
 
   @media (max-width: $breakPointPhone) {
     &:nth-child(odd) {
@@ -142,7 +149,7 @@
   a {
     color: var(--dark);
     &:hover {
-      color: var(--brand);
+      color: var(--dark);
     }
   }
 }
@@ -195,19 +202,19 @@
 
 .experts-list__reviews {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--brand);
 }
 
 .experts-list__experience {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--dark);
 }
 
 .experts-list__price {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--dark);
 }
 

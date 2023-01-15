@@ -37,5 +37,14 @@
 }
 
 .tags__tag:hover {
-  color: #b6b6b6;
+  color: var(--brand);
+}
+
+.tags__tag.tags__tag--dark {
+  color: var(--dark-bg);
+}
+
+.tags__tag.tags__tag--dark:hover {
+  background: var(--brand);
+  color: white;
 }

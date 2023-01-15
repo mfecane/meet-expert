@@ -30,19 +30,13 @@
   transform: rotate(90deg);
 }
 
-.profile-action--dark:hover .profile-action__icon {
-  background-color: var(--brand);
-  svg path {
-    fill: white;
-  }
+.profile-action--light {
 }
 
-.profile-action__icon--messages {
-  background: var(--accent);
-  color: white;
-
-  .profile-action:hover & {
-    background: var(--accent-hover);
+.profile-action--orange {
+  .profile-action__icon {
+    background: var(--accent);
+    color: white;
   }
 }
 
