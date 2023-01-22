@@ -565,7 +565,10 @@ body.lock{
 .searchbar__helptext-mobile{
   color:var(--grey);
   display:none;
+  font-size:1rem;
   line-height:1.25rem;
+  margin-top:16px;
+  text-align:center;
   text-transform:uppercase;
 }
 
@@ -629,6 +632,7 @@ body.lock{
   font-size:1rem;
   font-weight:700;
   position:relative;
+  width:0;
   z-index:1;
 }
 
@@ -1070,6 +1074,11 @@ body.lock{
   z-index:5;
 }
 
+.panel-gutter:hover{
+  background-color:var(--accent);
+  cursor:pointer;
+}
+
 .panel-gutter__label{
   color:#fff;
   cursor:pointer;
@@ -1091,7 +1100,7 @@ body.lock{
 
 .calendar--overlay{
   flex:1 1 auto;
-  margin:22px 0;
+  margin:43px 0 22px;
   overflow:hidden;
 }
 
@@ -1121,12 +1130,21 @@ body.lock{
 .person-details__profile-link{
   background:#ff683e;
   color:#fff;
+  cursor:hover;
   font-size:.8125rem;
   font-weight:700;
   letter-spacing:.08em;
   line-height:.75rem;
   padding:13px 20px;
   text-transform:uppercase;
+}
+
+.person-details__profile-link a,.person-details__profile-link a:hover{
+  color:#fff;
+}
+
+.person-details__profile-link:hover{
+  background:var(--dark-bg);
 }
 
 .person-details__info{
@@ -1171,6 +1189,10 @@ body.lock{
   line-height:1.4375rem;
 }
 
+.person-details__text-more{
+  font-weight:600;
+}
+
 .tags__container{
   display:flex;
   flex-wrap:wrap;
@@ -1208,6 +1230,15 @@ body.lock{
 
 .tags__tag:hover{
   color:var(--brand);
+}
+
+.tags__tag.tags__tag--dark{
+  color:var(--dark-bg);
+}
+
+.tags__tag.tags__tag--dark:hover{
+  background:var(--brand);
+  color:#fff;
 }
 
 .scroll-back{
@@ -1425,7 +1456,7 @@ body.lock{
 }
 
 .calendarEl{
-  min-height:400px;
+  min-height:700px;
 }
 
 .calendar--profile{
@@ -1572,21 +1603,9 @@ body.lock{
   transform:rotate(90deg);
 }
 
-.profile-action--dark:hover .profile-action__icon{
-  background-color:var(--brand);
-}
-
-.profile-action--dark:hover .profile-action__icon svg path{
-  fill:#fff;
-}
-
-.profile-action__icon--messages{
+.profile-action--orange .profile-action__icon{
   background:var(--accent);
   color:#fff;
-}
-
-.profile-action:hover .profile-action__icon--messages{
-  background:var(--accent-hover);
 }
 
 .profile-action__icon-action{
@@ -2084,6 +2103,7 @@ body.lock{
   background:var(--light);
   display:flex;
   flex:0 0 52px;
+  height:52px;
   justify-content:center;
 }
 
@@ -2107,7 +2127,6 @@ body.lock{
 
 .message-panel__job{
   color:var(--grey);
-  font-family:Gotham Pro;
   font-size:.9375rem;
   font-style:normal;
   font-weight:700;
@@ -2124,7 +2143,7 @@ body.lock{
 
 .message-panel__messages-container{
   border-top:2px solid var(--light);
-  height:70%;
+  height:100%;
   overflow-y:auto;
 }
 
@@ -2133,6 +2152,18 @@ body.lock{
   flex-direction:column;
   justify-content:flex-end;
   min-height:100%;
+  position:relative;
+}
+
+.message-panel__messages-date{
+  color:var(--grey);
+  font-size:13px;
+  font-weight:400;
+  left:50%;
+  line-height:26px;
+  position:absolute;
+  top:20px;
+  transform:translateX(-50%);
 }
 
 .panel-message__container{
@@ -2154,6 +2185,10 @@ body.lock{
   line-height:1.5625rem;
 }
 
+.panel-message__name.panel-message__name--you{
+  color:var(--dark);
+}
+
 .panel-message__time{
   color:var(--grey);
   flex:0 0 52px;
@@ -2172,17 +2207,7 @@ body.lock{
   line-height:1.4375rem;
 }
 
-.message-panel__input-container{
-  height:30%;
-  overflow:hidden;
-}
-
-.message-input,.message-input__inner{
-  height:100%;
-  width:100%;
-}
-
-.message-input__inner{
+.message-input{
   border:1px solid var(--light);
   color:var(--grey);
   display:flex;
@@ -2190,31 +2215,40 @@ body.lock{
   font-size:.8125rem;
   font-style:normal;
   font-weight:700;
+  height:100%;
   letter-spacing:.08em;
   line-height:.75rem;
   overflow:hidden;
   padding:21px;
   position:relative;
+  width:100%;
+}
+
+.message-input-inner{
+  flex:1 1 fit-content;
+  position:relative;
 }
 
 .message-input__textarea{
   color:var(--dark);
-  flex:1 0 auto;
   font-size:.9375rem;
   font-weight:400;
   line-height:1.4375rem;
+  max-height:92px;
+  min-height:23px;
   resize:none;
+  width:100%;
 }
 
 .message-input__hint{
   font-size:.8125rem;
-  left:21px;
+  left:0;
   line-height:1.0625rem;
   opacity:1;
   pointer-events:none;
   position:absolute;
   text-transform:uppercase;
-  top:21px;
+  top:0;
   transition:opacity .2s ease;
   width:100%;
 }
@@ -2224,8 +2258,10 @@ body.lock{
 }
 
 .message-input__description{
+  flex:0 0 fit-content;
   font-size:.8125rem;
-  line-height:1.0625rem;
+  line-height:17px;
+  margin-top:14px;
 }
 
 .message-input__description span{
@@ -2562,9 +2598,18 @@ body.lock{
   display:none;
 }
 
-.fc-toolbar-title{
-  font-family:Bodoni MT;
+.fc-toolbar-title .month{
+  font-family:Bodoni;
+  font-size:32px;
   font-style:italic;
+  font-weight:400;
+  line-height:30px;
+  text-transform:capitalize;
+}
+
+.fc-toolbar-title .date{
+  font-size:21px;
+  line-height:30px;
 }
 
 .fc button.fc-button-primary{
@@ -2585,6 +2630,15 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
 
 .fc td.fc-timegrid-slot-minor{
   border-top-style:dashed;
+}
+
+button.fc-button-primary[title="Next неделя"]{
+  margin-left:7px !important;
+}
+
+button.fc-button-primary[title="день view"],button.fc-button-primary[title="неделя view"]{
+  padding:12px 18px;
+  text-transform:uppercase;
 }
 
 .burger{
@@ -2897,6 +2951,9 @@ tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid{
   }
   .searchbar__helptext-mobile{
     display:block;
+  }
+  .searchbar__tag{
+    display:none;
   }
   .experts-list__heading{
     font-size:3rem;
